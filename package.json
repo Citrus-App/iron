@@ -1,0 +1,10 @@
+{
+  "name": "iron",
+  "license": "MIT",
+  "scripts": {
+    "build": "token-transformer ./tokens/tokens.json ./tokens/tokens_parsed.json && style-dictionary build"
+  },
+  "dependencies": {
+    "token-transformer": "^0.0.17"
+  }
+}
