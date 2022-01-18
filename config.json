@@ -6,7 +6,10 @@
       "buildPath": "build/css/",
       "files": [{
         "destination": "tokens.css",
-        "format": "css/variables"
+        "format": "css/variables",
+        "options": {
+          "outputReferences": true
+        }
       }]
     },
     "ios": {
