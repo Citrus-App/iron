@@ -4,7 +4,7 @@
     "name": "@Citrus-App/iron",
     "registry": "https://npm.pkg.github.com/@Citrus-App"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Citrus Frontend Toolkit",
   "scripts": {
     "rollup": "rollup -c",
