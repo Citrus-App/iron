@@ -1,7 +1,8 @@
 {
-  "name": "iron",
+  "name": "@Citrus-App/iron",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/YOUR_REPOSITORY_NAME"
+    "name": "@Citrus-App/iron",
+    "registry": "https://npm.pkg.github.com/@Citrus-App"
   },
   "version": "0.1.0",
   "description": "The Citrus Frontend Toolkit",
