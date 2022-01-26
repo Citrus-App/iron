@@ -1,5 +1,5 @@
 {
-  "name": "@Citrus-App/iron",
+  "name": "@citrus-app/iron",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -43,5 +43,13 @@
     "react-dom": "^17.0.2",
     "style-dictionary": "@latest",
     "webpack": "^5.66.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Citrus-App/iron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Citrus-App/iron/issues"
+  },
+  "homepage": "https://github.com/Citrus-App/iron#readme"
 }
