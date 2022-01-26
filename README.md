@@ -13,6 +13,10 @@ The periodic table of elements symbol for iron is `Fe`, short for the Latin ferr
 ### To get started
 Make sure you have style-dictionary installed globally by running `npm install -g style-dictionary`, then clone this repo and `cd ~/[your_path_to_this_repo]` and run `style-dictionary build`
 
+### Build FE components
+(more info needed here)
+Run `yarn run rollup`
+
 ### Contributing
 [... wip ]
 
