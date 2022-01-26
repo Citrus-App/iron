@@ -19,6 +19,9 @@ Run `yarn run rollup`
 
 ### Contributing
 [... wip ]
+- bumping version
+    `npm version xx.xx.xx`
+    `npm publish`
 
 ### Roadmap
 [... wip ]
