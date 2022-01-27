@@ -20,8 +20,8 @@
     background-color: var(--light-button-hover)
   }
 
-  &::pressed,
-  &::focused {
+  &:pressed,
+  &:focused {
     background-color: var(--light-button-pressed);
   }
 }

@@ -8,6 +8,7 @@ import autoprefixer from 'autoprefixer';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 const postcssImport = require("postcss-import");
+const postcssNested = require("postcss-nested");
 
 const packageJson = require("./package.json");
 import babel from 'rollup-plugin-babel';
@@ -37,6 +38,7 @@ export default [
         plugins: [
           autoprefixer(),
           postcssImport(),
+          postcssNested()
         ],
         extract: false,
         modules: true,
