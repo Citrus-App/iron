@@ -1,9 +1,8 @@
 .baseButton {
-  background-color: var(--button-background);
+  background-color: var(--light-button-default);
   border-radius: 0;
   height: 5.5rem;
   padding: 1rem 1.9rem 1.1rem;
-  border: 2px solid var(--color-dark);
   font-size: 1.5rem;
   color: var(--color-dark);
   display: inline-flex;
