@@ -3,9 +3,9 @@
   "platforms": {
     "css": {
       "transformGroup": "css",
-      "buildPath": "build/css/",
+      "buildPath": "build/tokens/",
       "files": [{
-        "destination": "tokens.css",
+        "destination": "index.css",
         "format": "css/variables",
         "options": {
           "outputReferences": true
