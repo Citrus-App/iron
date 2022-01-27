@@ -1,0 +1,13 @@
+{
+  "ignoreFiles": [
+    "node_modules/**/*"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "no-descending-specificity": null,
+    "property-no-unknown": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+    }]
+  }
+}

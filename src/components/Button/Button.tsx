@@ -1,12 +1,29 @@
 import React from "react";
-import "./Button.css";
+import classnames from "classnames";
+import styles from "./Button.module.css";
 
-export interface ButtonProps {
-  label: string;
+type Props = {
+  children?: React.ReactNode;
+  action?: any;
+  href?: string;
+  variant?: string;
 }
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+const Button = ({ 
+  children,
+  action,
+  href,
+  variant 
+}: Props) => {
+  const classList = classnames(
+    styles.baseButton,
+    styles[`variant-${variant}`]
+  )
+  return (
+    <a className={classList} href={href} onClick={action}>
+      <div className={styles.inner}>{children}</div>
+    </a>
+  )
 };
 
 export default Button;

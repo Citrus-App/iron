@@ -25,10 +25,9 @@
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "react": "^17.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
-    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "style-loader": "^3.3.1",
     "token-transformer": "^0.0.17",
     "typescript": "^4.4.4"
@@ -39,9 +38,25 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
   "dependencies": {
-    "react-dom": "^17.0.2",
+    "autoprefixer": "^10.4.2",
+    "classnames": "^2.3.1",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.2.3",
+    "postcss-reporter": "^7.0.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "style-dictionary": "^3.1.1",
+    "stylelint": "^14.3.0",
+    "typescript-plugin-css-modules": "^3.4.0",
     "webpack": "^5.66.0"
   },
   "repository": {
