@@ -1,5 +1,5 @@
 {
-  "name": "citrus-app/iron",
+  "name": "@citrus-app/iron",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -41,7 +41,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "react-dom": "^17.0.2",
-    "style-dictionary": "@latest",
+    "style-dictionary": "^3.1.1",
     "webpack": "^5.66.0"
   },
   "repository": {
