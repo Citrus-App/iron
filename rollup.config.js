@@ -7,6 +7,8 @@ import {terser} from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
+const postcssImport = require("postcss-import");
+
 const packageJson = require("./package.json");
 import babel from 'rollup-plugin-babel';
 
@@ -32,7 +34,10 @@ export default [
     plugins: [
       peerDepsExternal(),
       postcss({
-        plugins: [autoprefixer()],
+        plugins: [
+          autoprefixer(),
+          postcssImport(),
+        ],
         extract: false,
         modules: true,
       }),
