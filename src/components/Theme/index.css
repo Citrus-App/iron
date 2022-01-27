@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Jan 2022 18:36:28 GMT
+ * Generated on Thu, 27 Jan 2022 19:04:08 GMT
  */
 
 :root {
@@ -11,7 +11,6 @@
   --dark-small-50: [object Object];
   --dark-small-15: [object Object];
   --dark-docs-shadow: [object Object];
-  --dark-button: [object Object];
   --dark-text-button-outline: #9b9b9b;
   --global-spacing-10: 80;
   --global-spacing-9: 72;
@@ -260,17 +259,12 @@
   --icon-default: #363638;
   --icon-white: #ffffff;
   --button-outline-disabled: #4f4f51;
-  --button-outline-hover-highlight: #14b4dc;
-  --button-outline-hover-muted: #9b9b9b;
   --button-outline-pressed: #9b9b9b;
   --button-outline-hover: #b4b4b4;
   --button-outline-default: #e6e6e6;
   --button: [object Object];
-  --text-button-outline-pressed-blue: #6ad0e9;
-  --text-button-outline-disabled: #4f4f51;
   --text-button-outline-pressed: #b4b4b4;
   --text-button-outline-highlight: #14b4dc;
-  --text-button-outline-muted: #4f4f51;
   --text-button-outline: #9b9b9b;
   --text-warning: #c73f00;
   --text-info: #18697e;
@@ -324,6 +318,9 @@
   --light-text-button: var(--gray-800);
   --light-text-body: var(--gray-800);
   --light-text-headline: var(--gray-900);
+  --dark-button-pressed: var(--blue-700);
+  --dark-button-hover: var(--blue-500);
+  --dark-button-default: var(--blue-100);
   --dark-border-accent: var(--blue-500);
   --dark-border-critical: var(--red-400);
   --dark-border-divider: var(--gray-700);
@@ -354,17 +351,11 @@
   --dark-icon-success: var(--green-500);
   --dark-icon-accent: var(--blue-500);
   --dark-icon-default: var(--gray-400);
-  --dark-button-outline-hover: var(--blue-500);
   --dark-button-outline-disabled: var(--gray-700);
-  --dark-button-outline-hover-highlight: var(--blue-500);
   --dark-button-outline-pressed: var(--gray-300);
-  --dark-button-outline-hover-muted: var(--gray-400);
   --dark-button-outline-default: var(--gray-500);
-  --dark-text-button-outline-pressed-blue: var(--blue-300);
-  --dark-text-button-outline-disabled: var(--gray-700);
   --dark-text-button-outline-pressed: var(--gray-300);
   --dark-text-button-outline-highlight: var(--blue-500);
-  --dark-text-button-outline-muted: var(--gray-700);
   --dark-text-warning: var(--yellow-800);
   --dark-text-info: var(--blue-500);
   --dark-text-critical: var(--red-400);

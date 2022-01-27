@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Thu, 27 Jan 2022 18:36:28 GMT
+// Generated on Thu, 27 Jan 2022 19:04:08 GMT
 
 
 import UIKit
@@ -30,20 +30,17 @@ public class StyleDictionary {
     public static let buttonOutlineDefault = #e6e6e6
     public static let buttonOutlineDisabled = #4f4f51
     public static let buttonOutlineHover = #b4b4b4
-    public static let buttonOutlineHoverHighlight = #14b4dc
-    public static let buttonOutlineHoverMuted = #9b9b9b
     public static let buttonOutlinePressed = #9b9b9b
     public static let darkBorderAccent = #14b4dc
     public static let darkBorderCritical = #f96c73
     public static let darkBorderDefault = #9b9b9b
     public static let darkBorderDivider = #4f4f51
-    public static let darkButton = [object Object]
+    public static let darkButtonDefault = #c1ebf6
+    public static let darkButtonHover = #14b4dc
     public static let darkButtonOutlineDefault = #818183
     public static let darkButtonOutlineDisabled = #4f4f51
-    public static let darkButtonOutlineHover = #14b4dc
-    public static let darkButtonOutlineHoverHighlight = #14b4dc
-    public static let darkButtonOutlineHoverMuted = #9b9b9b
     public static let darkButtonOutlinePressed = #b4b4b4
+    public static let darkButtonPressed = #17829d
     public static let darkDocsShadow = [object Object]
     public static let darkExtraLarge100 = [object Object]
     public static let darkExtraLarge15 = [object Object]
@@ -80,11 +77,8 @@ public class StyleDictionary {
     public static let darkTextBody = #ffffff
     public static let darkTextButton = #1d1d1f
     public static let darkTextButtonOutline = #9b9b9b
-    public static let darkTextButtonOutlineDisabled = #4f4f51
     public static let darkTextButtonOutlineHighlight = #14b4dc
-    public static let darkTextButtonOutlineMuted = #4f4f51
     public static let darkTextButtonOutlinePressed = #b4b4b4
-    public static let darkTextButtonOutlinePressedBlue = #6ad0e9
     public static let darkTextCritical = #f96c73
     public static let darkTextHeadline = #ffffff
     public static let darkTextInfo = #14b4dc
@@ -355,11 +349,8 @@ public class StyleDictionary {
     public static let textBody = #363638
     public static let textButton = #363638
     public static let textButtonOutline = #9b9b9b
-    public static let textButtonOutlineDisabled = #4f4f51
     public static let textButtonOutlineHighlight = #14b4dc
-    public static let textButtonOutlineMuted = #4f4f51
     public static let textButtonOutlinePressed = #b4b4b4
-    public static let textButtonOutlinePressedBlue = #6ad0e9
     public static let textCaseNone = none
     public static let textCritical = #f1465a
     public static let textDecorationNone = none

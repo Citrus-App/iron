@@ -36,10 +36,6 @@
       "value": "#9b9b9b",
       "type": "color"
     },
-    "button-outline-muted": {
-      "value": "#4f4f51",
-      "type": "color"
-    },
     "button-outline-highlight": {
       "value": "#14b4dc",
       "type": "color"
@@ -47,44 +43,20 @@
     "button-outline-pressed": {
       "value": "#b4b4b4",
       "type": "color"
-    },
-    "button-outline-disabled": {
-      "value": "#4f4f51",
-      "type": "color"
-    },
-    "button-outline-pressed-blue": {
-      "value": "#6ad0e9",
-      "type": "color"
     }
   },
   "button": {
     "value": {
       "fontFamily": "SF Compact",
-      "fontWeight": "Bold",
+      "fontWeight": "Regular",
       "lineHeight": 32,
-      "fontSize": 18,
-      "letterSpacing": "$letterSpacing.1",
+      "fontSize": 16,
+      "letterSpacing": 0,
       "paragraphSpacing": 0,
       "textCase": "none",
       "textDecoration": "none"
     },
-    "type": "typography",
-    "default": {
-      "value": "{gray.500}",
-      "type": "color"
-    },
-    "hover": {
-      "value": "{blue.500}",
-      "type": "color"
-    },
-    "pressed": {
-      "value": "{blue.300}",
-      "type": "color"
-    },
-    "disabled": {
-      "value": "{gray.700}",
-      "type": "color"
-    }
+    "type": "typography"
   },
   "button-outline": {
     "default": {
@@ -97,14 +69,6 @@
     },
     "pressed": {
       "value": "#9b9b9b",
-      "type": "color"
-    },
-    "hover-muted": {
-      "value": "#9b9b9b",
-      "type": "color"
-    },
-    "hover-highlight": {
-      "value": "#14b4dc",
       "type": "color"
     },
     "disabled": {
