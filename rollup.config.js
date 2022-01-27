@@ -6,14 +6,8 @@ import {terser} from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-// import stylelint from "stylelint";
-// import postcssReporter from "postcss-reporter";
-// import postcssImport from "postcss-import";
-// import postcssNested from "postcss-nested";
-// import postcssPresetEnv from "postcss-preset-env";
-
 const packageJson = require("./package.json");
-// import babel from 'rollup-plugin-babel';
+import babel from 'rollup-plugin-babel';
 
 export default {
   input: "src/index.ts",
@@ -23,7 +17,7 @@ export default {
       name: 'comlib',
       sourcemap: true,
       file: './dist/index.js',
-      format: 'esm',
+      format: 'umd',
       globals: { react: 'React' },
     },
   ],
@@ -31,19 +25,11 @@ export default {
   plugins: [
     peerDepsExternal(),
     postcss({
-      plugins: [
-        autoprefixer()
-        // // stylelint(),
-        //   postcssImport({
-        //     addModulesDirectories: ["./build/tokens"],
-        //   }),
-        // postcssNested(),
-        // postcssReporter(),
-      ],
+      plugins: [autoprefixer()],
       extract: false,
       modules: true,
     }),
-    // babel({ exclude: 'node_modules/**' }),
+    babel({ exclude: 'node_modules/**' }),
     resolve(),
     commonjs(),
     typescript({ tsconfig: "./tsconfig.json" }),
