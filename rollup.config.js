@@ -23,7 +23,7 @@ export default {
       name: 'comlib',
       sourcemap: true,
       file: './dist/index.js',
-      format: 'umd',
+      format: 'esm',
       globals: { react: 'React' },
     },
   ],
