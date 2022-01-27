@@ -1,5 +1,5 @@
 {
-  "name": "@citrus-app/iron",
+  "name": "citrus-app/iron",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
