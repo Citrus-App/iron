@@ -39,6 +39,5 @@ yarn-error.log*
 .yarnrc
 .yarn
 
-dist
 node_modules
 .vscode
