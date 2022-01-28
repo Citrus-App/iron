@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import {terser} from 'rollup-plugin-terser';
+// import {terser} from 'rollup-plugin-terser';
 import autoprefixer from 'autoprefixer';
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
@@ -47,7 +47,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      terser()
+      // terser()
     ],
   },
   {
