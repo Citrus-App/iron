@@ -9,11 +9,11 @@
       "type": "color"
     },
     "button": {
-      "value": "#363638",
+      "value": "#ffffff",
       "type": "color"
     },
     "link": {
-      "value": "#18697e",
+      "value": "#14b4dc",
       "type": "color"
     },
     "success": {
@@ -25,7 +25,7 @@
       "type": "color"
     },
     "info": {
-      "value": "#18697e",
+      "value": "#169bbc",
       "type": "color"
     },
     "warning": {
@@ -33,14 +33,22 @@
       "type": "color"
     },
     "button-outline": {
-      "value": "#9b9b9b",
+      "value": "#818183",
       "type": "color"
     },
-    "button-outline-highlight": {
+    "secondary": {
+      "value": "#818183",
+      "type": "color"
+    },
+    "button-outline-hover": {
       "value": "#14b4dc",
       "type": "color"
     },
     "button-outline-pressed": {
+      "value": "#17829d",
+      "type": "color"
+    },
+    "button-outline-disabled": {
       "value": "#b4b4b4",
       "type": "color"
     }
@@ -60,19 +68,19 @@
   },
   "button-outline": {
     "default": {
-      "value": "#e6e6e6",
+      "value": "#818183",
       "type": "color"
     },
     "hover": {
-      "value": "#b4b4b4",
+      "value": "#14b4dc",
       "type": "color"
     },
     "pressed": {
-      "value": "#9b9b9b",
+      "value": "#17829d",
       "type": "color"
     },
     "disabled": {
-      "value": "#4f4f51",
+      "value": "#b4b4b4",
       "type": "color"
     }
   },

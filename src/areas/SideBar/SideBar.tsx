@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Button.module.css";
+import styles from "./SideBar.module.css";
 
 type Props = {
   // props here

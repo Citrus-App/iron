@@ -79,7 +79,7 @@ function createBase(p) {
 
 function createModule(p, name, parent) {
   const tpl = `import React from 'react'
-import styles from "./Button.module.css";
+import styles from "./${name}.module.css";
 
 type Props = {
   // props here

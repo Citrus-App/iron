@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Thu, 27 Jan 2022 22:49:34 GMT
+// Generated on Fri, 28 Jan 2022 18:40:13 GMT
 
 
 import UIKit
@@ -27,20 +27,22 @@ public class StyleDictionary {
     public static let borderDefault = #9b9b9b
     public static let borderDivider = #e6e6e6
     public static let button = [object Object]
-    public static let buttonOutlineDefault = #e6e6e6
-    public static let buttonOutlineDisabled = #4f4f51
-    public static let buttonOutlineHover = #b4b4b4
-    public static let buttonOutlinePressed = #9b9b9b
+    public static let buttonOutlineDefault = #818183
+    public static let buttonOutlineDisabled = #b4b4b4
+    public static let buttonOutlineHover = #14b4dc
+    public static let buttonOutlinePressed = #17829d
     public static let darkBorderAccent = #14b4dc
     public static let darkBorderCritical = #f96c73
     public static let darkBorderDefault = #9b9b9b
     public static let darkBorderDivider = #4f4f51
-    public static let darkButtonDefault = #c1ebf6
+    public static let darkButtonDefault = #818183
+    public static let darkButtonDisabled = #4f4f51
     public static let darkButtonHover = #14b4dc
     public static let darkButtonOutlineDefault = #818183
     public static let darkButtonOutlineDisabled = #4f4f51
-    public static let darkButtonOutlinePressed = #b4b4b4
-    public static let darkButtonPressed = #17829d
+    public static let darkButtonOutlineHover = #14b4dc
+    public static let darkButtonOutlinePressed = #6ad0e9
+    public static let darkButtonPressed = #6ad0e9
     public static let darkDocsShadow = [object Object]
     public static let darkExtraLarge100 = [object Object]
     public static let darkExtraLarge15 = [object Object]
@@ -76,13 +78,15 @@ public class StyleDictionary {
     public static let darkSurfaceWash = #000000
     public static let darkTextBody = #ffffff
     public static let darkTextButton = #1d1d1f
-    public static let darkTextButtonOutline = #9b9b9b
-    public static let darkTextButtonOutlineHighlight = #14b4dc
-    public static let darkTextButtonOutlinePressed = #b4b4b4
+    public static let darkTextButtonOutline = #818183
+    public static let darkTextButtonOutlineDisabled = #4f4f51
+    public static let darkTextButtonOutlineHover = #14b4dc
+    public static let darkTextButtonOutlinePressed = #6ad0e9
     public static let darkTextCritical = #f96c73
     public static let darkTextHeadline = #ffffff
     public static let darkTextInfo = #14b4dc
     public static let darkTextLink = #14b4dc
+    public static let darkTextSecondary = #9b9b9b
     public static let darkTextSuccess = #00c988
     public static let darkTextWarning = #e55c00
     public static let docsShadow = [object Object]
@@ -201,12 +205,14 @@ public class StyleDictionary {
     public static let lightBorderCritical = #f1465a
     public static let lightBorderDefault = #9b9b9b
     public static let lightBorderDivider = #e6e6e6
-    public static let lightButtonDefault = #169bbc
-    public static let lightButtonHover = #17829d
-    public static let lightButtonOutlineDefault = #e6e6e6
-    public static let lightButtonOutlineHover = #b4b4b4
-    public static let lightButtonOutlinePressed = #9b9b9b
-    public static let lightButtonPressed = #18697e
+    public static let lightButtonDefault = #818183
+    public static let lightButtonDisabled = #b4b4b4
+    public static let lightButtonHover = #14b4dc
+    public static let lightButtonOutlineDefault = #818183
+    public static let lightButtonOutlineDisabled = #b4b4b4
+    public static let lightButtonOutlineHover = #14b4dc
+    public static let lightButtonOutlinePressed = #17829d
+    public static let lightButtonPressed = #17829d
     public static let lightIconAccent = #18697e
     public static let lightIconCritical = #f1465a
     public static let lightIconDefault = #363638
@@ -233,12 +239,16 @@ public class StyleDictionary {
     public static let lightSurfaceWarning = #ffeebe
     public static let lightSurfaceWash = #f3f3f3
     public static let lightTextBody = #363638
-    public static let lightTextButton = #363638
-    public static let lightTextButtonOutline = #9b9b9b
+    public static let lightTextButton = #ffffff
+    public static let lightTextButtonOutline = #818183
+    public static let lightTextButtonOutlineDisabled = #b4b4b4
+    public static let lightTextButtonOutlineHover = #14b4dc
+    public static let lightTextButtonOutlinePressed = #17829d
     public static let lightTextCritical = #f1465a
     public static let lightTextHeadline = #1d1d1f
-    public static let lightTextInfo = #18697e
-    public static let lightTextLink = #18697e
+    public static let lightTextInfo = #169bbc
+    public static let lightTextLink = #14b4dc
+    public static let lightTextSecondary = #818183
     public static let lightTextSuccess = #00ad76
     public static let lightTextWarning = #c73f00
     public static let lineHeights0 = 68
@@ -347,16 +357,18 @@ public class StyleDictionary {
     public static let surfaceWarning = #ffeebe
     public static let surfaceWash = #f3f3f3
     public static let textBody = #363638
-    public static let textButton = #363638
-    public static let textButtonOutline = #9b9b9b
-    public static let textButtonOutlineHighlight = #14b4dc
-    public static let textButtonOutlinePressed = #b4b4b4
+    public static let textButton = #ffffff
+    public static let textButtonOutline = #818183
+    public static let textButtonOutlineDisabled = #b4b4b4
+    public static let textButtonOutlineHover = #14b4dc
+    public static let textButtonOutlinePressed = #17829d
     public static let textCaseNone = none
     public static let textCritical = #f1465a
     public static let textDecorationNone = none
     public static let textHeadline = #1d1d1f
-    public static let textInfo = #18697e
-    public static let textLink = #18697e
+    public static let textInfo = #169bbc
+    public static let textLink = #14b4dc
+    public static let textSecondary = #818183
     public static let textSuccess = #00ad76
     public static let textWarning = #c73f00
     public static let yellow000 = #fff8e4

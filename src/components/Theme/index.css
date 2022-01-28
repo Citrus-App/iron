@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Jan 2022 22:49:34 GMT
+ * Generated on Fri, 28 Jan 2022 18:40:13 GMT
  */
 
 :root {
@@ -11,7 +11,6 @@
   --dark-small-50: [object Object];
   --dark-small-15: [object Object];
   --dark-docs-shadow: [object Object];
-  --dark-text-button-outline: #9b9b9b;
   --global-spacing-10: 80;
   --global-spacing-9: 72;
   --global-spacing-8: 64;
@@ -258,20 +257,22 @@
   --icon-accent: #18697e;
   --icon-default: #363638;
   --icon-white: #ffffff;
-  --button-outline-disabled: #4f4f51;
-  --button-outline-pressed: #9b9b9b;
-  --button-outline-hover: #b4b4b4;
-  --button-outline-default: #e6e6e6;
+  --button-outline-disabled: #b4b4b4;
+  --button-outline-pressed: #17829d;
+  --button-outline-hover: #14b4dc;
+  --button-outline-default: #818183;
   --button: [object Object];
-  --text-button-outline-pressed: #b4b4b4;
-  --text-button-outline-highlight: #14b4dc;
-  --text-button-outline: #9b9b9b;
+  --text-button-outline-disabled: #b4b4b4;
+  --text-button-outline-pressed: #17829d;
+  --text-button-outline-hover: #14b4dc;
+  --text-secondary: #818183;
+  --text-button-outline: #818183;
   --text-warning: #c73f00;
-  --text-info: #18697e;
+  --text-info: #169bbc;
   --text-critical: #f1465a;
   --text-success: #00ad76;
-  --text-link: #18697e;
-  --text-button: #363638;
+  --text-link: #14b4dc;
+  --text-button: #ffffff;
   --text-body: #363638;
   --text-headline: #1d1d1f;
   --light-border-accent: var(--blue-800);
@@ -303,24 +304,31 @@
   --light-icon-accent: var(--blue-800);
   --light-icon-default: var(--gray-800);
   --light-icon-white: var(--gray-000);
-  --light-button-outline-pressed: var(--gray-400);
-  --light-button-outline-hover: var(--gray-300);
-  --light-button-outline-default: var(--gray-200);
-  --light-button-pressed: var(--blue-800);
-  --light-button-hover: var(--blue-700);
-  --light-button-default: var(--blue-600);
-  --light-text-button-outline: var(--gray-400);
+  --light-button-outline-disabled: var(--gray-300);
+  --light-button-outline-pressed: var(--blue-700);
+  --light-button-outline-hover: var(--blue-500);
+  --light-button-outline-default: var(--gray-500);
+  --light-button-disabled: var(--gray-300);
+  --light-button-pressed: var(--blue-700);
+  --light-button-hover: var(--blue-500);
+  --light-button-default: var(--gray-500);
+  --light-text-button-outline-disabled: var(--gray-300);
+  --light-text-button-outline-pressed: var(--blue-700);
+  --light-text-button-outline-hover: var(--blue-500);
+  --light-text-secondary: var(--gray-500);
+  --light-text-button-outline: var(--gray-500);
   --light-text-warning: var(--yellow-900);
-  --light-text-info: var(--blue-800);
+  --light-text-info: var(--blue-600);
   --light-text-critical: var(--red-500);
   --light-text-success: var(--green-600);
-  --light-text-link: var(--blue-800);
-  --light-text-button: var(--gray-800);
+  --light-text-link: var(--blue-500);
+  --light-text-button: var(--gray-000);
   --light-text-body: var(--gray-800);
   --light-text-headline: var(--gray-900);
-  --dark-button-pressed: var(--blue-700);
+  --dark-button-disabled: var(--gray-700);
+  --dark-button-pressed: var(--blue-300);
   --dark-button-hover: var(--blue-500);
-  --dark-button-default: var(--blue-100);
+  --dark-button-default: var(--gray-500);
   --dark-border-accent: var(--blue-500);
   --dark-border-critical: var(--red-400);
   --dark-border-divider: var(--gray-700);
@@ -351,16 +359,20 @@
   --dark-icon-success: var(--green-500);
   --dark-icon-accent: var(--blue-500);
   --dark-icon-default: var(--gray-400);
+  --dark-button-outline-hover: var(--blue-500);
   --dark-button-outline-disabled: var(--gray-700);
-  --dark-button-outline-pressed: var(--gray-300);
+  --dark-button-outline-pressed: var(--blue-300);
   --dark-button-outline-default: var(--gray-500);
-  --dark-text-button-outline-pressed: var(--gray-300);
-  --dark-text-button-outline-highlight: var(--blue-500);
+  --dark-text-button-outline-disabled: var(--gray-700);
+  --dark-text-secondary: var(--gray-400);
+  --dark-text-button-outline-pressed: var(--blue-300);
+  --dark-text-button-outline-hover: var(--blue-500);
   --dark-text-warning: var(--yellow-800);
   --dark-text-info: var(--blue-500);
   --dark-text-critical: var(--red-400);
   --dark-text-success: var(--green-500);
   --dark-text-link: var(--blue-500);
+  --dark-text-button-outline: var(--gray-500);
   --dark-text-button: var(--gray-900);
   --dark-text-body: var(--gray-000);
   --dark-text-headline: var(--gray-000);
