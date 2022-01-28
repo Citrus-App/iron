@@ -7,6 +7,7 @@
   "description": "The Citrus Frontend Toolkit",
   "scripts": {
     "rollup": "rollup -c",
+    "dev": "rollup -c -w",
     "tokens": "token-transformer ./tokens/tokens.json ./tokens/tokens_parsed.json && style-dictionary build"
   },
   "author": "Jared Smith — Citrus",
@@ -50,6 +51,7 @@
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.2.3",
     "postcss-reporter": "^7.0.5",
+    "react": "^17.0.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

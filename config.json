@@ -10,6 +10,12 @@
         "options": {
           "outputReferences": true
         }
+      },{
+        "destination": "tokens.js",
+        "format": "javascript/module-flat",
+        "options": {
+          "outputReferences": true
+        }
       }]
     },
     "ios": {

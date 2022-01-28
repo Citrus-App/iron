@@ -1,9 +1,9 @@
 .baseButton {
-  background-color: var(--light-button-default);
+  background-color: var(--button-default);
   border-radius: 0;
   height: 5.5rem;
   padding: 1rem 1.9rem 1.1rem;
-  color: var(--light-text-button);
+  color: var(--text-button);
   display: inline-flex;
   text-decoration: none;
   text-transform: uppercase;
@@ -14,19 +14,30 @@
 
   font-family: var(--global-font-families-sf-compact);
   font-weight: var(--global-font-weights-sf-compact-3);
-  line-height: var(--global-line-heights-2);
   font-size: var(--global-font-size-0);
 
   &:hover {
-    background-color: var(--light-button-hover)
+    background-color: var(--button-hover)
   }
 
   &:focus {
-    background-color: var(--light-button-pressed);
+    background-color: var(--button-pressed);
   }
 }
 
 .inner {
   margin: auto;
   display: flex;
+}
+
+.variant-outline {
+  background-color: transparent;
+  border: 1px solid var(--button-outline-default);
+  color: var(--text-button-outline);
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--button-outline-hover);
+    color: var(--button-outline-hover);
+  }
 }
