@@ -18,12 +18,12 @@ Make sure you have style-dictionary installed globally by running `npm install -
 Run `yarn run rollup`
 
 ### Developing
-First navigate to your `Iron` project dir `cd ~/Sites/iron`
-Then run `yarn link`
-Then in the `Iron` project run `yarn dev` which will start the rollup watch process
-Now navigate to the frontend repo `cd ~/Sites/citrus`
-Now run `yarn link "@citrus-app/iron"`
-You should now see HMR working and components updating in the app as you develop
+- First navigate to your `Iron` project dir `cd ~/Sites/iron`
+- Then run `yarn link`
+- Then in the `Iron` project run `yarn dev` which will start the rollup watch process
+- Now navigate to the frontend repo `cd ~/Sites/citrus`
+- Now run `yarn link "@citrus-app/iron"`
+- You should now see HMR working and components updating in the app as you develop
 
 ### Roadmap
 [... wip ]
