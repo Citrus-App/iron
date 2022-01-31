@@ -5,5 +5,8 @@ declare type Props = {
     href?: string;
     variant?: string;
 };
-declare const Button: ({ children, action, href, variant }: Props) => JSX.Element;
+declare const Button: {
+    ({ children, action, href, variant }: Props): JSX.Element;
+    documentation: string;
+};
 export default Button;

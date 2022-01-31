@@ -7,7 +7,10 @@ declare type Props$a = {
     href?: string;
     variant?: string;
 };
-declare const Button: ({ children, action, href, variant }: Props$a) => JSX.Element;
+declare const Button: {
+    ({ children, action, href, variant }: Props$a): JSX.Element;
+    documentation: string;
+};
 
 declare type Props$9 = {
     children?: React.ReactNode;
@@ -32,11 +35,21 @@ declare const SideBar: ({}: Props$4) => JSX.Element;
 declare type Props$3 = {};
 declare const Content: ({}: Props$3) => JSX.Element;
 
-declare type Props$2 = {};
-declare const Header: ({}: Props$2) => JSX.Element;
+declare type Props$2 = {
+    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    children?: React.ReactNode;
+};
+declare const Header: {
+    ({ as, children }: Props$2): JSX.Element;
+    documentation: string;
+};
 
-declare type Props$1 = {};
-declare const Text: ({}: Props$1) => JSX.Element;
+declare type Props$1 = {
+    as?: 'p' | 'span' | 'strong';
+    variant?: 'small';
+    children?: React.ReactNode;
+};
+declare const Text: ({ as, variant, children }: Props$1) => JSX.Element;
 
 declare type Props = {};
 declare const Icon: ({}: Props) => JSX.Element;

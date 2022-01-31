@@ -3,10 +3,10 @@ import classnames from "classnames";
 import styles from "./Button.module.css";
 
 type Props = {
-  children?: React.ReactNode;
-  action?: any;
-  href?: string;
-  variant?: string;
+  children?: React.ReactNode,
+  action?: any,
+  href?: string,
+  variant?: string
 }
 
 const Button = ({ 
@@ -25,5 +25,8 @@ const Button = ({
     </a>
   )
 };
+
+
+Button.documentation = `The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma`
 
 export default Button;

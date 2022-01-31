@@ -95,7 +95,7 @@
 	  }
 	}
 
-	var css_248z$9 = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  height: 5.5rem;\n  padding: 1rem 1.9rem 1.1rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  text-transform: uppercase;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: var(--global-font-size-0);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    background-color: var(--button-pressed);\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background-color: transparent;\n  border: 1px solid var(--button-outline-default);\n  color: var(--text-button-outline);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: transparent;\n    border: 1px solid var(--button-outline-hover);\n    color: var(--button-outline-hover);\n  }\n";
+	var css_248z$9 = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  padding: 1rem 1.9rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  text-transform: uppercase;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: var(--global-font-size-0);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    background-color: var(--button-pressed);\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background-color: transparent;\n  border: 1px solid var(--button-outline-default);\n  color: var(--text-button-outline);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: transparent;\n    border: 1px solid var(--button-outline-hover);\n    color: var(--button-outline-hover);\n  }\n";
 	var styles$9 = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U"};
 	styleInject(css_248z$9);
 
@@ -105,6 +105,7 @@
 	    return (React__default["default"].createElement("a", { className: classList, href: href, onClick: action },
 	        React__default["default"].createElement("div", { className: styles$9.inner }, children)));
 	};
+	Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
 
 	/*! *****************************************************************************
 	Copyright (c) Microsoft Corporation.
@@ -853,20 +854,27 @@
 	    return (React__default["default"].createElement("div", { className: styles$3.root }, "hello world! I am Content"));
 	};
 
-	var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n";
+	var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: \"IvyPresto Display\";\n  font-weight: 100;\n  line-height: 6.8rem;\n  font-size: 6rem;\n  letter-spacing: 0;\n}\n\nh2 {\n  font-family: \"IvyPresto Display\";\n  font-weight: 100;\n  line-height: 4.8rem;\n  font-size: 4rem;\n  letter-spacing: 0;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\";\n  font-weight: 100;\n  line-height: 3.2rem;\n  font-size: 2.4rem;\n  letter-spacing: 0;\n}\n";
 	var styles$2 = {"root":"Header-module_root__zkAdZ"};
 	styleInject(css_248z$2);
 
 	var Header = function (_a) {
-	    return (React__default["default"].createElement("div", { className: styles$2.root }, "hello world! I am Header"));
+	    var as = _a.as, children = _a.children;
+	    var Tag = as ? as : 'h1';
+	    return (React__default["default"].createElement(Tag, { className: styles$2.root }, children));
 	};
+	Object.assign(Header, styles$2);
+	Header.documentation = "The Header component does not accept variants and instead utilizes base html tags. This component requires the \"as\" prop to specifiy the tag type.";
 
-	var css_248z$1 = "\n.Text-module_root__xduhb {\n  position: relative;\n}\n";
-	var styles$1 = {"root":"Text-module_root__xduhb"};
+	var css_248z$1 = "\n.Text-module_root__xduhb {\n  position: relative;\n}\n\n\np {\n  font-family: \"SF Compact\";\n  font-weight: 100;\n  line-height: 2.8rem;\n  font-size: 2rem;\n  letter-spacing: 0;\n}\n\n\nstrong {\n  font-family: \"SF Compact\";\n  font-weight: bold;\n}\n\n\n.Text-module_variant-small__XJ9xx {\n  font-size: 1.8rem;\n}";
+	var styles$1 = {"root":"Text-module_root__xduhb","variant-small":"Text-module_variant-small__XJ9xx"};
 	styleInject(css_248z$1);
 
 	var Text = function (_a) {
-	    return (React__default["default"].createElement("div", { className: styles$1.root }, "hello world! I am Text"));
+	    var as = _a.as, variant = _a.variant, children = _a.children;
+	    var Tag = as ? as : 'p';
+	    var classList = classnames(styles$1["variant-".concat(variant)]);
+	    return (React__default["default"].createElement(Tag, { className: classList }, children));
 	};
 
 	var css_248z = "\n.Icon-module_root__91OsV {\n  position: relative;\n}\n";
