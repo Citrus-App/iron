@@ -5,6 +5,6 @@ declare type Props = {
 };
 declare const Theme: {
     ({ children, themeMode }: Props): JSX.Element;
-    extracter: (mode: string) => void[];
+    extracter: (mode: string) => any;
 };
 export default Theme;

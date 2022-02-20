@@ -18,7 +18,7 @@ declare type Props$9 = {
 };
 declare const Theme: {
     ({ children, themeMode }: Props$9): JSX.Element;
-    extracter: (mode: string) => void[];
+    extracter: (mode: string) => any;
 };
 
 declare type Props$8 = {};

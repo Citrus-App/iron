@@ -793,11 +793,12 @@
 
 	var setTheme = function (mode) {
 	    var themeStyles = {};
-	    return Object.keys(tokens).map(function (key, index) {
+	    Object.keys(tokens).map(function (key, index) {
 	        if (key.startsWith(mode)) {
 	            themeStyles["--".concat(key.split("".concat(mode, "-"))[1])] = tokens[key];
 	        }
 	    });
+	    return themeStyles;
 	};
 	var Theme = function (_a) {
 	    var children = _a.children, _b = _a.themeMode, themeMode = _b === void 0 ? 'light' : _b;

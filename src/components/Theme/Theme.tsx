@@ -11,13 +11,14 @@ type Props = {
 
 const setTheme = (mode: string) => {
   const themeStyles: any = {}
-  return Object.keys(Tokens).map(function(key, index) {
+  Object.keys(Tokens).map(function(key, index) {
     if(key.startsWith(mode)) {
       themeStyles[
         `--${key.split(`${mode}-`)[1]}`
       ] = Tokens[key]
     }
   });
+  return themeStyles;
 }
 
 const Theme = ({ 
