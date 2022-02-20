@@ -791,16 +791,12 @@
 	  "light-border-accent": "#18697e"
 	};
 
-	// DEV NOTE
-	// The below prop will get set 
-	// via a global them provider context
-	var tempThemeProp = 'light';
 	var Theme = function (_a) {
-	    var children = _a.children;
+	    var children = _a.children, _b = _a.themeMode, themeMode = _b === void 0 ? 'light' : _b;
 	    var themeStyles = {};
 	    Object.keys(tokens).map(function (key, index) {
-	        if (key.startsWith(tempThemeProp)) {
-	            themeStyles["--".concat(key.split("".concat(tempThemeProp, "-"))[1])] = tokens[key];
+	        if (key.startsWith(themeMode)) {
+	            themeStyles["--".concat(key.split("".concat(themeMode, "-"))[1])] = tokens[key];
 	        }
 	    });
 	    return (React__default["default"].createElement("div", { className: "ThemeProvider", style: __assign({}, themeStyles) }, children));
