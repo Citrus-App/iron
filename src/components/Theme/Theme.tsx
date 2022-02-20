@@ -9,22 +9,28 @@ type Props = {
   themeMode?: string;
 }
 
+const setTheme = (mode: string) => {
+  const themeStyles: any = {}
+  return Object.keys(Tokens).map(function(key, index) {
+    if(key.startsWith(mode)) {
+      themeStyles[
+        `--${key.split(`${mode}-`)[1]}`
+      ] = Tokens[key]
+    }
+  });
+}
+
 const Theme = ({ 
   children,
   themeMode = 'light'
 }: Props) => {
-  const themeStyles: any = {}
-
-  Object.keys(Tokens).map(function(key, index) {
-    if(key.startsWith(themeMode)) {
-      themeStyles[
-        `--${key.split(`${themeMode}-`)[1]}`
-      ] = Tokens[key]
-    }
-  });
+  const themeStyles: any  = setTheme(themeMode)
   return (
     <div className="ThemeProvider" style={{...themeStyles}}>{children}</div>
   )
 };
 
+Theme.extracter = setTheme;
 export default Theme;
+
+

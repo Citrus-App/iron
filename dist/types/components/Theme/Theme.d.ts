@@ -3,5 +3,8 @@ declare type Props = {
     children?: React.ReactNode;
     themeMode?: string;
 };
-declare const Theme: ({ children, themeMode }: Props) => JSX.Element;
+declare const Theme: {
+    ({ children, themeMode }: Props): JSX.Element;
+    extracter: (mode: string) => void[];
+};
 export default Theme;

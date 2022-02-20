@@ -783,16 +783,20 @@ var tokens = {
   "light-border-accent": "#18697e"
 };
 
-var Theme = function (_a) {
-    var children = _a.children, _b = _a.themeMode, themeMode = _b === void 0 ? 'light' : _b;
+var setTheme = function (mode) {
     var themeStyles = {};
-    Object.keys(tokens).map(function (key, index) {
-        if (key.startsWith(themeMode)) {
-            themeStyles["--".concat(key.split("".concat(themeMode, "-"))[1])] = tokens[key];
+    return Object.keys(tokens).map(function (key, index) {
+        if (key.startsWith(mode)) {
+            themeStyles["--".concat(key.split("".concat(mode, "-"))[1])] = tokens[key];
         }
     });
+};
+var Theme = function (_a) {
+    var children = _a.children, _b = _a.themeMode, themeMode = _b === void 0 ? 'light' : _b;
+    var themeStyles = setTheme(themeMode);
     return (React.createElement("div", { className: "ThemeProvider", style: __assign({}, themeStyles) }, children));
 };
+Theme.extracter = setTheme;
 
 var css_248z$8 = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
 var styles$8 = {"root":"Menu-module_root__Hh-vp"};

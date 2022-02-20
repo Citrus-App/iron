@@ -16,7 +16,10 @@ declare type Props$9 = {
     children?: React.ReactNode;
     themeMode?: string;
 };
-declare const Theme: ({ children, themeMode }: Props$9) => JSX.Element;
+declare const Theme: {
+    ({ children, themeMode }: Props$9): JSX.Element;
+    extracter: (mode: string) => void[];
+};
 
 declare type Props$8 = {};
 declare const Menu: ({}: Props$8) => JSX.Element;
