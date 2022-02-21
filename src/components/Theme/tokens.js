@@ -293,6 +293,7 @@ module.exports = {
   "dark-icon-warning": "#e55c00",
   "dark-icon-background": "#ffffff",
   "dark-icon-contrast": "#1d1d1f",
+  "dark-icon-white": "#ffffff",
   "dark-surface-wash": "#000000",
   "dark-surface-default": "#1d1d1f",
   "dark-surface-default-hover": "#363638",
