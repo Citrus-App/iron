@@ -1,4 +1,10 @@
-
 .root {
-  position: relative;
+  grid-area: sidebar;
+  position: sticky;
+  top: 4rem;
+  max-height: calc(100vh - 8rem);
+
+  /* we double up the space here of the grid-gap to provide room to the gallery */
+  padding-right: 10rem;
+  z-index: 15;
 }

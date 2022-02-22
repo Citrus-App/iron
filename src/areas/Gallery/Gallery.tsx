@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from "./SideBar.module.css";
+import styles from "./Gallery.module.css";
 
 type Props = {
   children?: React.ReactNode
 }
 
-const SideBar = ({ 
+const Gallery = ({ 
   children
 }: Props) => {
   return (
@@ -13,4 +13,4 @@ const SideBar = ({
   )
 };
 
-export default SideBar;
+export default Gallery;

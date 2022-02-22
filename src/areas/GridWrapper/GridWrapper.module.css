@@ -1,0 +1,8 @@
+.root {
+  display: grid;
+  grid-template-columns: var(--main-grid);
+  grid-gap: 2rem;
+  grid-template-areas:
+    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'
+    'sidebar sidebar sidebar sidebar gallery gallery gallery gallery gallery gallery gallery gallery';
+}

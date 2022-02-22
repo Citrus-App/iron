@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from "./SideBar.module.css";
+import styles from "./TopBar.module.css";
 
 type Props = {
   children?: React.ReactNode
 }
 
-const SideBar = ({ 
+const TopBar = ({ 
   children
 }: Props) => {
   return (
@@ -13,4 +13,4 @@ const SideBar = ({
   )
 };
 
-export default SideBar;
+export default TopBar;

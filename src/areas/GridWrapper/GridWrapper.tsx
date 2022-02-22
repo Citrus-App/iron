@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from "./SideBar.module.css";
+import styles from "./GridWrapper.module.css";
 
 type Props = {
   children?: React.ReactNode
 }
 
-const SideBar = ({ 
+const GridWrapper = ({ 
   children
 }: Props) => {
   return (
@@ -13,4 +13,4 @@ const SideBar = ({
   )
 };
 
-export default SideBar;
+export default GridWrapper;

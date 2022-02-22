@@ -1,0 +1,7 @@
+.root {
+  grid-area: topbar;
+  display: flex;
+  border-bottom: 1px solid var(--color-dark);
+  padding-bottom: 2rem;
+  width: 100%;
+}

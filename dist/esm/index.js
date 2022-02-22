@@ -87,15 +87,15 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$9 = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  padding: 1rem 1.9rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  text-transform: uppercase;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: var(--global-font-size-0);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    background-color: var(--button-pressed);\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background-color: transparent;\n  border: 1px solid var(--button-outline-default);\n  color: var(--text-button-outline);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: transparent;\n    border: 1px solid var(--button-outline-hover);\n    color: var(--button-outline-hover);\n  }\n";
-var styles$9 = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U"};
-styleInject(css_248z$9);
+var css_248z$b = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  padding: 1rem 1.9rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  text-transform: uppercase;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: var(--global-font-size-0);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    background-color: var(--button-pressed);\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background-color: transparent;\n  border: 1px solid var(--button-outline-default);\n  color: var(--text-button-outline);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: transparent;\n    border: 1px solid var(--button-outline-hover);\n    color: var(--button-outline-hover);\n  }\n";
+var styles$b = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U"};
+styleInject(css_248z$b);
 
 var Button = function (_a) {
     var children = _a.children, action = _a.action, href = _a.href, variant = _a.variant;
-    var classList = classnames(styles$9.baseButton, styles$9["variant-".concat(variant)]);
+    var classList = classnames(styles$b.baseButton, styles$b["variant-".concat(variant)]);
     return (React.createElement("a", { className: classList, href: href, onClick: action },
-        React.createElement("div", { className: styles$9.inner }, children)));
+        React.createElement("div", { className: styles$b.inner }, children)));
 };
 Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
 
@@ -800,52 +800,74 @@ var Theme = function (_a) {
 };
 Theme.extracter = setTheme;
 
-var css_248z$8 = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
-var styles$8 = {"root":"Menu-module_root__Hh-vp"};
-styleInject(css_248z$8);
+var css_248z$a = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
+var styles$a = {"root":"Menu-module_root__Hh-vp"};
+styleInject(css_248z$a);
 
 var Menu = function (_a) {
-    return (React.createElement("div", { className: styles$8.root }, "hello world! I am Menu"));
+    return (React.createElement("div", { className: styles$a.root }, "hello world! I am Menu"));
 };
 
-var css_248z$7 = "\n.Overlay-module_root__snYjz {\n  position: relative;\n}\n";
-var styles$7 = {"root":"Overlay-module_root__snYjz"};
-styleInject(css_248z$7);
+var css_248z$9 = "\n.Overlay-module_root__snYjz {\n  position: relative;\n}\n";
+var styles$9 = {"root":"Overlay-module_root__snYjz"};
+styleInject(css_248z$9);
 
 var Overlay = function (_a) {
-    return (React.createElement("div", { className: styles$7.root }, "hello world! I am Overlay"));
+    return (React.createElement("div", { className: styles$9.root }, "hello world! I am Overlay"));
 };
 
-var css_248z$6 = "\n.Card-module_root__c9KvZ {\n  position: relative;\n}\n";
-var styles$6 = {"root":"Card-module_root__c9KvZ"};
-styleInject(css_248z$6);
+var css_248z$8 = "\n.Card-module_root__c9KvZ {\n  position: relative;\n}\n";
+var styles$8 = {"root":"Card-module_root__c9KvZ"};
+styleInject(css_248z$8);
 
 var Card = function (_a) {
-    return (React.createElement("div", { className: styles$6.root }, "hello world! I am Card"));
+    return (React.createElement("div", { className: styles$8.root }, "hello world! I am Card"));
 };
 
-var css_248z$5 = "\n.Grid-module_root__yvBn6 {\n  position: relative;\n}\n";
-var styles$5 = {"root":"Grid-module_root__yvBn6"};
+var css_248z$7 = ".Gallery-module_root__nWKQx {\n  grid-area: gallery;\n}\n";
+var styles$7 = {"root":"Gallery-module_root__nWKQx"};
+styleInject(css_248z$7);
+
+var Gallery = function (_a) {
+    var children = _a.children;
+    return (React.createElement("div", { className: styles$7.root }, children));
+};
+
+var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  grid-gap: 2rem;\n  grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'sidebar sidebar sidebar sidebar gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n";
+var styles$6 = {"root":"GridWrapper-module_root__qiLsL"};
+styleInject(css_248z$6);
+
+var GridWrapper = function (_a) {
+    var children = _a.children;
+    return (React.createElement("div", { className: styles$6.root }, children));
+};
+
+var css_248z$5 = ".SideBar-module_root__vMgD5 {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n\n  /* we double up the space here of the grid-gap to provide room to the gallery */\n  padding-right: 10rem;\n  z-index: 15;\n}";
+var styles$5 = {"root":"SideBar-module_root__vMgD5"};
 styleInject(css_248z$5);
 
-var Grid = function (_a) {
-    return (React.createElement("div", { className: styles$5.root }, "hello world! I am Grid"));
+var SideBar = function (_a) {
+    var children = _a.children;
+    return (React.createElement("div", { className: styles$5.root }, children));
 };
 
-var css_248z$4 = "\n.SideBar-module_root__ydBTZ {\n  position: relative;\n}\n";
-var styles$4 = {"root":"SideBar-module_root__ydBTZ"};
+var css_248z$4 = ".SidePanel-module_root__0iNYB {\n  top: 0;\n  color: var(--color-dark);\n  position: relative;\n  z-index: 9;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  left: calc(-1 * min(30vw, 700px) - 20vw);\n  transition: left 0.5s ease;\n  width: min(55vw, 650px);\n  background: var(--color-highlight);\n  box-shadow: 2px 2px 24px;\n}\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_abs__K7rS9 .SidePanel-module_innerPanel__vQAVh {\n      height: auto;\n      margin: auto 0;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_alignment-right__-XaUF {\n    position: absolute;\n    top: 5rem;\n    left: initial;\n    transition: right 0.5s ease;\n    right: calc(-1 * min(30vw, 700px) - 20vw);\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY {\n    left: 0;\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF {\n      right: 5rem;\n      left: initial;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF::after {\n        right: calc(-156.3vh + (min(700px, 30vw) / 2));\n        left: initial;\n      }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n    padding-left: 3rem;\n    padding-right: 20rem;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n  }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh * > div {\n      margin: auto;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh > section:last-child {\n      margin-top: 2rem;\n      display: block;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh a {\n      display: block;\n      margin-top: 0.75rem;\n      font-size: 2rem;\n    }\n";
+var styles$4 = {"root":"SidePanel-module_root__0iNYB","abs":"SidePanel-module_abs__K7rS9","innerPanel":"SidePanel-module_innerPanel__vQAVh","alignment-right":"SidePanel-module_alignment-right__-XaUF","activePanel":"SidePanel-module_activePanel__2ATtY"};
 styleInject(css_248z$4);
 
-var SideBar = function (_a) {
-    return (React.createElement("div", { className: styles$4.root }, "hello world! I am SideBar"));
+var SidePanel = function (_a) {
+    var children = _a.children, alignment = _a.alignment, state = _a.state, _b = _a.alignType, alignType = _b === void 0 ? '' : _b;
+    return (React.createElement("div", { className: classnames(styles$4[alignType], styles$4.root, styles$4["alignment-".concat(alignment)], state ? styles$4.activePanel : '') },
+        React.createElement("div", { className: styles$4.innerPanel }, children)));
 };
 
-var css_248z$3 = "\n.Content-module_root__58Ltu {\n  position: relative;\n}\n";
-var styles$3 = {"root":"Content-module_root__58Ltu"};
+var css_248z$3 = ".TopBar-module_root__7ZW6c {\n  grid-area: topbar;\n  display: flex;\n  border-bottom: 1px solid var(--color-dark);\n  padding-bottom: 2rem;\n  width: 100%;\n}\n";
+var styles$3 = {"root":"TopBar-module_root__7ZW6c"};
 styleInject(css_248z$3);
 
-var Content = function (_a) {
-    return (React.createElement("div", { className: styles$3.root }, "hello world! I am Content"));
+var TopBar = function (_a) {
+    var children = _a.children;
+    return (React.createElement("div", { className: styles$3.root }, children));
 };
 
 var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: \"IvyPresto Display\", serif;\n  font-weight: 100;\n  line-height: 6.8rem;\n  font-size: 6rem;\n  letter-spacing: 0;\n}\n\nh2 {\n  font-family: \"IvyPresto Display\", serif;\n  font-weight: 100;\n  line-height: 4.8rem;\n  font-size: 4rem;\n  letter-spacing: 0;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 500;\n  line-height: 3.2rem;\n  font-size: 2.4rem;\n  letter-spacing: 0;\n}\n";
@@ -879,5 +901,5 @@ var Icon = function (_a) {
     return (React.createElement("div", { className: styles.root }, "hello world! I am Icon"));
 };
 
-export { Button, Card, Content, Grid, Header, Icon, Menu, Overlay, SideBar, Text, Theme };
+export { Button, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
 //# sourceMappingURL=index.js.map
