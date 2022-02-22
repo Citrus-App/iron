@@ -37,8 +37,9 @@ declare const Gallery: ({ children }: Props$7) => JSX.Element;
 
 declare type Props$6 = {
     children?: React.ReactNode;
+    full?: boolean;
 };
-declare const GridWrapper: ({ children }: Props$6) => JSX.Element;
+declare const GridWrapper: ({ children, full }: Props$6) => JSX.Element;
 
 declare type Props$5 = {
     children?: React.ReactNode;

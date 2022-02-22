@@ -833,13 +833,13 @@ var Gallery = function (_a) {
     return (React.createElement("div", { className: styles$7.root }, children));
 };
 
-var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  grid-gap: 2rem;\n  grid-template-areas:\n  'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n  'gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n";
-var styles$6 = {"root":"GridWrapper-module_root__qiLsL"};
+var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  grid-gap: 2rem;\n  grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'sidebar sidebar sidebar sidebar gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n\n  .GridWrapper-module_root__qiLsL.GridWrapper-module_full__bjDtO {\n    grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery';\n  }\n";
+var styles$6 = {"root":"GridWrapper-module_root__qiLsL","full":"GridWrapper-module_full__bjDtO"};
 styleInject(css_248z$6);
 
 var GridWrapper = function (_a) {
-    var children = _a.children;
-    return (React.createElement("div", { className: styles$6.root }, children));
+    var children = _a.children, full = _a.full;
+    return (React.createElement("div", { className: classnames(styles$6.root, full ? styles$6.full : '') }, children));
 };
 
 var css_248z$5 = ".SideBar-module_root__vMgD5 {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n\n  /* we double up the space here of the grid-gap to provide room to the gallery */\n  padding-right: 10rem;\n  z-index: 15;\n}";
