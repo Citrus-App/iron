@@ -833,7 +833,7 @@ var Gallery = function (_a) {
     return (React.createElement("div", { className: styles$7.root }, children));
 };
 
-var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  grid-gap: 2rem;\n  grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'sidebar sidebar sidebar sidebar gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n";
+var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  grid-gap: 2rem;\n  grid-template-areas:\n  'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n  'gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n";
 var styles$6 = {"root":"GridWrapper-module_root__qiLsL"};
 styleInject(css_248z$6);
 
