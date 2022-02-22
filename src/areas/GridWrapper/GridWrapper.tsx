@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
+import classnames from 'classnames';
 import styles from "./GridWrapper.module.css";
 
 type Props = {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  full?: boolean
 }
 
 const GridWrapper = ({ 
-  children
+  children,
+  full
 }: Props) => {
   return (
-    <div className={styles.root}>{children}</div>
+    <div className={classnames(styles.root, full ? styles.full : '')}>{children}</div>
   )
 };
 
