@@ -861,7 +861,7 @@ var SidePanel = function (_a) {
         React.createElement("div", { className: styles$4.innerPanel }, children)));
 };
 
-var css_248z$3 = ".TopBar-module_root__7ZW6c {\n  grid-area: topbar;\n  display: flex;\n  border-bottom: 1px solid var(--color-dark);\n  padding-bottom: 2rem;\n  width: 100%;\n}\n";
+var css_248z$3 = ".TopBar-module_root__7ZW6c {\n  grid-area: topbar;\n  display: flex;\n  border-bottom: 1px solid var(--border-default);\n  margin-bottom: 6rem;\n  width: 100%;\n}\n";
 var styles$3 = {"root":"TopBar-module_root__7ZW6c"};
 styleInject(css_248z$3);
 
