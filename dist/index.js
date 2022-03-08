@@ -253,9 +253,9 @@
 	    "blur": 30,
 	    "spread": 0
 	  },
-	  "font-families-serif": 'ivypresto - display',,
+	  "font-families-serif": 'ivypresto-display',
 	  "font-families-sans": "SF Compact",
-	  "font-families-'ivypresto-display'": 'ivypresto - display',
+	  "font-families-'ivypresto-display'": 'ivypresto-display',
 	  "font-families-sf-compact": "SF Compact",
 	  "line-heights-0": 68,
 	  "line-heights-1": 48,
@@ -279,7 +279,7 @@
 	  "text-case-none": "none",
 	  "text-decoration-none": "none",
 	  "header1": {
-	    "fontFamily": 'ivypresto - display',
+	    "fontFamily": 'ivypresto-display',
 	    "fontWeight": "Regular",
 	    "lineHeight": 68,
 	    "fontSize": 60,
@@ -289,7 +289,7 @@
 	    "textDecoration": "none"
 	  },
 	  "header2": {
-	    "fontFamily": 'ivypresto - display',
+	    "fontFamily": 'ivypresto-display',
 	    "fontWeight": "Regular",
 	    "lineHeight": 48,
 	    "fontSize": 40,
@@ -299,7 +299,7 @@
 	    "textDecoration": "none"
 	  },
 	  "h1": {
-	    "fontFamily": 'ivypresto - display',
+	    "fontFamily": 'ivypresto-display',
 	    "fontWeight": "Light",
 	    "lineHeight": 68,
 	    "fontSize": 60,
@@ -309,7 +309,7 @@
 	    "textDecoration": "none"
 	  },
 	  "h2": {
-	    "fontFamily": 'ivypresto - display',
+	    "fontFamily": 'ivypresto-display',
 	    "fontWeight": "Light",
 	    "lineHeight": 48,
 	    "fontSize": 40,
@@ -493,9 +493,9 @@
 	  "spectrum-yellow-1000": "#752100",
 	  "spectrum-yellow-000": "#fff8e4",
 	  "global-text-headline": "#1d1d1f",
-	  "global-font-families-serif": 'ivypresto - display',
+	  "global-font-families-serif": 'ivypresto-display',
 	  "global-font-families-sans": "SF Compact",
-	  "global-font-families-'ivypresto-display'": 'ivypresto - display',
+	  "global-font-families-'ivypresto-display'": 'ivypresto-display',
 	  "global-font-families-sf-compact": "SF Compact",
 	  "global-line-heights-0": "68",
 	  "global-line-heights-1": "48",
