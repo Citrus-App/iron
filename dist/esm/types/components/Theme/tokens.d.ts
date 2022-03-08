@@ -117,7 +117,7 @@ declare const _default: {
     };
     "font-families-serif": string;
     "font-families-sans": string;
-    "font-families-ivypresto-display": string;
+    "font-families-'ivypresto-display'": string;
     "font-families-sf-compact": string;
     "line-heights-0": number;
     "line-heights-1": number;
@@ -357,7 +357,7 @@ declare const _default: {
     "global-text-headline": string;
     "global-font-families-serif": string;
     "global-font-families-sans": string;
-    "global-font-families-ivypresto-display": string;
+    "global-font-families-'ivypresto-display'": string;
     "global-font-families-sf-compact": string;
     "global-line-heights-0": string;
     "global-line-heights-1": string;

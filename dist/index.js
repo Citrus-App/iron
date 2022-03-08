@@ -253,9 +253,9 @@
 	    "blur": 30,
 	    "spread": 0
 	  },
-	  "font-families-serif": ivypresto - display,
+	  "font-families-serif": 'ivypresto - display',,
 	  "font-families-sans": "SF Compact",
-	  "font-families-ivypresto-display": ivypresto - display,
+	  "font-families-'ivypresto-display'": 'ivypresto - display',
 	  "font-families-sf-compact": "SF Compact",
 	  "line-heights-0": 68,
 	  "line-heights-1": 48,
@@ -279,7 +279,7 @@
 	  "text-case-none": "none",
 	  "text-decoration-none": "none",
 	  "header1": {
-	    "fontFamily": ivypresto - display,
+	    "fontFamily": 'ivypresto - display',
 	    "fontWeight": "Regular",
 	    "lineHeight": 68,
 	    "fontSize": 60,
@@ -289,7 +289,7 @@
 	    "textDecoration": "none"
 	  },
 	  "header2": {
-	    "fontFamily": ivypresto - display,
+	    "fontFamily": 'ivypresto - display',
 	    "fontWeight": "Regular",
 	    "lineHeight": 48,
 	    "fontSize": 40,
@@ -299,7 +299,7 @@
 	    "textDecoration": "none"
 	  },
 	  "h1": {
-	    "fontFamily": ivypresto - display,
+	    "fontFamily": 'ivypresto - display',
 	    "fontWeight": "Light",
 	    "lineHeight": 68,
 	    "fontSize": 60,
@@ -309,7 +309,7 @@
 	    "textDecoration": "none"
 	  },
 	  "h2": {
-	    "fontFamily": ivypresto - display,
+	    "fontFamily": 'ivypresto - display',
 	    "fontWeight": "Light",
 	    "lineHeight": 48,
 	    "fontSize": 40,
@@ -493,9 +493,9 @@
 	  "spectrum-yellow-1000": "#752100",
 	  "spectrum-yellow-000": "#fff8e4",
 	  "global-text-headline": "#1d1d1f",
-	  "global-font-families-serif": ivypresto - display,
+	  "global-font-families-serif": 'ivypresto - display',
 	  "global-font-families-sans": "SF Compact",
-	  "global-font-families-ivypresto-display": ivypresto - display,
+	  "global-font-families-'ivypresto-display'": 'ivypresto - display',
 	  "global-font-families-sf-compact": "SF Compact",
 	  "global-line-heights-0": "68",
 	  "global-line-heights-1": "48",
@@ -519,8 +519,8 @@
 	  "global-text-case-none": "none",
 	  "global-text-decoration-none": "none",
 	  "global-header1": {
-	    "fontFamily": "$fontFamilies.ivypresto-display",
-	    "fontWeight": "$fontWeights.ivypresto-display-0",
+	    "fontFamily": "$fontFamilies.'ivypresto-display'",
+	    "fontWeight": "$fontWeights.'ivypresto-display'-0",
 	    "lineHeight": "$lineHeights.0",
 	    "fontSize": "$fontSize.6",
 	    "letterSpacing": "$letterSpacing.0",
@@ -529,8 +529,8 @@
 	    "textDecoration": "$textDecoration.none"
 	  },
 	  "global-header2": {
-	    "fontFamily": "$fontFamilies.ivypresto-display",
-	    "fontWeight": "$fontWeights.ivypresto-display-0",
+	    "fontFamily": "$fontFamilies.'ivypresto-display'",
+	    "fontWeight": "$fontWeights.'ivypresto-display'-0",
 	    "lineHeight": "$lineHeights.1",
 	    "fontSize": "$fontSize.5",
 	    "letterSpacing": "$letterSpacing.0",
@@ -539,8 +539,8 @@
 	    "textDecoration": "$textDecoration.none"
 	  },
 	  "global-h1": {
-	    "fontFamily": "$fontFamilies.ivypresto-display",
-	    "fontWeight": "$fontWeights.ivypresto-display-1",
+	    "fontFamily": "$fontFamilies.'ivypresto-display'",
+	    "fontWeight": "$fontWeights.'ivypresto-display'-1",
 	    "lineHeight": "$lineHeights.0",
 	    "fontSize": "$fontSize.6",
 	    "letterSpacing": "$letterSpacing.0",
@@ -549,8 +549,8 @@
 	    "textDecoration": "$textDecoration.none"
 	  },
 	  "global-h2": {
-	    "fontFamily": "$fontFamilies.ivypresto-display",
-	    "fontWeight": "$fontWeights.ivypresto-display-1",
+	    "fontFamily": "$fontFamilies.'ivypresto-display'",
+	    "fontWeight": "$fontWeights.'ivypresto-display'-1",
 	    "lineHeight": "$lineHeights.1",
 	    "fontSize": "$fontSize.5",
 	    "letterSpacing": "$letterSpacing.0",
@@ -878,7 +878,7 @@
 	    return (React__default["default"].createElement("div", { className: styles$3.root }, children));
 	};
 
-	var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: ivypresto-display, serif;\n  font-weight: 100;\n  line-height: 6.8rem;\n  font-size: 6rem;\n  letter-spacing: 0;\n}\n\nh2 {\n  font-family: ivypresto-display, serif;\n  font-weight: 100;\n  line-height: 4.8rem;\n  font-size: 4rem;\n  letter-spacing: 0;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 500;\n  line-height: 3.2rem;\n  font-size: 2.4rem;\n  letter-spacing: 0;\n}\n";
+	var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: 'ivypresto-display', serif;\n  font-weight: 100;\n  line-height: 6.8rem;\n  font-size: 6rem;\n  letter-spacing: 0;\n}\n\nh2 {\n  font-family: 'ivypresto-display', serif;\n  font-weight: 100;\n  line-height: 4.8rem;\n  font-size: 4rem;\n  letter-spacing: 0;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 500;\n  line-height: 3.2rem;\n  font-size: 2.4rem;\n  letter-spacing: 0;\n}\n";
 	var styles$2 = {"root":"Header-module_root__zkAdZ"};
 	styleInject(css_248z$2);
 

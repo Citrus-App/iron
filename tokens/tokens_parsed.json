@@ -299,15 +299,15 @@
   },
   "fontFamilies": {
     "serif": {
-      "value": ivypresto-display,
+      "value": 'ivypresto-display',
       "type": "fontFamilies"
     },
     "sans": {
       "value": "SF Compact",
       "type": "fontFamilies"
     },
-    "ivypresto-display": {
-      "value": ivypresto-display,
+    "'ivypresto-display'": {
+      "value": 'ivypresto-display',
       "type": "fontFamilies"
     },
     "sf-compact": {
@@ -342,11 +342,11 @@
       "value": "Regular",
       "type": "fontWeights"
     },
-    "ivypresto-display-0": {
+    "'ivypresto-display'-0": {
       "value": "Regular",
       "type": "fontWeights"
     },
-    "ivypresto-display-1": {
+    "'ivypresto-display'-1": {
       "value": "Light",
       "type": "fontWeights"
     },
@@ -415,7 +415,7 @@
   },
   "header1": {
     "value": {
-      "fontFamily": ivypresto-display,
+      "fontFamily": 'ivypresto-display',
       "fontWeight": "Regular",
       "lineHeight": 68,
       "fontSize": 60,
@@ -428,7 +428,7 @@
   },
   "header2": {
     "value": {
-      "fontFamily": ivypresto-display,
+      "fontFamily": 'ivypresto-display',
       "fontWeight": "Regular",
       "lineHeight": 48,
       "fontSize": 40,
@@ -441,7 +441,7 @@
   },
   "H1": {
     "value": {
-      "fontFamily": ivypresto-display,
+      "fontFamily": 'ivypresto-display',
       "fontWeight": "Light",
       "lineHeight": 68,
       "fontSize": 60,
@@ -454,7 +454,7 @@
   },
   "H2": {
     "value": {
-      "fontFamily": ivypresto-display,
+      "fontFamily": 'ivypresto-display',
       "fontWeight": "Light",
       "lineHeight": 48,
       "fontSize": 40,
