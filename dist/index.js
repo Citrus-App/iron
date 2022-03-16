@@ -832,7 +832,7 @@
 	    return (React__default["default"].createElement("div", { className: styles$8.root }, "hello world! I am Card"));
 	};
 
-	var css_248z$7 = ".Gallery-module_root__nWKQx {\n  grid-area: gallery;\n}\n";
+	var css_248z$7 = ".Gallery-module_root__nWKQx {\n  grid-area: gallery;\n}\n\n  @media only screen and (max-width: 900px) {.Gallery-module_root__nWKQx {\n    rid-area: initial;\n    grid-column: auto / span 12;\n    margin-top: 4rem\n}\n  }\n";
 	var styles$7 = {"root":"Gallery-module_root__nWKQx"};
 	styleInject(css_248z$7);
 
@@ -850,7 +850,7 @@
 	    return (React__default["default"].createElement("div", { className: classnames(styles$6.root, full ? styles$6.full : '') }, children));
 	};
 
-	var css_248z$5 = ".SideBar-module_root__vMgD5 {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n\n  /* we double up the space here of the grid-gap to provide room to the gallery */\n  padding-right: 10rem;\n  z-index: 15;\n}";
+	var css_248z$5 = ".SideBar-module_root__vMgD5 {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n\n  /* we double up the space here of the grid-gap to provide room to the gallery */\n  padding-right: 10rem;\n  z-index: 15;\n}\n\n  @media only screen and (max-width: 900px) {.SideBar-module_root__vMgD5 {\n    position: relative;\n    grid-area: initial;\n    padding-right: 0;\n    grid-column: auto / span 12\n}\n  }";
 	var styles$5 = {"root":"SideBar-module_root__vMgD5"};
 	styleInject(css_248z$5);
 

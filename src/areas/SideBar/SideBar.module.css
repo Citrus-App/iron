@@ -7,4 +7,11 @@
   /* we double up the space here of the grid-gap to provide room to the gallery */
   padding-right: 10rem;
   z-index: 15;
+
+  @media only screen and (max-width: 900px) {
+    position: relative;
+    grid-area: initial;
+    padding-right: 0;
+    grid-column: auto / span 12;
+  }
 }
