@@ -25,5 +25,9 @@ Run `yarn run rollup`
 - Now run `yarn link "@citrus-app/iron"`
 - You should now see HMR working and components updating in the app as you develop
 
+### Releasing
+- `npm login --scope=@citrus-app --registry=https://npm.pkg.github.com`
+- Then login with your github username, and for the password use the personal access token stored in 1pass
+
 ### Roadmap
 [... wip ]
