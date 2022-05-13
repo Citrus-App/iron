@@ -27,7 +27,9 @@ Run `yarn run rollup`
 
 ### Releasing
 - `npm login --scope=@citrus-app --registry=https://npm.pkg.github.com`
-- Then login with your github username, and for the password use the personal access token stored in 1pass
+- Then login with your Github username, and for the password use the personal access token that you need to create in Github
+- tag the version following semver (`$ g tag x.x.x`)
+- push the tags & branch
 
 ### Roadmap
 [... wip ]
