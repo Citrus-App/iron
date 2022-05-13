@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 28 Jan 2022 18:40:13 GMT
+ * Generated on Fri, 13 May 2022 03:30:08 GMT
  */
 
 module.exports = {
@@ -60,9 +60,9 @@ module.exports = {
   "large-85": {"color":"#000000d9","type":"dropShadow","x":0,"y":0,"blur":100,"spread":0},
   "extra-large-15": {"color":"#00000026","type":"dropShadow","x":0,"y":0,"blur":30,"spread":0},
   "extra-large-100": {"color":"#000000","type":"dropShadow","x":0,"y":0,"blur":30,"spread":0},
-  "font-families-serif": 'ivypresto-display',
+  "font-families-serif": "ivypresto-display",
   "font-families-sans": "SF Compact",
-  "font-families-'ivypresto-display'": 'ivypresto-display',
+  "font-families-ivypresto-display": "ivypresto-display",
   "font-families-sf-compact": "SF Compact",
   "line-heights-0": 68,
   "line-heights-1": 48,
@@ -85,10 +85,10 @@ module.exports = {
   "paragraph-spacing-0": 0,
   "text-case-none": "none",
   "text-decoration-none": "none",
-  "header1": {"fontFamily":'ivypresto-display',"fontWeight":"Regular","lineHeight":68,"fontSize":60,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
-  "header2": {"fontFamily":'ivypresto-display',"fontWeight":"Regular","lineHeight":48,"fontSize":40,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
-  "h1": {"fontFamily":'ivypresto-display',"fontWeight":"Light","lineHeight":68,"fontSize":60,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
-  "h2": {"fontFamily":'ivypresto-display',"fontWeight":"Light","lineHeight":48,"fontSize":40,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
+  "header1": {"fontFamily":"$fontFamilies.'ivypresto-display'","fontWeight":"Regular","lineHeight":68,"fontSize":60,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
+  "header2": {"fontFamily":"$fontFamilies.'ivypresto-display'","fontWeight":"Regular","lineHeight":48,"fontSize":40,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
+  "h1": {"fontFamily":"$fontFamilies.'ivypresto-display'","fontWeight":"Light","lineHeight":68,"fontSize":60,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
+  "h2": {"fontFamily":"$fontFamilies.'ivypresto-display'","fontWeight":"Light","lineHeight":48,"fontSize":40,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
   "section-header": {"fontFamily":"SF Compact","fontWeight":"Bold","lineHeight":32,"fontSize":26,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
   "subtitle": {"fontFamily":"SF Compact","fontWeight":"Regular","lineHeight":32,"fontSize":24,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
   "main-body": {"fontFamily":"SF Compact","fontWeight":"Regular","lineHeight":28,"fontSize":20,"letterSpacing":0,"paragraphSpacing":0,"textCase":"none","textDecoration":"none"},
@@ -219,9 +219,9 @@ module.exports = {
   "spectrum-yellow-1000": "#752100",
   "spectrum-yellow-000": "#fff8e4",
   "global-text-headline": "#1d1d1f",
-  "global-font-families-serif": 'ivypresto-display',
+  "global-font-families-serif": "ivypresto-display",
   "global-font-families-sans": "SF Compact",
-  "global-font-families-'ivypresto-display'": 'ivypresto-display',
+  "global-font-families-ivypresto-display": "ivypresto-display",
   "global-font-families-sf-compact": "SF Compact",
   "global-line-heights-0": "68",
   "global-line-heights-1": "48",
@@ -293,7 +293,6 @@ module.exports = {
   "dark-icon-warning": "#e55c00",
   "dark-icon-background": "#ffffff",
   "dark-icon-contrast": "#1d1d1f",
-  "dark-icon-white": "#ffffff",
   "dark-surface-wash": "#000000",
   "dark-surface-default": "#1d1d1f",
   "dark-surface-default-hover": "#363638",

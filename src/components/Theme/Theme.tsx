@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Theme.module.css";
-import { default as Tokens } from "./tokens.js";
-
-
+import { default as Tokens } from "./tokens";
 
 type Props = {
   children?: React.ReactNode;
@@ -21,7 +19,7 @@ const setTheme = (mode: string) => {
   return themeStyles;
 }
 
-const Theme = ({ 
+const Theme = ({
   children,
   themeMode = 'light'
 }: Props) => {

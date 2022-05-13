@@ -1,7 +1,7 @@
 .baseButton {
   background-color: var(--button-default);
   border-radius: 0;
-  padding: 1rem 1.9rem;
+  line-height: 3rem;
   color: var(--text-button);
   display: inline-flex;
   text-decoration: none;
@@ -21,6 +21,10 @@
   &:focus {
     background-color: var(--button-pressed);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .inner {
@@ -30,12 +34,18 @@
 
 .variant-outline {
   background-color: transparent;
-  border: 1px solid var(--button-outline-default);
-  color: var(--text-button-outline);
+  border: 1px solid var(--spectrum-gray-000);
+  color: var(--spectrum-gray-000);
 
   &:hover {
     background-color: transparent;
     border: 1px solid var(--button-outline-hover);
     color: var(--button-outline-hover);
+  }
+
+  &:disabled {
+    border-color: var(--button-outline-disabled);
+    background-color: var(--button-outline-disabled);
+    cursor: not-allowed;
   }
 }

@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Fri, 28 Jan 2022 18:40:13 GMT
+// Generated on Fri, 13 May 2022 03:30:08 GMT
 
 
 import UIKit
@@ -92,9 +92,9 @@ public class StyleDictionary {
     public static let docsShadow = [object Object]
     public static let extraLarge100 = [object Object]
     public static let extraLarge15 = [object Object]
-    public static let fontFamiliesIvyprestoDisplay = IvyPresto Display
+    public static let fontFamiliesIvyprestoDisplay = ivypresto-display
     public static let fontFamiliesSans = SF Compact
-    public static let fontFamiliesSerif = IvyPresto Display
+    public static let fontFamiliesSerif = ivypresto-display
     public static let fontFamiliesSfCompact = SF Compact
     public static let fontSize0 = 16
     public static let fontSize1 = 18
@@ -111,9 +111,9 @@ public class StyleDictionary {
     public static let fontWeightsSfCompact3 = Regular
     public static let globalBodyInstructions = [object Object]
     public static let globalButton = [object Object]
-    public static let globalFontFamiliesIvyprestoDisplay = IvyPresto Display
+    public static let globalFontFamiliesIvyprestoDisplay = ivypresto-display
     public static let globalFontFamiliesSans = SF Compact
-    public static let globalFontFamiliesSerif = IvyPresto Display
+    public static let globalFontFamiliesSerif = ivypresto-display
     public static let globalFontFamiliesSfCompact = SF Compact
     public static let globalFontSize0 = 16
     public static let globalFontSize1 = 18

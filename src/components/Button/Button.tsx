@@ -5,24 +5,24 @@ import styles from "./Button.module.css";
 type Props = {
   children?: React.ReactNode,
   action?: any,
-  href?: string,
+  disabled?: boolean,
   variant?: string
 }
 
-const Button = ({ 
+const Button = ({
   children,
   action,
-  href,
-  variant 
+  variant,
+  disabled
 }: Props) => {
   const classList = classnames(
     styles.baseButton,
     styles[`variant-${variant}`]
   )
   return (
-    <a className={classList} href={href} onClick={action}>
+    <button className={classList} onClick={action} disabled={disabled}>
       <div className={styles.inner}>{children}</div>
-    </a>
+    </button>
   )
 };
 

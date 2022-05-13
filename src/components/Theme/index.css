@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 28 Jan 2022 18:40:13 GMT
+ * Generated on Fri, 13 May 2022 03:30:08 GMT
  */
 
 :root {
@@ -57,9 +57,9 @@
   --global-line-heights-1: 48;
   --global-line-heights-0: 68;
   --global-font-families-sf-compact: SF Compact;
-  --global-font-families-ivypresto-display: IvyPresto Display;
+  --global-font-families-ivypresto-display: ivypresto-display;
   --global-font-families-sans: SF Compact;
-  --global-font-families-serif: IvyPresto Display;
+  --global-font-families-serif: ivypresto-display;
   --global-text-headline: #1d1d1f;
   --spectrum-yellow-000: #fff8e4;
   --spectrum-yellow-1000: #752100;
@@ -216,9 +216,9 @@
   --line-heights-1: 48;
   --line-heights-0: 68;
   --font-families-sf-compact: SF Compact;
-  --font-families-ivypresto-display: IvyPresto Display;
+  --font-families-ivypresto-display: ivypresto-display;
   --font-families-sans: SF Compact;
-  --font-families-serif: IvyPresto Display;
+  --font-families-serif: ivypresto-display;
   --extra-large-100: [object Object];
   --extra-large-15: [object Object];
   --large-85: [object Object];
