@@ -41,3 +41,5 @@ yarn-error.log*
 
 node_modules
 .vscode
+
+.idea

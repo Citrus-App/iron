@@ -1,0 +1,5 @@
+.baseButtonGroup {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow:column;
+}

@@ -1,14 +1,22 @@
 /// <reference types="react" />
 import React from 'react';
 
-declare type Props$c = {
+declare type Props$d = {
     children?: React.ReactNode;
     action?: any;
-    href?: string;
+    disabled?: boolean;
     variant?: string;
 };
 declare const Button: {
-    ({ children, action, href, variant }: Props$c): JSX.Element;
+    ({ children, action, variant, disabled }: Props$d): JSX.Element;
+    documentation: string;
+};
+
+declare type Props$c = {
+    children?: React.ReactNode;
+};
+declare const ButtonGroup: {
+    ({ children }: Props$c): JSX.Element;
     documentation: string;
 };
 
@@ -78,4 +86,4 @@ declare const Text: ({ as, variant, children }: Props$1) => JSX.Element;
 declare type Props = {};
 declare const Icon: ({}: Props) => JSX.Element;
 
-export { Button, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
+export { Button, ButtonGroup, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
