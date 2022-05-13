@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "version": "0.1.55",
+  "version": "0.1.56",
   "description": "The Citrus Frontend Toolkit",
   "scripts": {
     "rollup": "rollup -c",
