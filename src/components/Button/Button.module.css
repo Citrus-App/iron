@@ -23,7 +23,7 @@
   }
 
   &:disabled {
-    cursor: not-allowed;
+    pointer-events: none;
   }
 }
 
@@ -34,8 +34,8 @@
 
 .variant-outline {
   background-color: transparent;
-  border: 1px solid var(--spectrum-gray-000);
-  color: var(--spectrum-gray-000);
+  border: 1px solid #ffffff;
+  color: #ffffff;
 
   &:hover {
     background-color: transparent;
@@ -44,8 +44,7 @@
   }
 
   &:disabled {
-    border-color: var(--button-outline-disabled);
-    background-color: var(--button-outline-disabled);
-    cursor: not-allowed;
+    color: var(--button-outline-disabled);
+    border: 1px solid var(--button-outline-disabled);
   }
 }
