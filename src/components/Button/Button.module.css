@@ -19,7 +19,7 @@
   }
 
   &:focus {
-    background-color: var(--button-pressed);
+    /*background-color: var(--button-pressed);*/
   }
 
   &:disabled {
