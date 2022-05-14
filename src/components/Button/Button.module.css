@@ -43,6 +43,10 @@
     color: var(--button-outline-hover);
   }
 
+  &:focus {
+     background-color: transparent;
+  }
+
   &:disabled {
     color: var(--button-outline-disabled);
     border: 1px solid var(--button-outline-disabled);
