@@ -880,7 +880,7 @@ var TopBar = function (_a) {
     return (React.createElement("div", { className: styles$3.root }, children));
 };
 
-var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: 'ivypresto-display', serif;\n  font-weight: 100;\n  line-height: 6.8rem;\n  font-size: 6rem;\n  letter-spacing: 0;\n}\n\nh2 {\n  font-family: 'ivypresto-display', serif;\n  font-weight: 100;\n  line-height: 4.8rem;\n  font-size: 4rem;\n  letter-spacing: 0;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 500;\n  line-height: 3.2rem;\n  font-size: 2.4rem;\n  letter-spacing: 0;\n}\n";
+var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: degular,sans-serif;\n  font-weight: 200;\n  font-style: normal;\n  font-size: 14rem;\n  line-height: 11rem;\n}\n\nh2 {\n  font-family: degular,sans-serif;\n  font-weight: 600;\n  font-style: normal;\n  font-size: 4.8rem;\n  line-height: 5.2rem;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 4.4rem;\n  line-height: 4.8rem;\n}\n\nh4 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 3rem;\n  line-height: 3.4rem\n}\n\nh5 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 2.2rem;\n  line-height: 2.4rem;\n}\n";
 var styles$2 = {"root":"Header-module_root__zkAdZ"};
 styleInject(css_248z$2);
 
