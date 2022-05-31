@@ -49,7 +49,7 @@
 
     * {
       color: var(--button-outline-disabled);
-      stroke: color: var(--button-outline-disabled);
+      stroke: var(--button-outline-disabled);
     }
   }
 }
