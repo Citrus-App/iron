@@ -6,21 +6,26 @@ type Props = {
   children?: React.ReactNode,
   action?: any,
   disabled?: boolean,
-  variant?: string
+  variant?: string,
+  type?: "button" | "submit" | "reset" | undefined
 }
 
 const Button = ({
   children,
   action,
   variant,
-  disabled
+  disabled,
+  type
 }: Props) => {
   const classList = classnames(
     styles.baseButton,
     styles[`variant-${variant}`]
   )
+
+  type = type ?? 'button'
+
   return (
-    <button className={classList} onClick={action} disabled={disabled}>
+    <button className={classList} onClick={action} disabled={disabled} type={type}>
       <div className={styles.inner}>{children}</div>
     </button>
   )
