@@ -6,9 +6,10 @@ declare type Props$d = {
     action?: any;
     disabled?: boolean;
     variant?: string;
+    type?: "button" | "submit" | "reset" | undefined;
 };
 declare const Button: {
-    ({ children, action, variant, disabled }: Props$d): JSX.Element;
+    ({ children, action, variant, disabled, type }: Props$d): JSX.Element;
     documentation: string;
 };
 

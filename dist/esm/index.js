@@ -92,9 +92,10 @@ var styles$c = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-m
 styleInject(css_248z$c);
 
 var Button = function (_a) {
-    var children = _a.children, action = _a.action, variant = _a.variant, disabled = _a.disabled;
+    var children = _a.children, action = _a.action, variant = _a.variant, disabled = _a.disabled, type = _a.type;
     var classList = classnames(styles$c.baseButton, styles$c["variant-".concat(variant)]);
-    return (React.createElement("button", { className: classList, onClick: action, disabled: disabled },
+    type = type !== null && type !== void 0 ? type : 'button';
+    return (React.createElement("button", { className: classList, onClick: action, disabled: disabled, type: type },
         React.createElement("div", { className: styles$c.inner }, children)));
 };
 Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
