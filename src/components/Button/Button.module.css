@@ -34,8 +34,8 @@
 
 .variant-outline {
   background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid var(--border-default);
+  color: var(--text-body);
 
   &:hover {
     background-color: transparent;
