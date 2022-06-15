@@ -12,7 +12,7 @@
 
   font-family: var(--global-font-families-sf-compact);
   font-weight: var(--global-font-weights-sf-compact-3);
-  font-size: var(--global-font-size-0);
+  font-size: calc(var(--global-font-size-0) * 0.1rem);
 
   &:hover {
     background-color: var(--button-hover)
