@@ -511,7 +511,7 @@ var tokens = {
   "global-font-weights-ivypresto-display-1": "Light",
   "global-font-weights-sf-compact-2": "Bold",
   "global-font-weights-sf-compact-3": "Regular",
-  "global-font-size-0": "16",
+  "global-font-size-0": "13",
   "global-font-size-1": "18",
   "global-font-size-2": "20",
   "global-font-size-3": "24",
@@ -800,6 +800,9 @@ var setTheme = function (mode) {
     Object.keys(tokens).map(function (key, index) {
         if (key.startsWith(mode)) {
             themeStyles["--".concat(key.split("".concat(mode, "-"))[1])] = tokens[key];
+        }
+        else if (key.startsWith('global')) {
+            themeStyles["--".concat(key)] = tokens[key];
         }
     });
     return themeStyles;

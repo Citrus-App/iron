@@ -233,7 +233,7 @@ module.exports = {
   "global-font-weights-ivypresto-display-1": "Light",
   "global-font-weights-sf-compact-2": "Bold",
   "global-font-weights-sf-compact-3": "Regular",
-  "global-font-size-0": "16",
+  "global-font-size-0": "13",
   "global-font-size-1": "18",
   "global-font-size-2": "20",
   "global-font-size-3": "24",
