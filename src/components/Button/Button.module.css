@@ -33,14 +33,13 @@
 }
 
 .variant-outline {
-  background-color: transparent;
+  background: transparent;
   border: 1px solid var(--border-default);
-  color: var(--text-body);
+  color: var(--button-color-hover);
 
   &:hover {
-    background-color: transparent;
     border: 1px solid var(--button-outline-hover);
-    color: var(--button-outline-hover);
+    color: var(--button-color-hover);
   }
 
   &:disabled {
