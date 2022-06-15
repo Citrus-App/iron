@@ -323,7 +323,7 @@ module.exports = {
   "dark-extra-large-15": {"color":"#00000026","type":"dropShadow","x":"0","y":"0","blur":"30","spread":"0"},
   "dark-extra-large-100": {"color":"#000000","type":"dropShadow","x":"0","y":"0","blur":"30","spread":"0"},
   "dark-button-default": "#818183",
-  "dark-button-hover": "#000",
+  "dark-button-hover": "#fff",
   "dark-button-pressed": "#6ad0e9",
   "dark-button-disabled": "#4f4f51",
   "dark-button-color-hover": "#000000",

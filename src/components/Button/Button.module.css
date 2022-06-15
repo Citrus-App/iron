@@ -35,10 +35,14 @@
 .variant-outline {
   background: transparent;
   border: 1px solid var(--border-default);
-  color: var(--button-color-hover);
+  color: var(--text-body);
 
   &:hover {
-    border: 1px solid var(--button-outline-hover);
+    border: 1px solid var(--button-hover);
+    color: var(--button-color-hover);
+  }
+
+  &:hover * {
     color: var(--button-color-hover);
   }
 
