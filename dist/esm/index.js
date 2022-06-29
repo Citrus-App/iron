@@ -157,7 +157,7 @@ var tokens = {
   "text-button-outline-pressed": "#17829d",
   "text-button-outline-disabled": "#b4b4b4",
   "button": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Regular",
     "lineHeight": 32,
     "fontSize": 16,
@@ -258,9 +258,9 @@ var tokens = {
     "spread": 0
   },
   "font-families-serif": "ivypresto-display",
-  "font-families-sans": "SF Compact",
+  "font-families-sans": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
   "font-families-ivypresto-display": "ivypresto-display",
-  "font-families-sf-compact": "SF Compact",
+  "font-families-sf-compact": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
   "line-heights-0": 68,
   "line-heights-1": 48,
   "line-heights-2": 32,
@@ -323,7 +323,7 @@ var tokens = {
     "textDecoration": "none"
   },
   "section-header": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Bold",
     "lineHeight": 32,
     "fontSize": 26,
@@ -333,7 +333,7 @@ var tokens = {
     "textDecoration": "none"
   },
   "subtitle": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Regular",
     "lineHeight": 32,
     "fontSize": 24,
@@ -343,7 +343,7 @@ var tokens = {
     "textDecoration": "none"
   },
   "main-body": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Regular",
     "lineHeight": 28,
     "fontSize": 20,
@@ -353,7 +353,7 @@ var tokens = {
     "textDecoration": "none"
   },
   "body-instructions": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Regular",
     "lineHeight": 28,
     "fontSize": 20,
@@ -363,7 +363,7 @@ var tokens = {
     "textDecoration": "none"
   },
   "small-body": {
-    "fontFamily": "SF Compact",
+    "fontFamily": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
     "fontWeight": "Regular",
     "lineHeight": 28,
     "fontSize": 18,
@@ -498,9 +498,9 @@ var tokens = {
   "spectrum-yellow-000": "#fff8e4",
   "global-text-headline": "#1d1d1f",
   "global-font-families-serif": "ivypresto-display",
-  "global-font-families-sans": "SF Compact",
+  "global-font-families-sans": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
   "global-font-families-ivypresto-display": "ivypresto-display",
-  "global-font-families-sf-compact": "SF Compact",
+  "global-font-families-sf-compact": "SF Compact, -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
   "global-line-heights-0": "68",
   "global-line-heights-1": "48",
   "global-line-heights-2": "32",
