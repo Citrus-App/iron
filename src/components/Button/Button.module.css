@@ -53,3 +53,14 @@
     }
   }
 }
+
+.variant-bare {
+  background-color: transparent;
+  border: 0 none;
+  color: var(--text-body);
+
+  &:hover {
+    background-color: transparent;
+     border: 0 none;
+  }
+}
