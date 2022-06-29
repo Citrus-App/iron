@@ -95,7 +95,7 @@
 	  }
 	}
 
-	var css_248z$c = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  line-height: 3rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: var(--global-font-size-0);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    /*background-color: var(--button-pressed);*/\n  }\n\n  .Button-module_baseButton__OB4cX:disabled {\n    pointer-events: none;\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background-color: transparent;\n  border: 1px solid var(--border-default);\n  color: var(--text-body);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: transparent;\n    border: 1px solid var(--button-outline-hover);\n    color: var(--button-outline-hover);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled {\n    color: var(--button-outline-disabled);\n    border: 1px solid var(--button-outline-disabled);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled * {\n      color: var(--button-outline-disabled);\n      stroke: var(--button-outline-disabled);\n    }\n\n.Button-module_variant-bare__-ig32 {\n  background-color: transparent;\n  border: 0 none;\n  color: var(--text-body);\n}\n\n.Button-module_variant-bare__-ig32:hover {\n    background-color: transparent;\n     border: 0 none;\n  }\n";
+	var css_248z$c = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  line-height: 3rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: calc(var(--global-font-size-0) * 0.1rem);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    /*background-color: var(--button-pressed);*/\n  }\n\n  .Button-module_baseButton__OB4cX:disabled {\n    pointer-events: none;\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background: transparent;\n  border: 1px solid var(--border-default);\n  color: var(--text-body);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    border: 1px solid var(--button-hover);\n    color: var(--button-color-hover);\n  }\n\n.Button-module_variant-outline__wbE1U:hover * {\n    color: var(--button-color-hover);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled {\n    color: var(--button-outline-disabled);\n    border: 1px solid var(--button-outline-disabled);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled * {\n      color: var(--button-outline-disabled);\n      stroke: var(--button-outline-disabled);\n    }\n\n.Button-module_variant-bare__-ig32 {\n  background-color: transparent;\n  border: 0 none;\n  color: var(--text-body);\n}\n\n.Button-module_variant-bare__-ig32:hover {\n    background-color: transparent;\n     border: 0 none;\n  }\n";
 	var styles$c = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U","variant-bare":"Button-module_variant-bare__-ig32"};
 	styleInject(css_248z$c);
 
@@ -519,7 +519,7 @@
 	  "global-font-weights-ivypresto-display-1": "Light",
 	  "global-font-weights-sf-compact-2": "Bold",
 	  "global-font-weights-sf-compact-3": "Regular",
-	  "global-font-size-0": "16",
+	  "global-font-size-0": "13",
 	  "global-font-size-1": "18",
 	  "global-font-size-2": "20",
 	  "global-font-size-3": "24",
@@ -748,9 +748,10 @@
 	    "spread": "0"
 	  },
 	  "dark-button-default": "#818183",
-	  "dark-button-hover": "#14b4dc",
+	  "dark-button-hover": "#fff",
 	  "dark-button-pressed": "#6ad0e9",
 	  "dark-button-disabled": "#4f4f51",
+	  "dark-button-color-hover": "#000000",
 	  "light-text-headline": "#1d1d1f",
 	  "light-text-body": "#363638",
 	  "light-text-button": "#ffffff",
@@ -765,9 +766,10 @@
 	  "light-text-button-outline-pressed": "#17829d",
 	  "light-text-button-outline-disabled": "#b4b4b4",
 	  "light-button-default": "#818183",
-	  "light-button-hover": "#14b4dc",
+	  "light-button-hover": "#000",
 	  "light-button-pressed": "#17829d",
 	  "light-button-disabled": "#b4b4b4",
+	  "light-button-color-hover": "#ffffff",
 	  "light-button-outline-default": "#818183",
 	  "light-button-outline-hover": "#14b4dc",
 	  "light-button-outline-pressed": "#17829d",
@@ -808,6 +810,9 @@
 	    Object.keys(tokens).map(function (key, index) {
 	        if (key.startsWith(mode)) {
 	            themeStyles["--".concat(key.split("".concat(mode, "-"))[1])] = tokens[key];
+	        }
+	        else if (key.startsWith('global')) {
+	            themeStyles["--".concat(key)] = tokens[key];
 	        }
 	    });
 	    return themeStyles;

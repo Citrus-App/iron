@@ -12,7 +12,7 @@
 
   font-family: var(--global-font-families-sf-compact);
   font-weight: var(--global-font-weights-sf-compact-3);
-  font-size: var(--global-font-size-0);
+  font-size: calc(var(--global-font-size-0) * 0.1rem);
 
   &:hover {
     background-color: var(--button-hover)
@@ -33,14 +33,17 @@
 }
 
 .variant-outline {
-  background-color: transparent;
+  background: transparent;
   border: 1px solid var(--border-default);
   color: var(--text-body);
 
   &:hover {
-    background-color: transparent;
-    border: 1px solid var(--button-outline-hover);
-    color: var(--button-outline-hover);
+    border: 1px solid var(--button-hover);
+    color: var(--button-color-hover);
+  }
+
+  &:hover * {
+    color: var(--button-color-hover);
   }
 
   &:disabled {
