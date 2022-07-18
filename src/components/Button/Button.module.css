@@ -43,6 +43,7 @@
   }
 
   &:hover * {
+    stroke: var(--button-color-hover);
     color: var(--button-color-hover);
   }
 

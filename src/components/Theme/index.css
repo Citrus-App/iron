@@ -4,6 +4,10 @@
  */
 
 :root {
+  --dark-white: #fff;
+  --light-white: #fff;
+  --dark-black: #000;
+  --light-black: #000;
   --dark-extra-large-100: [object Object];
   --dark-extra-large-15: [object Object];
   --dark-large-85: [object Object];
