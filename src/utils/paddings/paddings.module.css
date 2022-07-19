@@ -1,0 +1,109 @@
+.p,
+body *.p {
+  --padding-xl: var(--padding);
+  --padding-lg: var(--padding);
+  --padding-md: var(--padding);
+  --padding-sm: var(--padding);
+  padding: calc(1rem * var(--padding));
+  @media only screen and (max-width: 1700px) {
+    padding: calc(1rem * var(--padding-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    padding: calc(1rem * var(--padding-lg));
+  }
+  @media only screen and (max-width: 986px) {
+    padding: calc(1rem * var(--padding-md));
+  }
+  @media only screen and (max-width: 400px) {
+    padding: calc(1rem * var(--padding-sm));
+  }
+}
+
+.pb,
+body *.pb {
+  padding-bottom: calc(1rem * var(--padding-bottom));
+  --padding-bottom-xl: var(--padding-bottom);
+  --padding-bottom-lg: var(--padding-bottom);
+  --padding-bottom-md: var(--padding-bottom);
+  --padding-bottom-sm: var(--padding-bottom);
+
+  @media only screen and (max-width: 1700px) {
+    padding-bottom: calc(1rem * var(--padding-bottom-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    padding-bottom: calc(1rem * var(--padding-bottom-md));
+  }
+  @media only screen and (max-width: 986px) {
+    padding-bottom: calc(1rem * var(--padding-bottom-md));
+  }
+  @media only screen and (max-width: 400px) {
+    padding-bottom: calc(1rem * var(--padding-bottom-sm));
+  }
+}
+
+
+.pl,
+body *.pl {  
+  padding-left: calc(1rem * var(--padding-left));
+  --padding-left-xl: var(--padding-left);
+  --padding-left-lg: var(--padding-left);
+  --padding-left-md: var(--padding-left);
+  --padding-left-sm: var(--padding-left);
+
+  @media only screen and (max-width: 1700px) {
+    padding-left: calc(1rem * var(--padding-left-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    padding-left: calc(1rem * var(--padding-left-lg));
+  }
+  @media only screen and (max-width: 986px) {
+    padding-left: calc(1rem * var(--padding-left-md));
+  }
+  @media only screen and (max-width: 400px) {
+    padding-left: calc(1rem * var(--padding-left-sm));
+  }
+}
+  
+.pr,
+body *.pr {  
+ padding-right: calc(1rem * var(--padding-right));
+  --padding-right-xl: var(--padding-right);
+  --padding-right-lg: var(--padding-right);
+  --padding-right-md: var(--padding-right);
+  --padding-right-sm: var(--padding-right);
+
+ @media only screen and (max-width: 1700px) {
+   padding-right: calc(1rem * var(--padding-right-xl));
+ }
+ @media only screen and (max-width: 1280px) {
+   padding-right: calc(1rem * var(--padding-right-lg));
+ }
+ @media only screen and (max-width: 986px) {
+   padding-right: calc(1rem * var(--padding-right-md));
+ }
+ @media only screen and (max-width: 400px) {
+   padding-right: calc(1rem * var(--padding-right-sm));
+ }
+}  
+  
+.pt,
+body *.pt {
+ padding-top: calc(1rem * var(--padding-top));
+  --padding-top-xl: var(--padding-top);
+  --padding-top-lg: var(--padding-top);
+  --padding-top-md: var(--padding-top);
+  --padding-top-sm: var(--padding-top);
+
+ @media only screen and (max-width: 1700px) {
+   padding-top: calc(1rem * var(--padding-top-xl));
+ }
+ @media only screen and (max-width: 1280px) {
+   padding-top: calc(1rem * var(--padding-top-lg));
+ }
+ @media only screen and (max-width: 986px) {
+   padding-top: calc(1rem * var(--padding-top-md));
+ }
+ @media only screen and (max-width: 400px) {
+   padding-top: calc(1rem * var(--padding-top-sm));
+ }
+}

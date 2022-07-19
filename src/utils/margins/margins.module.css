@@ -1,0 +1,109 @@
+.m,
+body *.m {
+  --margin-xl: var(--margin);
+  --margin-lg: var(--margin);
+  --margin-md: var(--margin);
+  --margin-sm: var(--margin);
+  margin: calc(1rem * var(--margin));
+  @media only screen and (max-width: 1700px) {
+    margin: calc(1rem * var(--margin-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    margin: calc(1rem * var(--margin-lg));
+  }
+  @media only screen and (max-width: 986px) {
+    margin: calc(1rem * var(--margin-md));
+  }
+  @media only screen and (max-width: 400px) {
+    margin: calc(1rem * var(--margin-sm));
+  }
+}
+
+.mb,
+body *.mb {
+  margin-bottom: calc(1rem * var(--margin-bottom));
+  --margin-bottom-xl: var(--margin-bottom);
+  --margin-bottom-lg: var(--margin-bottom);
+  --margin-bottom-md: var(--margin-bottom);
+  --margin-bottom-sm: var(--margin-bottom);
+
+  @media only screen and (max-width: 1700px) {
+    margin-bottom: calc(1rem * var(--margin-bottom-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    margin-bottom: calc(1rem * var(--margin-bottom-md));
+  }
+  @media only screen and (max-width: 986px) {
+    margin-bottom: calc(1rem * var(--margin-bottom-md));
+  }
+  @media only screen and (max-width: 400px) {
+    margin-bottom: calc(1rem * var(--margin-bottom-sm));
+  }
+}
+
+
+.ml,
+body *.ml {  
+  margin-left: calc(1rem * var(--margin-left));
+  --margin-left-xl: var(--margin-left);
+  --margin-left-lg: var(--margin-left);
+  --margin-left-md: var(--margin-left);
+  --margin-left-sm: var(--margin-left);
+
+  @media only screen and (max-width: 1700px) {
+    margin-left: calc(1rem * var(--margin-left-xl));
+  }
+  @media only screen and (max-width: 1280px) {
+    margin-left: calc(1rem * var(--margin-left-lg));
+  }
+  @media only screen and (max-width: 986px) {
+    margin-left: calc(1rem * var(--margin-left-md));
+  }
+  @media only screen and (max-width: 400px) {
+    margin-left: calc(1rem * var(--margin-left-sm));
+  }
+}
+  
+.mr,
+body *.mr {  
+ margin-right: calc(1rem * var(--margin-right));
+  --margin-right-xl: var(--margin-right);
+  --margin-right-lg: var(--margin-right);
+  --margin-right-md: var(--margin-right);
+  --margin-right-sm: var(--margin-right);
+
+ @media only screen and (max-width: 1700px) {
+   margin-right: calc(1rem * var(--margin-right-xl));
+ }
+ @media only screen and (max-width: 1280px) {
+   margin-right: calc(1rem * var(--margin-right-lg));
+ }
+ @media only screen and (max-width: 986px) {
+   margin-right: calc(1rem * var(--margin-right-md));
+ }
+ @media only screen and (max-width: 400px) {
+   margin-right: calc(1rem * var(--margin-right-sm));
+ }
+}  
+  
+.mt,
+body *.mt {
+ margin-top: calc(1rem * var(--margin-top));
+  --margin-top-xl: var(--margin-top);
+  --margin-top-lg: var(--margin-top);
+  --margin-top-md: var(--margin-top);
+  --margin-top-sm: var(--margin-top);
+
+ @media only screen and (max-width: 1700px) {
+   margin-top: calc(1rem * var(--margin-top-xl));
+ }
+ @media only screen and (max-width: 1280px) {
+   margin-top: calc(1rem * var(--margin-top-lg));
+ }
+ @media only screen and (max-width: 986px) {
+   margin-top: calc(1rem * var(--margin-top-md));
+ }
+ @media only screen and (max-width: 400px) {
+   margin-top: calc(1rem * var(--margin-top-sm));
+ }
+}

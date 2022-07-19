@@ -1,5 +1,41 @@
 import React from 'react';
 
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+
 var classnames$1 = {exports: {}};
 
 /*!
@@ -60,6 +96,29 @@ var classnames$1 = {exports: {}};
 
 var classnames = classnames$1.exports;
 
+var responsiveOpts = ['sm', 'md', 'lg', 'xl', 'default'];
+var getResponsiveValues = function (prop, varValue) {
+    var stylesToReturn = {};
+    if (typeof prop === 'object') {
+        responsiveOpts.map(function (opt) {
+            if (prop[opt]) {
+                if (opt == 'default') {
+                    stylesToReturn["".concat(varValue)] = prop[opt];
+                }
+                else {
+                    stylesToReturn["".concat(varValue, "-").concat(opt)] = prop[opt];
+                }
+            }
+        });
+    }
+    else {
+        if (prop) {
+            stylesToReturn["".concat(varValue)] = prop;
+        }
+    }
+    return stylesToReturn;
+};
+
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
   var insertAt = ref.insertAt;
@@ -87,15 +146,102 @@ function styleInject(css, ref) {
   }
 }
 
+var css_248z$f = ".paddings-module_p__aOr-7,\nbody *.paddings-module_p__aOr-7 {\n  --padding-xl: var(--padding);\n  --padding-lg: var(--padding);\n  --padding-md: var(--padding);\n  --padding-sm: var(--padding);\n  padding: calc(1rem * var(--padding));\n}\n  @media only screen and (max-width: 1700px) {.paddings-module_p__aOr-7,\nbody *.paddings-module_p__aOr-7 {\n    padding: calc(1rem * var(--padding-xl))\n}\n  }\n  @media only screen and (max-width: 1280px) {.paddings-module_p__aOr-7,\nbody *.paddings-module_p__aOr-7 {\n    padding: calc(1rem * var(--padding-lg))\n}\n  }\n  @media only screen and (max-width: 986px) {.paddings-module_p__aOr-7,\nbody *.paddings-module_p__aOr-7 {\n    padding: calc(1rem * var(--padding-md))\n}\n  }\n  @media only screen and (max-width: 400px) {.paddings-module_p__aOr-7,\nbody *.paddings-module_p__aOr-7 {\n    padding: calc(1rem * var(--padding-sm))\n}\n  }\n\n.paddings-module_pb__18-tv,\nbody *.paddings-module_pb__18-tv {\n  padding-bottom: calc(1rem * var(--padding-bottom));\n  --padding-bottom-xl: var(--padding-bottom);\n  --padding-bottom-lg: var(--padding-bottom);\n  --padding-bottom-md: var(--padding-bottom);\n  --padding-bottom-sm: var(--padding-bottom);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.paddings-module_pb__18-tv,\nbody *.paddings-module_pb__18-tv {\n    padding-bottom: calc(1rem * var(--padding-bottom-xl))\n}\n  }\n\n@media only screen and (max-width: 1280px) {\n\n.paddings-module_pb__18-tv,\nbody *.paddings-module_pb__18-tv {\n    padding-bottom: calc(1rem * var(--padding-bottom-md))\n}\n  }\n\n@media only screen and (max-width: 986px) {\n\n.paddings-module_pb__18-tv,\nbody *.paddings-module_pb__18-tv {\n    padding-bottom: calc(1rem * var(--padding-bottom-md))\n}\n  }\n\n@media only screen and (max-width: 400px) {\n\n.paddings-module_pb__18-tv,\nbody *.paddings-module_pb__18-tv {\n    padding-bottom: calc(1rem * var(--padding-bottom-sm))\n}\n  }\n\n.paddings-module_pl__YHK6K,\nbody *.paddings-module_pl__YHK6K {  \n  padding-left: calc(1rem * var(--padding-left));\n  --padding-left-xl: var(--padding-left);\n  --padding-left-lg: var(--padding-left);\n  --padding-left-md: var(--padding-left);\n  --padding-left-sm: var(--padding-left);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.paddings-module_pl__YHK6K,\nbody *.paddings-module_pl__YHK6K {\n    padding-left: calc(1rem * var(--padding-left-xl))\n}\n  }\n\n@media only screen and (max-width: 1280px) {\n\n.paddings-module_pl__YHK6K,\nbody *.paddings-module_pl__YHK6K {\n    padding-left: calc(1rem * var(--padding-left-lg))\n}\n  }\n\n@media only screen and (max-width: 986px) {\n\n.paddings-module_pl__YHK6K,\nbody *.paddings-module_pl__YHK6K {\n    padding-left: calc(1rem * var(--padding-left-md))\n}\n  }\n\n@media only screen and (max-width: 400px) {\n\n.paddings-module_pl__YHK6K,\nbody *.paddings-module_pl__YHK6K {\n    padding-left: calc(1rem * var(--padding-left-sm))\n}\n  }\n\n.paddings-module_pr__sJaWq,\nbody *.paddings-module_pr__sJaWq {  \n padding-right: calc(1rem * var(--padding-right));\n  --padding-right-xl: var(--padding-right);\n  --padding-right-lg: var(--padding-right);\n  --padding-right-md: var(--padding-right);\n  --padding-right-sm: var(--padding-right);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.paddings-module_pr__sJaWq,\nbody *.paddings-module_pr__sJaWq {\n   padding-right: calc(1rem * var(--padding-right-xl))\n}\n }\n\n@media only screen and (max-width: 1280px) {\n\n.paddings-module_pr__sJaWq,\nbody *.paddings-module_pr__sJaWq {\n   padding-right: calc(1rem * var(--padding-right-lg))\n}\n }\n\n@media only screen and (max-width: 986px) {\n\n.paddings-module_pr__sJaWq,\nbody *.paddings-module_pr__sJaWq {\n   padding-right: calc(1rem * var(--padding-right-md))\n}\n }\n\n@media only screen and (max-width: 400px) {\n\n.paddings-module_pr__sJaWq,\nbody *.paddings-module_pr__sJaWq {\n   padding-right: calc(1rem * var(--padding-right-sm))\n}\n }\n\n.paddings-module_pt__Am0Ns,\nbody *.paddings-module_pt__Am0Ns {\n padding-top: calc(1rem * var(--padding-top));\n  --padding-top-xl: var(--padding-top);\n  --padding-top-lg: var(--padding-top);\n  --padding-top-md: var(--padding-top);\n  --padding-top-sm: var(--padding-top);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.paddings-module_pt__Am0Ns,\nbody *.paddings-module_pt__Am0Ns {\n   padding-top: calc(1rem * var(--padding-top-xl))\n}\n }\n\n@media only screen and (max-width: 1280px) {\n\n.paddings-module_pt__Am0Ns,\nbody *.paddings-module_pt__Am0Ns {\n   padding-top: calc(1rem * var(--padding-top-lg))\n}\n }\n\n@media only screen and (max-width: 986px) {\n\n.paddings-module_pt__Am0Ns,\nbody *.paddings-module_pt__Am0Ns {\n   padding-top: calc(1rem * var(--padding-top-md))\n}\n }\n\n@media only screen and (max-width: 400px) {\n\n.paddings-module_pt__Am0Ns,\nbody *.paddings-module_pt__Am0Ns {\n   padding-top: calc(1rem * var(--padding-top-sm))\n}\n }";
+var styles$f = {"p":"paddings-module_p__aOr-7","pb":"paddings-module_pb__18-tv","pl":"paddings-module_pl__YHK6K","pr":"paddings-module_pr__sJaWq","pt":"paddings-module_pt__Am0Ns"};
+styleInject(css_248z$f);
+
+function getPaddings(_a) {
+    var props = _a.props;
+    return [
+        props.p ? styles$f['p'] : null,
+        props.pb ? styles$f['pb'] : null,
+        props.pl ? styles$f['pl'] : null,
+        props.pr ? styles$f['pr'] : null,
+        props.pt ? styles$f['pt'] : null
+    ];
+}
+function getPaddingsStyles(_a) {
+    var p = _a.p, pb = _a.pb, pl = _a.pl, pr = _a.pr, pt = _a.pt;
+    var paddings = __assign(__assign(__assign(__assign(__assign({}, getResponsiveValues(p, '--padding')), getResponsiveValues(pl, '--padding-left')), getResponsiveValues(pr, '--padding-right')), getResponsiveValues(pb, '--padding-bottom')), getResponsiveValues(pt, '--padding-top'));
+    return paddings;
+}
+
+var css_248z$e = ".margins-module_m__PH27d,\nbody *.margins-module_m__PH27d {\n  --margin-xl: var(--margin);\n  --margin-lg: var(--margin);\n  --margin-md: var(--margin);\n  --margin-sm: var(--margin);\n  margin: calc(1rem * var(--margin));\n}\n  @media only screen and (max-width: 1700px) {.margins-module_m__PH27d,\nbody *.margins-module_m__PH27d {\n    margin: calc(1rem * var(--margin-xl))\n}\n  }\n  @media only screen and (max-width: 1280px) {.margins-module_m__PH27d,\nbody *.margins-module_m__PH27d {\n    margin: calc(1rem * var(--margin-lg))\n}\n  }\n  @media only screen and (max-width: 986px) {.margins-module_m__PH27d,\nbody *.margins-module_m__PH27d {\n    margin: calc(1rem * var(--margin-md))\n}\n  }\n  @media only screen and (max-width: 400px) {.margins-module_m__PH27d,\nbody *.margins-module_m__PH27d {\n    margin: calc(1rem * var(--margin-sm))\n}\n  }\n\n.margins-module_mb__H0D5-,\nbody *.margins-module_mb__H0D5- {\n  margin-bottom: calc(1rem * var(--margin-bottom));\n  --margin-bottom-xl: var(--margin-bottom);\n  --margin-bottom-lg: var(--margin-bottom);\n  --margin-bottom-md: var(--margin-bottom);\n  --margin-bottom-sm: var(--margin-bottom);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.margins-module_mb__H0D5-,\nbody *.margins-module_mb__H0D5- {\n    margin-bottom: calc(1rem * var(--margin-bottom-xl))\n}\n  }\n\n@media only screen and (max-width: 1280px) {\n\n.margins-module_mb__H0D5-,\nbody *.margins-module_mb__H0D5- {\n    margin-bottom: calc(1rem * var(--margin-bottom-md))\n}\n  }\n\n@media only screen and (max-width: 986px) {\n\n.margins-module_mb__H0D5-,\nbody *.margins-module_mb__H0D5- {\n    margin-bottom: calc(1rem * var(--margin-bottom-md))\n}\n  }\n\n@media only screen and (max-width: 400px) {\n\n.margins-module_mb__H0D5-,\nbody *.margins-module_mb__H0D5- {\n    margin-bottom: calc(1rem * var(--margin-bottom-sm))\n}\n  }\n\n.margins-module_ml__KGXjp,\nbody *.margins-module_ml__KGXjp {  \n  margin-left: calc(1rem * var(--margin-left));\n  --margin-left-xl: var(--margin-left);\n  --margin-left-lg: var(--margin-left);\n  --margin-left-md: var(--margin-left);\n  --margin-left-sm: var(--margin-left);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.margins-module_ml__KGXjp,\nbody *.margins-module_ml__KGXjp {\n    margin-left: calc(1rem * var(--margin-left-xl))\n}\n  }\n\n@media only screen and (max-width: 1280px) {\n\n.margins-module_ml__KGXjp,\nbody *.margins-module_ml__KGXjp {\n    margin-left: calc(1rem * var(--margin-left-lg))\n}\n  }\n\n@media only screen and (max-width: 986px) {\n\n.margins-module_ml__KGXjp,\nbody *.margins-module_ml__KGXjp {\n    margin-left: calc(1rem * var(--margin-left-md))\n}\n  }\n\n@media only screen and (max-width: 400px) {\n\n.margins-module_ml__KGXjp,\nbody *.margins-module_ml__KGXjp {\n    margin-left: calc(1rem * var(--margin-left-sm))\n}\n  }\n\n.margins-module_mr__p3-qB,\nbody *.margins-module_mr__p3-qB {  \n margin-right: calc(1rem * var(--margin-right));\n  --margin-right-xl: var(--margin-right);\n  --margin-right-lg: var(--margin-right);\n  --margin-right-md: var(--margin-right);\n  --margin-right-sm: var(--margin-right);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.margins-module_mr__p3-qB,\nbody *.margins-module_mr__p3-qB {\n   margin-right: calc(1rem * var(--margin-right-xl))\n}\n }\n\n@media only screen and (max-width: 1280px) {\n\n.margins-module_mr__p3-qB,\nbody *.margins-module_mr__p3-qB {\n   margin-right: calc(1rem * var(--margin-right-lg))\n}\n }\n\n@media only screen and (max-width: 986px) {\n\n.margins-module_mr__p3-qB,\nbody *.margins-module_mr__p3-qB {\n   margin-right: calc(1rem * var(--margin-right-md))\n}\n }\n\n@media only screen and (max-width: 400px) {\n\n.margins-module_mr__p3-qB,\nbody *.margins-module_mr__p3-qB {\n   margin-right: calc(1rem * var(--margin-right-sm))\n}\n }\n\n.margins-module_mt__hdL7G,\nbody *.margins-module_mt__hdL7G {\n margin-top: calc(1rem * var(--margin-top));\n  --margin-top-xl: var(--margin-top);\n  --margin-top-lg: var(--margin-top);\n  --margin-top-md: var(--margin-top);\n  --margin-top-sm: var(--margin-top);\n}\n\n@media only screen and (max-width: 1700px) {\n\n.margins-module_mt__hdL7G,\nbody *.margins-module_mt__hdL7G {\n   margin-top: calc(1rem * var(--margin-top-xl))\n}\n }\n\n@media only screen and (max-width: 1280px) {\n\n.margins-module_mt__hdL7G,\nbody *.margins-module_mt__hdL7G {\n   margin-top: calc(1rem * var(--margin-top-lg))\n}\n }\n\n@media only screen and (max-width: 986px) {\n\n.margins-module_mt__hdL7G,\nbody *.margins-module_mt__hdL7G {\n   margin-top: calc(1rem * var(--margin-top-md))\n}\n }\n\n@media only screen and (max-width: 400px) {\n\n.margins-module_mt__hdL7G,\nbody *.margins-module_mt__hdL7G {\n   margin-top: calc(1rem * var(--margin-top-sm))\n}\n }";
+var styles$e = {"m":"margins-module_m__PH27d","mb":"margins-module_mb__H0D5-","ml":"margins-module_ml__KGXjp","mr":"margins-module_mr__p3-qB","mt":"margins-module_mt__hdL7G"};
+styleInject(css_248z$e);
+
+function getMargins(_a) {
+    var props = _a.props;
+    return [
+        props.m ? styles$e["m"] : null,
+        props.mb ? styles$e["mb"] : null,
+        props.ml ? styles$e["ml"] : null,
+        props.mr ? styles$e["mr"] : null,
+        props.mt ? styles$e["mt"] : null
+    ];
+}
+function getMarginsStyles(_a) {
+    var m = _a.m, mb = _a.mb, ml = _a.ml, mr = _a.mr, mt = _a.mt;
+    var margins = __assign(__assign(__assign(__assign(__assign({}, getResponsiveValues(m, '--margin')), getResponsiveValues(ml, '--margin-left')), getResponsiveValues(mr, '--margin-right')), getResponsiveValues(mb, '--margin-bottom')), getResponsiveValues(mt, '--margin-top'));
+    return margins;
+}
+
+var css_248z$d = ".coords-module_coords-top__ARhTf, body *.coords-module_coords-top__ARhTf {\n    top: var(--coordTop);\n  }\n  .coords-module_coords-left__fhcnM, body *.coords-module_coords-left__fhcnM {\n    left: var(--coordLeft);\n  }\n  .coords-module_coords-right__5Fe8-, body *.coords-module_coords-right__5Fe8- {\n    right: var(--coordRight);\n  }\n  .coords-module_coords-bottom__nwDJx, body *.coords-module_coords-bottom__nwDJx {\n    bottom: var(--coordBottom);\n  }";
+var styles$d = {"coords-top":"coords-module_coords-top__ARhTf","coords-left":"coords-module_coords-left__fhcnM","coords-right":"coords-module_coords-right__5Fe8-","coords-bottom":"coords-module_coords-bottom__nwDJx"};
+styleInject(css_248z$d);
+
+function getCoords(_a) {
+    var props = _a.props;
+    return [
+        props.top ? styles$d["coords-top"] : null,
+        props.left ? styles$d["coords-left"] : null,
+        props.right ? styles$d["coords-right"] : null,
+        props.bottom ? styles$d["coords-bottom"] : null,
+    ];
+}
+function getCoordsStyle(_a) {
+    var top = _a.top, left = _a.left, right = _a.right, bottom = _a.bottom;
+    return {
+        '--coordTop': top,
+        '--coordLeft': left,
+        '--coordRight': right,
+        '--coordBottom': bottom,
+    };
+}
+
 var css_248z$c = ".Button-module_baseButton__OB4cX {\n  background-color: var(--button-default);\n  border-radius: 0;\n  line-height: 3rem;\n  color: var(--text-button);\n  display: inline-flex;\n  text-decoration: none;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-3);\n  font-size: calc(var(--global-font-size-0) * 0.1rem);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-hover)\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    /*background-color: var(--button-pressed);*/\n  }\n\n  .Button-module_baseButton__OB4cX:disabled {\n    pointer-events: none;\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background: transparent;\n  border: 1px solid var(--border-default);\n  color: var(--text-body);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    border: 1px solid var(--button-hover);\n    color: var(--button-color-hover);\n  }\n\n.Button-module_variant-outline__wbE1U:hover * {\n    stroke: var(--button-color-hover);\n    color: var(--button-color-hover);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled {\n    color: var(--button-outline-disabled);\n    border: 1px solid var(--button-outline-disabled);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled * {\n      color: var(--button-outline-disabled);\n      stroke: var(--button-outline-disabled);\n    }\n\n.Button-module_variant-bare__-ig32 {\n  background-color: transparent;\n  border: 0 none;\n  color: var(--text-body);\n}\n\n.Button-module_variant-bare__-ig32:hover {\n    background-color: transparent;\n     border: 0 none;\n  }\n";
 var styles$c = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U","variant-bare":"Button-module_variant-bare__-ig32"};
 styleInject(css_248z$c);
 
 var Button = function (_a) {
-    var children = _a.children, action = _a.action, variant = _a.variant, disabled = _a.disabled, type = _a.type;
-    var classList = classnames(styles$c.baseButton, styles$c["variant-".concat(variant)]);
+    var children = _a.children, action = _a.action, variant = _a.variant, disabled = _a.disabled, type = _a.type, m = _a.m, mb = _a.mb, ml = _a.ml, mr = _a.mr, mt = _a.mt, p = _a.p, pb = _a.pb, pl = _a.pl, pr = _a.pr, pt = _a.pt, top = _a.top, left = _a.left, right = _a.right, bottom = _a.bottom;
+    var classList = classnames.apply(void 0, __spreadArray(__spreadArray(__spreadArray(__spreadArray([], getCoords({
+        props: {
+            top: top,
+            left: left,
+            right: right,
+            bottom: bottom
+        }
+    }), false), getMargins({
+        props: {
+            m: m,
+            mb: mb,
+            ml: ml,
+            mr: mr,
+            mt: mt
+        }
+    }), false), getPaddings({
+        props: {
+            p: p,
+            pb: pb,
+            pl: pl,
+            pr: pr,
+            pt: pt
+        }
+    }), false), [styles$c.baseButton,
+        styles$c["variant-".concat(variant)]], false));
     type = type !== null && type !== void 0 ? type : 'button';
-    return (React.createElement("button", { className: classList, onClick: action, disabled: disabled, type: type },
+    return (React.createElement("button", { style: __assign(__assign(__assign({}, getCoordsStyle({ top: top, left: left, right: right, bottom: bottom })), getMarginsStyles({ m: m, mb: mb, ml: ml, mr: mr, mt: mt })), getPaddingsStyles({ p: p, pb: pb, pl: pl, pr: pr, pt: pt })), className: classList, onClick: action, disabled: disabled, type: type },
         React.createElement("div", { className: styles$c.inner }, children)));
 };
 Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
@@ -110,32 +256,6 @@ var ButtonGroup = function (_a) {
     return (React.createElement("div", { className: classList }, children));
 };
 ButtonGroup.documentation = "The Button Group component accepts button children";
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 
 /**
  * Do not edit directly
@@ -858,7 +978,7 @@ var GridWrapper = function (_a) {
     return (React.createElement("div", { className: classnames(styles$6.root, full ? styles$6.full : '') }, children));
 };
 
-var css_248z$5 = ".SideBar-module_root__ydBTZ {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n\n  /* we double up the space here of the grid-gap to provide room to the gallery */\n  padding-right: 10rem;\n  z-index: 15;\n}\n\n  @media only screen and (max-width: 900px) {.SideBar-module_root__ydBTZ {\n    position: relative;\n    grid-area: initial;\n    padding-right: 0;\n    grid-column: auto / span 12\n}\n  }";
+var css_248z$5 = ".SideBar-module_root__ydBTZ {\n  grid-area: sidebar;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 4rem;\n  max-height: calc(100vh - 8rem);\n  padding-right: 10rem;\n  z-index: 15;\n}\n\n  @media only screen and (max-width: 900px) {.SideBar-module_root__ydBTZ {\n    position: relative;\n    grid-area: initial;\n    padding-right: 0;\n    grid-column: auto / span 12\n}\n  }";
 var styles$5 = {"root":"SideBar-module_root__ydBTZ"};
 styleInject(css_248z$5);
 
@@ -867,13 +987,39 @@ var SideBar = function (_a) {
     return (React.createElement("div", { className: styles$5.root }, children));
 };
 
-var css_248z$4 = ".SidePanel-module_root__0iNYB {\n  top: 0;\n  color: var(--color-dark);\n  position: relative;\n  z-index: 9;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  left: calc(-1 * min(30vw, 700px) - 20vw);\n  transition: left 0.5s ease;\n  width: 500px;\n  background: var(--color-highlight);\n  border-right: 1px solid var(--color-dark);\n}\n\n  @media only screen and (max-width: 900px) {.SidePanel-module_root__0iNYB {\n    width: 100%\n}\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_abs__K7rS9 .SidePanel-module_innerPanel__vQAVh {\n      height: auto;\n      margin: auto 0;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_alignment-right__-XaUF {\n    position: absolute;\n    top: 5rem;\n    left: initial;\n    transition: right 0.5s ease;\n    right: calc(-1 * min(30vw, 700px) - 20vw);\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY {\n    left: 0;\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF {\n      right: 5rem;\n      left: initial;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF::after {\n        right: calc(-156.3vh + (min(700px, 30vw) / 2));\n        left: initial;\n      }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n    padding-left: 3rem;\n    padding-right: 3rem;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n  }\n\n  @media only screen and (max-width: 900px) {\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n      padding: 2rem\n  }\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh * > div {\n      margin: auto;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh > section:last-child {\n      margin-top: 2rem;\n      display: block;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh a {\n      display: block;\n      margin-top: 0.75rem;\n      font-size: 2rem;\n    }\n";
+var css_248z$4 = ".SidePanel-module_root__0iNYB {\n  top: 0;\n  color: var(--color-dark);\n  position: relative;\n  z-index: 9;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  left: calc(-1 * min(30vw, 700px) - 20vw);\n  transition: left 0.5s ease;\n  width: 500px;\n  background: var(--color-highlight);\n  border-right: 1px solid var(--color-dark);\n}\n\n  @media only screen and (max-width: 900px) {.SidePanel-module_root__0iNYB {\n    width: 100%;\n    border-right: 0\n}\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_abs__K7rS9 .SidePanel-module_innerPanel__vQAVh {\n      height: auto;\n      margin: auto 0;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_alignment-right__-XaUF {\n    position: absolute;\n    top: 5rem;\n    left: initial;\n    transition: right 0.5s ease;\n    right: calc(-1 * min(30vw, 700px) - 20vw);\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY {\n    left: 0;\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF {\n      right: 5rem;\n      left: initial;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF::after {\n        right: calc(-156.3vh + (min(700px, 30vw) / 2));\n        left: initial;\n      }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n    padding-left: 3rem;\n    padding-right: 3rem;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n  }\n\n  @media only screen and (max-width: 900px) {\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n      padding: 2rem\n  }\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh * > div {\n      margin: auto;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh > section:last-child {\n      margin-top: 2rem;\n      display: block;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh a {\n      display: block;\n      margin-top: 0.75rem;\n      font-size: 2rem;\n    }\n";
 var styles$4 = {"root":"SidePanel-module_root__0iNYB","abs":"SidePanel-module_abs__K7rS9","innerPanel":"SidePanel-module_innerPanel__vQAVh","alignment-right":"SidePanel-module_alignment-right__-XaUF","activePanel":"SidePanel-module_activePanel__2ATtY"};
 styleInject(css_248z$4);
 
 var SidePanel = function (_a) {
-    var children = _a.children, alignment = _a.alignment, state = _a.state, _b = _a.alignType, alignType = _b === void 0 ? '' : _b;
-    return (React.createElement("div", { className: classnames(styles$4[alignType], styles$4.root, styles$4["alignment-".concat(alignment)], state ? styles$4.activePanel : '') },
+    var children = _a.children, alignment = _a.alignment, state = _a.state, _b = _a.alignType, alignType = _b === void 0 ? '' : _b, m = _a.m, mb = _a.mb, ml = _a.ml, mr = _a.mr, mt = _a.mt, p = _a.p, pb = _a.pb, pl = _a.pl, pr = _a.pr, pt = _a.pt, top = _a.top, left = _a.left, right = _a.right, bottom = _a.bottom;
+    return (React.createElement("div", { style: __assign(__assign(__assign({}, getCoordsStyle({ top: top, left: left, right: right, bottom: bottom })), getMarginsStyles({ m: m, mb: mb, ml: ml, mr: mr, mt: mt })), getPaddingsStyles({ p: p, pb: pb, pl: pl, pr: pr, pt: pt })), className: classnames.apply(void 0, __spreadArray(__spreadArray(__spreadArray(__spreadArray([], getCoords({
+            props: {
+                top: top,
+                left: left,
+                right: right,
+                bottom: bottom
+            }
+        }), false), getMargins({
+            props: {
+                m: m,
+                mb: mb,
+                ml: ml,
+                mr: mr,
+                mt: mt
+            }
+        }), false), getPaddings({
+            props: {
+                p: p,
+                pb: pb,
+                pl: pl,
+                pr: pr,
+                pt: pt
+            }
+        }), false), [styles$4[alignType],
+            styles$4["alignment-".concat(alignment)],
+            state ? styles$4.activePanel : '',
+            styles$4.root], false)) },
         React.createElement("div", { className: styles$4.innerPanel }, children)));
 };
 
@@ -886,7 +1032,7 @@ var TopBar = function (_a) {
     return (React.createElement("div", { className: styles$3.root }, children));
 };
 
-var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: degular,sans-serif;\n  font-weight: 200;\n  font-style: normal;\n  font-size: 14rem;\n  line-height: 11rem;\n}\n\nh2 {\n  font-family: degular,sans-serif;\n  font-weight: 600;\n  font-style: normal;\n  font-size: 4.8rem;\n  line-height: 5.2rem;\n}\n\n/* this maps to subtitle */\n\nh3 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 4.4rem;\n  line-height: 4.8rem;\n}\n\nh4 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 3rem;\n  line-height: 3.4rem\n}\n\nh5 {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 600;\n  font-size: 2.2rem;\n  line-height: 2.4rem;\n}\n";
+var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: degular,sans-serif;\n  font-weight: 200;\n  font-style: normal;\n  font-size: 14rem;\n  line-height: 11rem;\n}\n\nh2 {\n  font-family: degular,sans-serif;\n  font-weight: 600;\n  font-style: normal;\n  font-size: 4.8rem;\n  line-height: 5.2rem;\n}\n\nh3 {\n  font-weight: 600;\n  font-size: 4.4rem;\n  line-height: 4.8rem;\n}\n\nh4 {\n  font-weight: 600;\n  font-size: 3rem;\n  line-height: 3.4rem\n}\n\nh5 {\n  font-weight: 600;\n  font-size: 2.2rem;\n  line-height: 2.4rem;\n}\n";
 var styles$2 = {"root":"Header-module_root__zkAdZ"};
 styleInject(css_248z$2);
 
@@ -898,7 +1044,7 @@ var Header = function (_a) {
 Object.assign(Header, styles$2);
 Header.documentation = "The Header component does not accept variants and instead utilizes base html tags. This component requires the \"as\" prop to specifiy the tag type.";
 
-var css_248z$1 = "\n.Text-module_root__xduhb {\n  position: relative;\n}\n\n\np {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: 100;\n  line-height: 2.8rem;\n  font-size: 2rem;\n  letter-spacing: 0;\n}\n\n\nstrong {\n  font-family: \"SF Compact\", sans-serif;\n  font-weight: bold;\n}\n\n\n.Text-module_variant-small__XJ9xx {\n  font-size: 1.8rem;\n}";
+var css_248z$1 = ".Text-module_root__xduhb {\n  position: relative;\n}\n\np {\n  font-weight: 100;\n  line-height: 2.8rem;\n  font-size: 2rem;\n  letter-spacing: 0;\n}\n\nstrong {\n  font-weight: bold;\n}\n\n.Text-module_variant-small__XJ9xx {\n  font-size: 1.8rem;\n}";
 var styles$1 = {"root":"Text-module_root__xduhb","variant-small":"Text-module_variant-small__XJ9xx"};
 styleInject(css_248z$1);
 
