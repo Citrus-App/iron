@@ -2,13 +2,13 @@ import { getResponsiveValues } from "../responsive/responsive"
 import PaddingsTypes from "./paddings"
 import styles from './paddings.module.css'
 
-function getPaddings({ props }: { props: PaddingsTypes }) {
+function getPaddings({ p, pb, pl, pr, pt }: PaddingsTypes ) {
   return [
-    props.p ? styles['p'] : null,
-    props.pb ? styles['pb'] : null,
-    props.pl ? styles['pl'] : null,
-    props.pr ? styles['pr'] : null,
-    props.pt ? styles['pt'] : null
+    p ? styles['p'] : null,
+    pb ? styles['pb'] : null,
+    pl ? styles['pl'] : null,
+    pr ? styles['pr'] : null,
+    pt ? styles['pt'] : null
   ]
 }
 

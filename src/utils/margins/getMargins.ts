@@ -2,15 +2,15 @@ import { getResponsiveValues } from "../responsive/responsive"
 import MarginsTypes from "./margins"
 import styles from './margins.module.css'
 
-function getMargins({ props }: { props: MarginsTypes }) {
+function getMargins({ m, mb, ml, mr, mt }: MarginsTypes) {
   return [
-    props.m ? styles[`m`] : null,
-    props.mb ? styles[`mb`] : null,
-    props.ml ? styles[`ml`] : null,
-    props.mr ? styles[`mr`] : null,
-    props.mt ? styles[`mt`] : null
+    m ? styles[`m`] : null,
+    mb ? styles[`mb`] : null,
+    ml ? styles[`ml`] : null,
+    mr ? styles[`mr`] : null,
+    mt ? styles[`mt`] : null
   ]
-}screenLeft
+}
 
 function getMarginsStyles({m, mb, ml, mr, mt}: MarginsTypes) {
   const margins =  {

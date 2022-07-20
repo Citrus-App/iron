@@ -73,22 +73,18 @@ const Button = ({
       }
     }),
     ...getMargins({
-      props: {
-        m,
-        mb,
-        ml,
-        mr,
-        mt
-      }
+      m,
+      mb,
+      ml,
+      mr,
+      mt
     }),
     ...getPaddings({
-      props: {
-        p,
-        pb,
-        pl,
-        pr,
-        pt
-      }
+      p,
+      pb,
+      pl,
+      pr,
+      pt
     }),
     styles.baseButton,
     styles[`variant-${variant}`]
@@ -100,7 +96,7 @@ const Button = ({
     <button
       style={{
         ...getCoordsStyle({top, left, right, bottom}),
-        ...getMarginsStyles({m, mb, ml, mr, mt})
+        ...getMarginsStyles({m, mb, ml, mr, mt}),
         ...getPaddingsStyles({p, pb, pl, pr, pt})
       } as React.CSSProperties}
       className={classList}

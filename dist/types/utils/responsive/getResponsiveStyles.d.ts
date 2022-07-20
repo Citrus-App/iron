@@ -1,8 +1,8 @@
-import ResponsiveTypes from "./responsive";
-declare function getResponsiveStyle({ responsive }: ResponsiveTypes): {
-    '--coordTop': any;
-    '--coordLeft': any;
-    '--coordRight': any;
-    '--coordBottom': any;
+import { ResponsiveTypes } from "./responsive";
+declare function getResponsiveStyle({ sm, md, lg, xl, default: string }: ResponsiveTypes): {
+    '--coordTop': String | Number;
+    '--coordLeft': String | Number;
+    '--coordRight': String | Number;
+    '--coordBottom': String | Number;
 };
 export default getResponsiveStyle;

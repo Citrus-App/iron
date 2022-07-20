@@ -15,7 +15,7 @@ const setTheme = (mode: string) => {
         `--${key.split(`${mode}-`)[1]}`
       ] = Tokens[key]
     } else if(key.startsWith('global')) {
-      themeStyles[`--${key}`] = Tokens[key]
+      themeStyles[`--${key.split('global-')[1]}`] = Tokens[key]
     }
   });
   return themeStyles;

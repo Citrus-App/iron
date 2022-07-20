@@ -1,5 +1,6 @@
-export declare const responsiveOpts: readonly ["sm", "md", "lg", "xl", "default"];
-export declare type ResponsiveNames = typeof responsiveOpts[number];
+declare const responsiveOpts: readonly ["sm", "md", "lg", "xl", "default"];
+declare type ResponsiveNames = typeof responsiveOpts[number];
+declare type responsiveUnitValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'auto'];
 declare type ResponsiveTypes = {
     sm: String | Number;
     md: String | Number;
@@ -8,4 +9,4 @@ declare type ResponsiveTypes = {
     default: String | Number;
 };
 declare const getResponsiveValues: (prop: ResponsiveTypes | String | Number | ResponsiveNames, varValue: String | ResponsiveNames) => any;
-export { ResponsiveTypes, getResponsiveValues };
+export { responsiveOpts, ResponsiveNames, responsiveUnitValues, ResponsiveTypes, getResponsiveValues };

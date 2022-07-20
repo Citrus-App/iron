@@ -1,5 +1,6 @@
-export const responsiveOpts = ['sm', 'md', 'lg', 'xl', 'default'] as const
-export type ResponsiveNames = typeof responsiveOpts[number]
+const responsiveOpts = ['sm', 'md', 'lg', 'xl', 'default'] as const
+type ResponsiveNames = typeof responsiveOpts[number]
+type responsiveUnitValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'auto'];
 
 type ResponsiveTypes = {
   sm: String|Number,
@@ -18,21 +19,24 @@ const getResponsiveValues = (
       responsiveOpts.map((opt: ResponsiveNames) => {
         if((prop as ResponsiveTypes)[opt]) {
           if(opt == 'default') {
-            stylesToReturn[`${varValue}`] = (prop as ResponsiveTypes)[opt]
+            stylesToReturn[`${varValue}`] = `var(--spacing-${(prop as ResponsiveTypes)[opt]})`
           } else {
-            stylesToReturn[`${varValue}-${opt}`] = (prop as ResponsiveTypes)[opt]
+            stylesToReturn[`${varValue}-${opt}`] = `var(--spacing-${(prop as ResponsiveTypes)[opt]})`
           }
         }
       })
   } else {
     if(prop) {
-      stylesToReturn[`${varValue}`] = prop
+      stylesToReturn[`${varValue}`] = `var(--spacing-${(prop)})`
     }
   }
   return stylesToReturn
 }
 
 export {
+  responsiveOpts,
+  ResponsiveNames,
+  responsiveUnitValues,
   ResponsiveTypes,
   getResponsiveValues
 }
