@@ -1,18 +1,15 @@
 import React from 'react'
-import styles from "./Overlay.module.css";
+import styles from './Overlay.module.css'
 
-type Props = {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface Props {
   // props here
 }
 
-const Overlay = ({ 
-  // props 
-}: Props) => {
-  return (
-    <div className={styles.root}>
-      hello world! I am Overlay
-    </div>
-  )
-};
+// eslint-disable-next-line no-empty-pattern
+const Overlay = ({}: // props
+Props) => {
+  return <div className={styles.root}>hello world! I am Overlay</div>
+}
 
-export default Overlay;
+export default Overlay

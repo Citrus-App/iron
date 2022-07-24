@@ -1,23 +1,22 @@
-import React from "react";
-import classnames from "classnames";
-import CoordsTypes from '../../utils/coords/coords';
-import getPaddings, { getPaddingsStyles } from '../../utils/paddings/getPaddings';
-import PaddingsTypes from '../../utils/paddings/paddings';
-import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins';
-import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords';
-import MarginsTypes from '../../utils/margins/margins';
+import React from 'react'
+import classnames from 'classnames'
+import CoordsTypes from '../../utils/coords/coords'
+import getPaddings, {
+  getPaddingsStyles,
+} from '../../utils/paddings/getPaddings'
+import PaddingsTypes from '../../utils/paddings/paddings'
+import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins'
+import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords'
+import MarginsTypes from '../../utils/margins/margins'
 
-import styles from "./Button.module.css";
+import styles from './Button.module.css'
 
-interface ButtonProps extends
-MarginsTypes,
-PaddingsTypes,
-CoordsTypes {
-  children?: React.ReactNode,
-  action?: any,
-  disabled?: boolean,
-  variant?: string,
-  type?: "button" | "submit" | "reset" | undefined
+interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
+  children?: React.ReactNode
+  action?: any
+  disabled?: boolean
+  variant?: string
+  type?: 'button' | 'submit' | 'reset' | undefined
 }
 
 const Button = ({
@@ -39,7 +38,7 @@ const Button = ({
   top,
   left,
   right,
-  bottom
+  bottom,
 }: ButtonProps) => {
   const props = {
     children,
@@ -60,31 +59,31 @@ const Button = ({
     top,
     left,
     right,
-    bottom
+    bottom,
   }
-  
+
   const classList = classnames(
     ...getCoords({
       props: {
         top,
         left,
         right,
-        bottom
-      }
+        bottom,
+      },
     }),
     ...getMargins({
       m,
       mb,
       ml,
       mr,
-      mt
+      mt,
     }),
     ...getPaddings({
       p,
       pb,
       pl,
       pr,
-      pt
+      pt,
     }),
     styles.baseButton,
     styles[`variant-${variant}`]
@@ -94,11 +93,13 @@ const Button = ({
 
   return (
     <button
-      style={{
-        ...getCoordsStyle({top, left, right, bottom}),
-        ...getMarginsStyles({m, mb, ml, mr, mt}),
-        ...getPaddingsStyles({p, pb, pl, pr, pt})
-      } as React.CSSProperties}
+      style={
+        {
+          ...getCoordsStyle({ top, left, right, bottom }),
+          ...getMarginsStyles({ m, mb, ml, mr, mt }),
+          ...getPaddingsStyles({ p, pb, pl, pr, pt }),
+        } as React.CSSProperties
+      }
       className={classList}
       onClick={action}
       disabled={disabled}
@@ -107,9 +108,9 @@ const Button = ({
       <div className={styles.inner}>{children}</div>
     </button>
   )
-};
+}
 
+Button.documentation =
+  'The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma'
 
-Button.documentation = `The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma`
-
-export default Button;
+export default Button

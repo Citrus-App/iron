@@ -1,18 +1,15 @@
 import React from 'react'
-import styles from "./Menu.module.css";
+import styles from './Menu.module.css'
 
-type Props = {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface Props {
   // props here
 }
 
-const Menu = ({ 
-  // props 
-}: Props) => {
-  return (
-    <div className={styles.root}>
-      hello world! I am Menu
-    </div>
-  )
-};
+// eslint-disable-next-line no-empty-pattern
+const Menu = ({}: // props
+Props) => {
+  return <div className={styles.root}>hello world! I am Menu</div>
+}
 
-export default Menu;
+export default Menu
