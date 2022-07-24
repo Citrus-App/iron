@@ -6,7 +6,7 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
@@ -18,9 +18,18 @@ module.exports = {
   },
   'plugins': [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+		'prettier'
   ],
   'rules': {
+		// General rules
+		'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        semi: false,
+      }
+    ],
     'indent': ['error', 2],
     'linebreak-style': [
       'error',
@@ -33,6 +42,24 @@ module.exports = {
     'semi': [
       'warn',
       'never'
-    ]
-  }
+    ],
+	  // Typescript rules
+		'@typescript-eslint/consistent-type-definitions': [
+			'error',
+			'interface',
+		],
+		'@typescript-eslint/member-ordering': 'error',
+		'@typescript-eslint/no-empty-interface': 'error',
+		'@typescript-eslint/no-explicit-any': 'warn',
+		'@typescript-eslint/no-inferrable-types': 'error',
+		'@typescript-eslint/no-non-null-assertion': 'error',
+		'@typescript-eslint/no-unused-vars': [
+			'error',
+			{
+				argsIgnorePattern: '^_',
+				varsIgnorePattern: '^_',
+			},
+		],
+		'@typescript-eslint/prefer-function-type': 'error',
+  },
 }
