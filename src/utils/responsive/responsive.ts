@@ -1,33 +1,37 @@
 const responsiveOpts = ['sm', 'md', 'lg', 'xl', 'default'] as const
 type ResponsiveNames = typeof responsiveOpts[number]
-type responsiveUnitValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'auto'];
+type responsiveUnitValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'auto']
 
-type ResponsiveTypes = {
-  sm: String|Number,
-  md: String|Number,
-  lg: String|Number,
-  xl: String|Number,
-  default: String|Number
+interface ResponsiveTypes {
+  sm: string | number
+  md: string | number
+  lg: string | number
+  xl: string | number
+  default: string | number
 }
 
 const getResponsiveValues = (
-  prop: ResponsiveTypes|String|Number|ResponsiveNames,
-  varValue: String|ResponsiveNames
+  prop: ResponsiveTypes | string | number | ResponsiveNames,
+  varValue: string | ResponsiveNames
 ) => {
   const stylesToReturn: any = {}
-  if(typeof prop === 'object') {
-      responsiveOpts.map((opt: ResponsiveNames) => {
-        if((prop as ResponsiveTypes)[opt]) {
-          if(opt == 'default') {
-            stylesToReturn[`${varValue}`] = `var(--spacing-${(prop as ResponsiveTypes)[opt]})`
-          } else {
-            stylesToReturn[`${varValue}-${opt}`] = `var(--spacing-${(prop as ResponsiveTypes)[opt]})`
-          }
+  if (typeof prop === 'object') {
+    responsiveOpts.map((opt: ResponsiveNames) => {
+      if ((prop as ResponsiveTypes)[opt]) {
+        if (opt == 'default') {
+          stylesToReturn[`${varValue}`] = `var(--spacing-${
+            (prop as ResponsiveTypes)[opt]
+          })`
+        } else {
+          stylesToReturn[`${varValue}-${opt}`] = `var(--spacing-${
+            (prop as ResponsiveTypes)[opt]
+          })`
         }
-      })
+      }
+    })
   } else {
-    if(prop) {
-      stylesToReturn[`${varValue}`] = `var(--spacing-${(prop)})`
+    if (prop) {
+      stylesToReturn[`${varValue}`] = `var(--spacing-${prop})`
     }
   }
   return stylesToReturn
@@ -38,5 +42,5 @@ export {
   ResponsiveNames,
   responsiveUnitValues,
   ResponsiveTypes,
-  getResponsiveValues
+  getResponsiveValues,
 }

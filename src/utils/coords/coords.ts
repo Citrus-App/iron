@@ -1,9 +1,9 @@
-type vals =  'top' | 'left' | 'right' | 'bottom';
+type vals = 'top' | 'left' | 'right' | 'bottom'
 
-type CoordsTypes = {
-  top: vals,
-  left: vals,
-  right: vals,
+interface CoordsTypes {
+  top: vals
+  left: vals
+  right: vals
   bottom: vals
 }
 

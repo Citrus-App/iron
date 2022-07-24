@@ -1,6 +1,6 @@
-type vals =  'block' | 'flex' | 'inlineBlock' | 'inlineFlex' | 'grid';
+type vals = 'block' | 'flex' | 'inlineBlock' | 'inlineFlex' | 'grid'
 
-type DisplaysTypes = {
+interface DisplaysTypes {
   display: vals
 }
 

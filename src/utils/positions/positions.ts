@@ -1,6 +1,6 @@
-type vals =  'relative' | 'absolute' | 'fixed' | 'sticky';
+type vals = 'relative' | 'absolute' | 'fixed' | 'sticky'
 
-type PositionsTypes = {
+interface PositionsTypes {
   position: vals
 }
 
