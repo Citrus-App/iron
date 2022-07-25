@@ -1,16 +1,12 @@
 import React from 'react'
-import styles from "./Gallery.module.css";
+import styles from './Gallery.module.css'
 
-type Props = {
+interface Props {
   children?: React.ReactNode
 }
 
-const Gallery = ({ 
-  children
-}: Props) => {
-  return (
-    <div className={styles.root}>{children}</div>
-  )
-};
+const Gallery = ({ children }: Props) => {
+  return <div className={styles.root}>{children}</div>
+}
 
-export default Gallery;
+export default Gallery

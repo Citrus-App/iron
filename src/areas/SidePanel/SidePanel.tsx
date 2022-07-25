@@ -1,24 +1,23 @@
 import React from 'react'
 import classnames from 'classnames'
-import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins';
-import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords';
-import MarginsTypes from '../../utils/margins/margins';
-import styles from "./SidePanel.module.css";
-import CoordsTypes from '../../utils/coords/coords';
-import getPaddings, { getPaddingsStyles } from '../../utils/paddings/getPaddings';
-import PaddingsTypes from '../../utils/paddings/paddings';
+import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins'
+import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords'
+import MarginsTypes from '../../utils/margins/margins'
+import styles from './SidePanel.module.css'
+import CoordsTypes from '../../utils/coords/coords'
+import getPaddings, {
+  getPaddingsStyles,
+} from '../../utils/paddings/getPaddings'
+import PaddingsTypes from '../../utils/paddings/paddings'
 
-interface SidePanelInterface 
-  extends MarginsTypes,
-  CoordsTypes,
-  PaddingsTypes {
-    children?: React.ReactNode,
-    alignment?: string,
-    state?: boolean,
-    alignType?: string,
+interface SidePanelInterface extends MarginsTypes, CoordsTypes, PaddingsTypes {
+  children?: React.ReactNode
+  alignment?: string
+  state?: boolean
+  alignType?: string
 }
 
-const SidePanel = ({ 
+const SidePanel = ({
   children,
   alignment,
   state,
@@ -36,7 +35,7 @@ const SidePanel = ({
   top,
   left,
   right,
-  bottom
+  bottom,
 }: SidePanelInterface) => {
   const props = {
     children,
@@ -56,24 +55,26 @@ const SidePanel = ({
     top,
     left,
     right,
-    bottom
+    bottom,
   }
 
   return (
     <div
-      style={{
-        ...getCoordsStyle({top, left, right, bottom}),
-        ...getMarginsStyles({m, mb, ml, mr, mt}),
-        ...getPaddingsStyles({p, pb, pl, pr, pt})
-      } as React.CSSProperties}
+      style={
+        {
+          ...getCoordsStyle({ top, left, right, bottom }),
+          ...getMarginsStyles({ m, mb, ml, mr, mt }),
+          ...getPaddingsStyles({ p, pb, pl, pr, pt }),
+        } as React.CSSProperties
+      }
       className={classnames(
         ...getCoords({
           props: {
             top,
             left,
             right,
-            bottom
-          }
+            bottom,
+          },
         }),
         ...getMargins({
           props: {
@@ -81,16 +82,17 @@ const SidePanel = ({
             mb,
             ml,
             mr,
-            mt
-          }}),
+            mt,
+          },
+        }),
         ...getPaddings({
           props: {
             p,
             pb,
             pl,
             pr,
-            pt
-          }
+            pt,
+          },
         }),
         styles[alignType],
         styles[`alignment-${alignment}`],
@@ -98,11 +100,9 @@ const SidePanel = ({
         styles.root
       )}
     >
-      <div className={styles.innerPanel}>
-        {children}
-      </div>
+      <div className={styles.innerPanel}>{children}</div>
     </div>
   )
-};
+}
 
-export default SidePanel;
+export default SidePanel
