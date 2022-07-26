@@ -1,4 +1,4 @@
-import CoordsTypes from "./coords";
+import CoordsTypes from './coords';
 declare function getCoords({ props }: {
     props: CoordsTypes;
 }): any[];

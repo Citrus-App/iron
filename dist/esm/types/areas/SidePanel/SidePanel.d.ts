@@ -8,5 +8,5 @@ interface SidePanelInterface extends MarginsTypes, CoordsTypes, PaddingsTypes {
     state?: boolean;
     alignType?: string;
 }
-declare const SidePanel: ({ children, alignment, state, alignType, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom }: SidePanelInterface) => JSX.Element;
+declare const SidePanel: ({ children, alignment, state, alignType, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: SidePanelInterface) => JSX.Element;
 export default SidePanel;

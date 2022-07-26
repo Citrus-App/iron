@@ -113,7 +113,7 @@ var getResponsiveValues = function (prop, varValue) {
     }
     else {
         if (prop) {
-            stylesToReturn["".concat(varValue)] = "var(--spacing-".concat((prop), ")");
+            stylesToReturn["".concat(varValue)] = "var(--spacing-".concat(prop, ")");
         }
     }
     return stylesToReturn;
@@ -157,7 +157,7 @@ function getPaddings(_a) {
         pb ? styles$f['pb'] : null,
         pl ? styles$f['pl'] : null,
         pr ? styles$f['pr'] : null,
-        pt ? styles$f['pt'] : null
+        pt ? styles$f['pt'] : null,
     ];
 }
 function getPaddingsStyles(_a) {
@@ -173,11 +173,11 @@ styleInject(css_248z$e);
 function getMargins(_a) {
     var m = _a.m, mb = _a.mb, ml = _a.ml, mr = _a.mr, mt = _a.mt;
     return [
-        m ? styles$e["m"] : null,
-        mb ? styles$e["mb"] : null,
-        ml ? styles$e["ml"] : null,
-        mr ? styles$e["mr"] : null,
-        mt ? styles$e["mt"] : null
+        m ? styles$e['m'] : null,
+        mb ? styles$e['mb'] : null,
+        ml ? styles$e['ml'] : null,
+        mr ? styles$e['mr'] : null,
+        mt ? styles$e['mt'] : null,
     ];
 }
 function getMarginsStyles(_a) {
@@ -193,10 +193,10 @@ styleInject(css_248z$d);
 function getCoords(_a) {
     var props = _a.props;
     return [
-        props.top ? styles$d["coords-top"] : null,
-        props.left ? styles$d["coords-left"] : null,
-        props.right ? styles$d["coords-right"] : null,
-        props.bottom ? styles$d["coords-bottom"] : null,
+        props.top ? styles$d['coords-top'] : null,
+        props.left ? styles$d['coords-left'] : null,
+        props.right ? styles$d['coords-right'] : null,
+        props.bottom ? styles$d['coords-bottom'] : null,
     ];
 }
 function getCoordsStyle(_a) {
@@ -220,27 +220,28 @@ var Button = function (_a) {
             top: top,
             left: left,
             right: right,
-            bottom: bottom
-        }
+            bottom: bottom,
+        },
     }), false), getMargins({
         m: m,
         mb: mb,
         ml: ml,
         mr: mr,
-        mt: mt
+        mt: mt,
     }), false), getPaddings({
         p: p,
         pb: pb,
         pl: pl,
         pr: pr,
-        pt: pt
+        pt: pt,
     }), false), [styles$c.baseButton,
         styles$c["variant-".concat(variant)]], false));
     type = type !== null && type !== void 0 ? type : 'button';
     return (React.createElement("button", { style: __assign(__assign(__assign({}, getCoordsStyle({ top: top, left: left, right: right, bottom: bottom })), getMarginsStyles({ m: m, mb: mb, ml: ml, mr: mr, mt: mt })), getPaddingsStyles({ p: p, pb: pb, pl: pl, pr: pr, pt: pt })), className: classList, onClick: action, disabled: disabled, type: type },
         React.createElement("div", { className: styles$c.inner }, children)));
 };
-Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
+Button.documentation =
+    'The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma';
 
 var css_248z$b = ".ButtonGroup-module_baseButtonGroup__G5x-4 {\n  display: grid;\n  grid-auto-columns: 1fr;\n  grid-auto-flow:column;\n  -moz-column-gap: 1.6rem;\n       column-gap: 1.6rem;\n}\n";
 var styles$b = {"baseButtonGroup":"ButtonGroup-module_baseButtonGroup__G5x-4"};
@@ -249,9 +250,9 @@ styleInject(css_248z$b);
 var ButtonGroup = function (_a) {
     var children = _a.children;
     var classList = classnames(styles$b.baseButtonGroup);
-    return (React.createElement("div", { className: classList }, children));
+    return React.createElement("div", { className: classList }, children);
 };
-ButtonGroup.documentation = "The Button Group component accepts button children";
+ButtonGroup.documentation = 'The Button Group component accepts button children';
 
 /**
  * Do not edit directly
@@ -407,7 +408,7 @@ var Tokens = {
 
 var setTheme = function (mode) {
     var themeStyles = {};
-    Object.keys(Tokens).map(function (key, index) {
+    Object.keys(Tokens).map(function (key, _index) {
         if (key.startsWith(mode)) {
             themeStyles["--".concat(key.split("".concat(mode, "-"))[1])] = Tokens[key];
         }
@@ -428,24 +429,27 @@ var css_248z$a = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
 var styles$a = {"root":"Menu-module_root__Hh-vp"};
 styleInject(css_248z$a);
 
+// eslint-disable-next-line no-empty-pattern
 var Menu = function (_a) {
-    return (React.createElement("div", { className: styles$a.root }, "hello world! I am Menu"));
+    return React.createElement("div", { className: styles$a.root }, "hello world! I am Menu");
 };
 
 var css_248z$9 = "\n.Overlay-module_root__snYjz {\n  position: relative;\n}\n";
 var styles$9 = {"root":"Overlay-module_root__snYjz"};
 styleInject(css_248z$9);
 
+// eslint-disable-next-line no-empty-pattern
 var Overlay = function (_a) {
-    return (React.createElement("div", { className: styles$9.root }, "hello world! I am Overlay"));
+    return React.createElement("div", { className: styles$9.root }, "hello world! I am Overlay");
 };
 
 var css_248z$8 = "\n.Card-module_root__c9KvZ {\n  position: relative;\n}\n";
 var styles$8 = {"root":"Card-module_root__c9KvZ"};
 styleInject(css_248z$8);
 
+// eslint-disable-next-line no-empty-pattern
 var Card = function (_a) {
-    return (React.createElement("div", { className: styles$8.root }, "hello world! I am Card"));
+    return React.createElement("div", { className: styles$8.root }, "hello world! I am Card");
 };
 
 var css_248z$7 = ".Gallery-module_root__nWKQx {\n  grid-area: gallery;\n}\n\n  @media only screen and (max-width: 900px) {.Gallery-module_root__nWKQx {\n    rid-area: initial;\n    grid-column: auto / span 12;\n    margin-top: 4rem\n}\n  }\n";
@@ -454,7 +458,7 @@ styleInject(css_248z$7);
 
 var Gallery = function (_a) {
     var children = _a.children;
-    return (React.createElement("div", { className: styles$7.root }, children));
+    return React.createElement("div", { className: styles$7.root }, children);
 };
 
 var css_248z$6 = ".GridWrapper-module_root__qiLsL {\n  display: grid;\n  grid-template-columns: var(--main-grid);\n  -moz-column-gap: 2rem;\n       column-gap: 2rem;\n  grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'sidebar sidebar sidebar sidebar gallery gallery gallery gallery gallery gallery gallery gallery';\n}\n\n  .GridWrapper-module_root__qiLsL.GridWrapper-module_full__bjDtO {\n    grid-template-areas:\n    'topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar topbar'\n    'gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery';\n  }\n";
@@ -472,7 +476,7 @@ styleInject(css_248z$5);
 
 var SideBar = function (_a) {
     var children = _a.children;
-    return (React.createElement("div", { className: styles$5.root }, children));
+    return React.createElement("div", { className: styles$5.root }, children);
 };
 
 var css_248z$4 = ".SidePanel-module_root__0iNYB {\n  top: 0;\n  color: var(--color-dark);\n  position: relative;\n  z-index: 9;\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  left: calc(-1 * min(30vw, 700px) - 20vw);\n  transition: left 0.5s ease;\n  width: 500px;\n  background: var(--color-highlight);\n  border-right: 1px solid var(--color-dark);\n}\n\n  @media only screen and (max-width: 900px) {.SidePanel-module_root__0iNYB {\n    width: 100%;\n    border-right: 0\n}\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_abs__K7rS9 .SidePanel-module_innerPanel__vQAVh {\n      height: auto;\n      margin: auto 0;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_alignment-right__-XaUF {\n    position: absolute;\n    top: 5rem;\n    left: initial;\n    transition: right 0.5s ease;\n    right: calc(-1 * min(30vw, 700px) - 20vw);\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY {\n    left: 0;\n  }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF {\n      right: 5rem;\n      left: initial;\n    }\n\n  .SidePanel-module_root__0iNYB.SidePanel-module_activePanel__2ATtY.SidePanel-module_alignment-right__-XaUF::after {\n        right: calc(-156.3vh + (min(700px, 30vw) / 2));\n        left: initial;\n      }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n    padding-left: 3rem;\n    padding-right: 3rem;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n  }\n\n  @media only screen and (max-width: 900px) {\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh {\n      padding: 2rem\n  }\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh * > div {\n      margin: auto;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh > section:last-child {\n      margin-top: 2rem;\n      display: block;\n    }\n\n  .SidePanel-module_root__0iNYB .SidePanel-module_innerPanel__vQAVh a {\n      display: block;\n      margin-top: 0.75rem;\n      font-size: 2rem;\n    }\n";
@@ -486,24 +490,24 @@ var SidePanel = function (_a) {
                 top: top,
                 left: left,
                 right: right,
-                bottom: bottom
-            }
+                bottom: bottom,
+            },
         }), false), getMargins({
             props: {
                 m: m,
                 mb: mb,
                 ml: ml,
                 mr: mr,
-                mt: mt
-            }
+                mt: mt,
+            },
         }), false), getPaddings({
             props: {
                 p: p,
                 pb: pb,
                 pl: pl,
                 pr: pr,
-                pt: pt
-            }
+                pt: pt,
+            },
         }), false), [styles$4[alignType],
             styles$4["alignment-".concat(alignment)],
             state ? styles$4.activePanel : '',
@@ -517,7 +521,7 @@ styleInject(css_248z$3);
 
 var TopBar = function (_a) {
     var children = _a.children;
-    return (React.createElement("div", { className: styles$3.root }, children));
+    return React.createElement("div", { className: styles$3.root }, children);
 };
 
 var css_248z$2 = "\n.Header-module_root__zkAdZ {\n  position: relative;\n}\n\nh1 {\n  font-family: var(--font-families-degular);\n  font-weight: 200;\n  font-style: normal;\n  font-size: 14rem;\n  line-height: 11rem;\n}\n\nh2 {\n  font-family: var(--font-families-degular);\n  font-weight: 600;\n  font-style: normal;\n  font-size: 4.8rem;\n  line-height: 5.2rem;\n}\n\nh3 {\n  font-family: var(--font-families-sf-compact);\n  font-weight: 600;\n  font-size: 4.4rem;\n  line-height: 4.8rem;\n}\n\nh4 {\n  font-family: var(--font-families-sf-compact);\n  font-weight: 600;\n  font-size: 3rem;\n  line-height: 3.4rem\n}\n\nh5 {\n  font-family: var(--font-families-sf-compact);\n  font-weight: 600;\n  font-size: 2.2rem;\n  line-height: 2.4rem;\n}\n";

@@ -1,5 +1,3 @@
-import DisplaysTypes from "./displays";
-declare function getDisplays({ props }: {
-    props: DisplaysTypes;
-}): any[];
+import DisplaysTypes from './displays';
+declare function getDisplays({ display }: DisplaysTypes): any[];
 export default getDisplays;

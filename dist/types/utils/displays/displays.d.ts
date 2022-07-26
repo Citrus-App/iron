@@ -1,5 +1,4 @@
-declare type vals = 'block' | 'flex' | 'inlineBlock' | 'inlineFlex' | 'grid';
-declare type DisplaysTypes = {
-    display: vals;
-};
-export default DisplaysTypes;
+export interface DisplayProps {
+    display: 'block' | 'flex' | 'inlineBlock' | 'inlineFlex' | 'grid';
+}
+export default DisplayProps;

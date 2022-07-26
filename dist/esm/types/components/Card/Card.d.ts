@@ -1,4 +1,5 @@
 /// <reference types="react" />
-declare type Props = {};
+interface Props {
+}
 declare const Card: ({}: Props) => JSX.Element;
 export default Card;

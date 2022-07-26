@@ -1,8 +1,8 @@
 import DisplaysTypes from './displays'
 import styles from './displays.module.css'
 
-function getDisplays({ props }: { props: DisplaysTypes }) {
-  return [styles[`display-${props.display}`]]
+function getDisplays({ display }: DisplaysTypes) {
+  return [styles[`display-${display}`]]
 }
 
 export default getDisplays

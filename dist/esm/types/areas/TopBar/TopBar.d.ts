@@ -1,6 +1,6 @@
 import React from 'react';
-declare type Props = {
+interface Props {
     children?: React.ReactNode;
-};
+}
 declare const TopBar: ({ children }: Props) => JSX.Element;
 export default TopBar;

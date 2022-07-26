@@ -1,4 +1,4 @@
-import PostionsTypes from "./positions";
+import PostionsTypes from './positions';
 declare function getPositions({ props }: {
     props: PostionsTypes;
 }): any[];
