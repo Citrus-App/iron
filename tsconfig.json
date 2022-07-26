@@ -18,6 +18,7 @@
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "outDir": "dist",
     "declaration": true,
-    "declarationDir": "types"
+    "declarationDir": "types",
+    "allowJs": true
   }
 }

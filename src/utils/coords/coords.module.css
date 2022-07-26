@@ -1,0 +1,15 @@
+.coords,
+body *.coords {
+  &-top {
+    top: var(--coordTop);
+  }
+  &-left {
+    left: var(--coordLeft);
+  }
+  &-right {
+    right: var(--coordRight);
+  }
+  &-bottom {
+    bottom: var(--coordBottom);
+  }
+}

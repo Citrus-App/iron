@@ -1,16 +1,12 @@
 import React from 'react'
-import styles from "./TopBar.module.css";
+import styles from './TopBar.module.css'
 
-type Props = {
+interface Props {
   children?: React.ReactNode
 }
 
-const TopBar = ({ 
-  children
-}: Props) => {
-  return (
-    <div className={styles.root}>{children}</div>
-  )
-};
+const TopBar = ({ children }: Props) => {
+  return <div className={styles.root}>{children}</div>
+}
 
-export default TopBar;
+export default TopBar

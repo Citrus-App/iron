@@ -1,71 +1,101 @@
 /// <reference types="react" />
 import React from 'react';
 
-declare type Props$d = {
+declare type vals = 'top' | 'left' | 'right' | 'bottom';
+interface CoordsTypes {
+    top: vals;
+    left: vals;
+    right: vals;
+    bottom: vals;
+}
+
+declare type integerVals$1 = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+interface PaddingsTypes {
+    p: integerVals$1;
+    pb: integerVals$1;
+    pl: integerVals$1;
+    pr: integerVals$1;
+    pt: integerVals$1;
+}
+
+declare const integerVals: number;
+declare const autoVals = "auto";
+interface MarginsTypes {
+    m: typeof integerVals | typeof autoVals;
+    mb: typeof integerVals | typeof autoVals;
+    ml: typeof integerVals | typeof autoVals;
+    mr: typeof integerVals | typeof autoVals;
+    mt: typeof integerVals | typeof autoVals;
+}
+
+interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
     action?: any;
     disabled?: boolean;
     variant?: string;
-    type?: "button" | "submit" | "reset" | undefined;
-};
+    type?: 'button' | 'submit' | 'reset' | undefined;
+}
 declare const Button: {
-    ({ children, action, variant, disabled, type }: Props$d): JSX.Element;
+    ({ children, action, variant, disabled, type, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: ButtonProps): JSX.Element;
     documentation: string;
 };
 
-declare type Props$c = {
+interface Props$b {
     children?: React.ReactNode;
-};
+}
 declare const ButtonGroup: {
-    ({ children }: Props$c): JSX.Element;
+    ({ children }: Props$b): JSX.Element;
     documentation: string;
 };
 
-declare type Props$b = {
+interface Props$a {
     children?: React.ReactNode;
     themeMode?: string;
-};
+}
 declare const Theme: {
-    ({ children, themeMode }: Props$b): JSX.Element;
+    ({ children, themeMode }: Props$a): JSX.Element;
     extracter: (mode: string) => any;
 };
 
-declare type Props$a = {};
-declare const Menu: ({}: Props$a) => JSX.Element;
+interface Props$9 {
+}
+declare const Menu: ({}: Props$9) => JSX.Element;
 
-declare type Props$9 = {};
-declare const Overlay: ({}: Props$9) => JSX.Element;
+interface Props$8 {
+}
+declare const Overlay: ({}: Props$8) => JSX.Element;
 
-declare type Props$8 = {};
-declare const Card: ({}: Props$8) => JSX.Element;
+interface Props$7 {
+}
+declare const Card: ({}: Props$7) => JSX.Element;
 
-declare type Props$7 = {
+interface Props$6 {
     children?: React.ReactNode;
-};
-declare const Gallery: ({ children }: Props$7) => JSX.Element;
+}
+declare const Gallery: ({ children }: Props$6) => JSX.Element;
 
-declare type Props$6 = {
+interface Props$5 {
     children?: React.ReactNode;
     full?: boolean;
-};
-declare const GridWrapper: ({ children, full }: Props$6) => JSX.Element;
+}
+declare const GridWrapper: ({ children, full }: Props$5) => JSX.Element;
 
-declare type Props$5 = {
+interface Props$4 {
     children?: React.ReactNode;
-};
-declare const SideBar: ({ children }: Props$5) => JSX.Element;
+}
+declare const SideBar: ({ children }: Props$4) => JSX.Element;
 
-declare type Props$4 = {
+interface SidePanelInterface extends MarginsTypes, CoordsTypes, PaddingsTypes {
     children?: React.ReactNode;
     alignment?: string;
     state?: boolean;
     alignType?: string;
-};
-declare const SidePanel: ({ children, alignment, state, alignType }: Props$4) => JSX.Element;
+}
+declare const SidePanel: ({ children, alignment, state, alignType, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: SidePanelInterface) => JSX.Element;
 
-declare type Props$3 = {
+interface Props$3 {
     children?: React.ReactNode;
-};
+}
 declare const TopBar: ({ children }: Props$3) => JSX.Element;
 
 declare type Props$2 = {
