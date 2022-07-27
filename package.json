@@ -10,7 +10,7 @@
     "dev": "rollup -c -w",
     "tokens": "token-transformer ./tokens/tokens.json ./tokens/tokens_parsed.json && style-dictionary build",
     "create:component": "babel-node --experimental-modules ./scripts/create-component.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 3000",
     "build-storybook": "build-storybook"
   },
   "author": "Jared Smith — Citrus",
