@@ -58,7 +58,13 @@
   }
 }
 
-.variant-bare {
+.variant-solid {
+  background-color: var(--spectrum-gray-1000);
+  color: var(--spectrum-gray-000);
+  border: 1px solid var(--spectrum-gray-1000);
+}
+
+/* .variant-bare {
   background-color: transparent;
   border: 0 none;
   color: var(--text-body);
@@ -67,4 +73,4 @@
     background-color: transparent;
      border: 0 none;
   }
-}
+} */
