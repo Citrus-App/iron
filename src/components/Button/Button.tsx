@@ -11,15 +11,15 @@ import MarginsTypes from '../../utils/margins/margins'
 
 import styles from './Button.module.css'
 
-interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
+export interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
   children?: React.ReactNode
-  action?: any
+  action?: () => void
   disabled?: boolean
-  variant?: string
+  variant?: 'outline' | 'solid'
   type?: 'button' | 'submit' | 'reset' | undefined
 }
 
-const Button = ({
+export const Button = ({
   children,
   action,
   variant,
@@ -86,7 +86,7 @@ const Button = ({
       pt,
     }),
     styles.baseButton,
-    styles[`variant-${variant}`]
+    styles[`variant-${variant}`],
   )
 
   type = type ?? 'button'
@@ -103,8 +103,7 @@ const Button = ({
       className={classList}
       onClick={action}
       disabled={disabled}
-      type={type}
-    >
+      type={type}>
       <div className={styles.inner}>{children}</div>
     </button>
   )
