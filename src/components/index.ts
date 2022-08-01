@@ -4,4 +4,3 @@ export { default as Theme } from "./Theme";
 
 export { default as Menu } from "./Menu";
 export { default as Overlay } from "./Overlay";
-export { default as Card } from "./Card";
