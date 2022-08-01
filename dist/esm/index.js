@@ -87,26 +87,26 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$c = ".Button-module_baseButton__OB4cX {\n  border-radius: 0;\n  line-height: 3rem;\n  display: inline-flex;\n  text-decoration: none;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-2);\n  font-size: calc(var(--global-font-size-0) * 0.1rem);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-primary);\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    /*background-color: var(--button-pressed);*/\n  }\n\n  .Button-module_baseButton__OB4cX:disabled {\n    pointer-events: none;\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background: transparent;\n  border: 1px solid var(--button-primary);\n  color: var(--button-primary);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: var(--button-primary);\n    color: var(--button-secondary);\n  }\n\n.Button-module_variant-outline__wbE1U:hover * {\n    color: var(--button-secondary);\n    stroke: var(--button-secondary);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled {\n    color: var(--button-disabled);\n    border: 1px solid var(--button-disabled);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled * {\n      color: var(--button-disabled);\n      stroke: var(--button-disabled);\n    }\n\n.Button-module_variant-bare__-ig32 {\n  background-color: transparent;\n  border: 0 none;\n  color: var(---button-primary);\n}\n\n.Button-module_variant-bare__-ig32:hover {\n    background-color: transparent;\n     border: 0 none;\n  }\n";
-var styles$c = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U","variant-bare":"Button-module_variant-bare__-ig32"};
-styleInject(css_248z$c);
+var css_248z$b = ".Button-module_baseButton__OB4cX {\n  border-radius: 0;\n  line-height: 3rem;\n  display: inline-flex;\n  text-decoration: none;\n  white-space: nowrap;\n  cursor: pointer;\n  margin: 0;\n  transition: color 0.4s ease, border 0.4s ease;\n\n  font-family: var(--global-font-families-sf-compact);\n  font-weight: var(--global-font-weights-sf-compact-2);\n  font-size: calc(var(--global-font-size-0) * 0.1rem);\n}\n\n  .Button-module_baseButton__OB4cX:hover {\n    background-color: var(--button-primary);\n  }\n\n  .Button-module_baseButton__OB4cX:focus {\n    /*background-color: var(--button-pressed);*/\n  }\n\n  .Button-module_baseButton__OB4cX:disabled {\n    pointer-events: none;\n  }\n\n.Button-module_inner__boETo {\n  margin: auto;\n  display: flex;\n}\n\n.Button-module_variant-outline__wbE1U {\n  background: transparent;\n  border: 1px solid var(--button-primary);\n  color: var(--button-primary);\n}\n\n.Button-module_variant-outline__wbE1U:hover {\n    background-color: var(--button-primary);\n    color: var(--button-secondary);\n  }\n\n.Button-module_variant-outline__wbE1U:hover * {\n    color: var(--button-secondary);\n    stroke: var(--button-secondary);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled {\n    color: var(--button-disabled);\n    border: 1px solid var(--button-disabled);\n  }\n\n.Button-module_variant-outline__wbE1U:disabled * {\n      color: var(--button-disabled);\n      stroke: var(--button-disabled);\n    }\n\n.Button-module_variant-bare__-ig32 {\n  background-color: transparent;\n  border: 0 none;\n  color: var(---button-primary);\n}\n\n.Button-module_variant-bare__-ig32:hover {\n    background-color: transparent;\n     border: 0 none;\n  }\n";
+var styles$b = {"baseButton":"Button-module_baseButton__OB4cX","inner":"Button-module_inner__boETo","variant-outline":"Button-module_variant-outline__wbE1U","variant-bare":"Button-module_variant-bare__-ig32"};
+styleInject(css_248z$b);
 
 var Button = function (_a) {
     var children = _a.children, action = _a.action, variant = _a.variant, disabled = _a.disabled, type = _a.type;
-    var classList = classnames(styles$c.baseButton, styles$c["variant-".concat(variant)]);
+    var classList = classnames(styles$b.baseButton, styles$b["variant-".concat(variant)]);
     type = type !== null && type !== void 0 ? type : 'button';
     return (React.createElement("button", { className: classList, onClick: action, disabled: disabled, type: type },
-        React.createElement("div", { className: styles$c.inner }, children)));
+        React.createElement("div", { className: styles$b.inner }, children)));
 };
 Button.documentation = "The Button component accepts children for strings, action for (), href for link, and variant for our types defined in Figma";
 
-var css_248z$b = ".ButtonGroup-module_baseButtonGroup__G5x-4 {\n  display: grid;\n  grid-auto-columns: 1fr;\n  grid-auto-flow:column;\n  -moz-column-gap: 1.6rem;\n       column-gap: 1.6rem;\n}\n";
-var styles$b = {"baseButtonGroup":"ButtonGroup-module_baseButtonGroup__G5x-4"};
-styleInject(css_248z$b);
+var css_248z$a = ".ButtonGroup-module_baseButtonGroup__G5x-4 {\n  display: grid;\n  grid-auto-columns: 1fr;\n  grid-auto-flow:column;\n  -moz-column-gap: 1.6rem;\n       column-gap: 1.6rem;\n}\n";
+var styles$a = {"baseButtonGroup":"ButtonGroup-module_baseButtonGroup__G5x-4"};
+styleInject(css_248z$a);
 
 var ButtonGroup = function (_a) {
     var children = _a.children;
-    var classList = classnames(styles$b.baseButtonGroup);
+    var classList = classnames(styles$a.baseButtonGroup);
     return (React.createElement("div", { className: classList }, children));
 };
 ButtonGroup.documentation = "The Button Group component accepts button children";
@@ -760,28 +760,20 @@ var Theme = function (_a) {
 };
 Theme.extracter = setTheme;
 
-var css_248z$a = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
-var styles$a = {"root":"Menu-module_root__Hh-vp"};
-styleInject(css_248z$a);
-
-var Menu = function (_a) {
-    return (React.createElement("div", { className: styles$a.root }, "hello world! I am Menu"));
-};
-
-var css_248z$9 = "\n.Overlay-module_root__snYjz {\n  position: relative;\n}\n";
-var styles$9 = {"root":"Overlay-module_root__snYjz"};
+var css_248z$9 = "\n.Menu-module_root__Hh-vp {\n  position: relative;\n}\n";
+var styles$9 = {"root":"Menu-module_root__Hh-vp"};
 styleInject(css_248z$9);
 
-var Overlay = function (_a) {
-    return (React.createElement("div", { className: styles$9.root }, "hello world! I am Overlay"));
+var Menu = function (_a) {
+    return (React.createElement("div", { className: styles$9.root }, "hello world! I am Menu"));
 };
 
-var css_248z$8 = "\n.Card-module_root__c9KvZ {\n  position: relative;\n}\n";
-var styles$8 = {"root":"Card-module_root__c9KvZ"};
+var css_248z$8 = "\n.Overlay-module_root__snYjz {\n  position: relative;\n}\n";
+var styles$8 = {"root":"Overlay-module_root__snYjz"};
 styleInject(css_248z$8);
 
-var Card = function (_a) {
-    return (React.createElement("div", { className: styles$8.root }, "hello world! I am Card"));
+var Overlay = function (_a) {
+    return (React.createElement("div", { className: styles$8.root }, "hello world! I am Overlay"));
 };
 
 var css_248z$7 = ".Gallery-module_root__nWKQx {\n  grid-area: gallery;\n}\n\n  @media only screen and (max-width: 900px) {.Gallery-module_root__nWKQx {\n    rid-area: initial;\n    grid-column: auto / span 12;\n    margin-top: 4rem\n}\n  }\n";
@@ -861,5 +853,5 @@ var Icon = function (_a) {
     return (React.createElement("div", { className: styles.root }, "hello world! I am Icon"));
 };
 
-export { Button, ButtonGroup, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
+export { Button, ButtonGroup, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
 //# sourceMappingURL=index.js.map
