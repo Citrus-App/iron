@@ -1,7 +1,7 @@
 .root {
   grid-area: topbar;
   display: flex;
-  border-bottom: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-primary);
   margin-bottom: 6rem;
   width: 100%;
 }

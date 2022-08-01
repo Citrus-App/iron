@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 
 declare type Props$d = {
