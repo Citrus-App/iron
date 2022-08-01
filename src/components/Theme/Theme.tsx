@@ -11,8 +11,9 @@ const setTheme = (mode: string) => {
   const themeStyles: any = {}
   Object.keys(Tokens).map(function(key, index) {
     if(key.startsWith(mode)) {
+      const pre = key.split(`${mode}-`)[1]
       themeStyles[
-        `--${key.split(`${mode}-`)[1]}`
+        `--${pre.split('-').splice(1, pre.split('-').length).join('-')}`
       ] = Tokens[key]
     } else if(key.startsWith('global')) {
       themeStyles[`--${key}`] = Tokens[key]
