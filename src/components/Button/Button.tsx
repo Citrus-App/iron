@@ -1,24 +1,13 @@
 import React from 'react'
 import classnames from 'classnames'
-import CoordsTypes from '../../utils/coords/coords'
 import getPaddings, {
   getPaddingsStyles,
 } from '../../utils/paddings/getPaddings'
-import PaddingsTypes from '../../utils/paddings/paddings'
 import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins'
 import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords'
-import MarginsTypes from '../../utils/margins/margins'
+import { ButtonProps } from './types'
 
 import styles from './Button.module.css'
-
-interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
-  children?: React.ReactNode
-  action?: any
-  disabled?: boolean
-  variant?: string
-  type?: 'button' | 'submit' | 'reset' | undefined
-}
-
 const Button = ({
   children,
   action,
