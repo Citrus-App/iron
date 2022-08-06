@@ -1,4 +1,5 @@
 import '../build/tokens/index.css'
+import '../src/stories/docs.css'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

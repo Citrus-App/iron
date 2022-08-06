@@ -14,6 +14,8 @@ const Button = ({
   variant,
   disabled,
   type,
+  icon,
+  iconPosition = 'left',
   m,
   mb,
   ml,
@@ -80,22 +82,34 @@ const Button = ({
 
   type = type ?? 'button'
 
+  const Icon = icon ?? undefined
+
   return (
-    <button
-      style={
-        {
-          ...getCoordsStyle({ top, left, right, bottom }),
-          ...getMarginsStyles({ m, mb, ml, mr, mt }),
-          ...getPaddingsStyles({ p, pb, pl, pr, pt }),
-        } as React.CSSProperties
-      }
-      className={classList}
-      onClick={action}
-      disabled={disabled}
-      type={type}
-    >
-      <div className={styles.inner}>{children}</div>
-    </button>
+    <div style={{ height: '36px' }}>
+      <button
+        style={
+          {
+            ...getCoordsStyle({ top, left, right, bottom }),
+            ...getMarginsStyles({ m, mb, ml, mr, mt }),
+            ...getPaddingsStyles({ p, pb, pl, pr, pt }),
+          } as React.CSSProperties
+        }
+        className={classList}
+        onClick={action}
+        disabled={disabled}
+        type={type}
+      >
+        <div className={styles.inner}>
+          {icon && iconPosition === 'left' && (
+            <div className={styles.icon}>{Icon}</div>
+          )}
+          {children}
+          {icon && iconPosition === 'right' && (
+            <div className={styles.icon}>{Icon}</div>
+          )}
+        </div>
+      </button>
+    </div>
   )
 }
 
