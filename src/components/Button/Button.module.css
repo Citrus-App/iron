@@ -35,6 +35,10 @@
   justify-content: center;
 }
 
+.inner svg {
+  stroke: currentColor;
+}
+
 .variant-outline {
   background: transparent;
   border: 1px solid var(--text-body);
@@ -65,6 +69,12 @@
   background-color: var(--spectrum-gray-1000);
   color: var(--spectrum-gray-000);
   border: 1px solid var(--spectrum-gray-1000);
+}
+
+.variant-disabled {
+  background-color: transparent;
+  color: var(--light-text-button-outline);
+  border: 1px solid var(--light-text-button-outline);
 }
 
 .variant-bare {
