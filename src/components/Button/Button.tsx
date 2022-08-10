@@ -85,7 +85,7 @@ const Button = ({
   const Icon = icon ?? undefined
 
   return (
-    <div style={{ height: '36px' }}>
+    <div>
       <button
         style={
           {
