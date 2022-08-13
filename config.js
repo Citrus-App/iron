@@ -16,7 +16,6 @@ StyleDictionary.registerFilter({
 
 StyleDictionary.registerTransform({
   type: "name",
-  // transitive: true,
   name: "name/flatten-category",
   transformer: (token) => {
     const [category, ...rest] = token.path;
