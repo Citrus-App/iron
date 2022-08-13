@@ -28,6 +28,18 @@ StyleDictionary.registerFilter({
   },
 });
 
+StyleDictionary.registerFilter({
+  name: "noCategory",
+  matcher: function (token) {
+    return (
+      token.path[0] !== "spectrum" &&
+      token.path[0] !== "global" &&
+      token.path[0] !== "dark" &&
+      token.path[0] !== "light"
+    );
+  },
+});
+
 StyleDictionary.registerTransform({
   type: "name",
   name: "name/flatten-category",
@@ -96,6 +108,14 @@ module.exports = {
           destination: "spectrum-tokens.css",
           format: "css/variables",
           filter: "isSpectrum",
+          options: {
+            outputReferences: true,
+          },
+        },
+        {
+          destination: "tokens.css",
+          format: "css/variables",
+          filter: "noCategory",
           options: {
             outputReferences: true,
           },
