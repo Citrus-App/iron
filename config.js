@@ -3,14 +3,28 @@ const StyleDictionary = require("style-dictionary");
 StyleDictionary.registerFilter({
   name: "isLight",
   matcher: function (token) {
-    return token.path.indexOf("light") <= 0;
+    return token.path[0] === "light";
   },
 });
 
 StyleDictionary.registerFilter({
   name: "isDark",
   matcher: function (token) {
-    return token.path.indexOf("dark") <= 0;
+    return token.path[0] === "dark";
+  },
+});
+
+StyleDictionary.registerFilter({
+  name: "isGlobal",
+  matcher: function (token) {
+    return token.path[0] === "global";
+  },
+});
+
+StyleDictionary.registerFilter({
+  name: "isSpectrum",
+  matcher: function (token) {
+    return token.path[0] === "spectrum";
   },
 });
 
@@ -66,6 +80,22 @@ module.exports = {
           destination: "dark-tokens.css",
           format: "css/variables",
           filter: "isDark",
+          options: {
+            outputReferences: true,
+          },
+        },
+        {
+          destination: "global-tokens.css",
+          format: "css/variables",
+          filter: "isGlobal",
+          options: {
+            outputReferences: true,
+          },
+        },
+        {
+          destination: "spectrum-tokens.css",
+          format: "css/variables",
+          filter: "isSpectrum",
           options: {
             outputReferences: true,
           },
