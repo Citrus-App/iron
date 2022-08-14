@@ -1,14 +1,6 @@
 /// <reference types="react" />
 import React from 'react';
 
-declare type vals = 'top' | 'left' | 'right' | 'bottom';
-interface CoordsTypes {
-    top: vals;
-    left: vals;
-    right: vals;
-    bottom: vals;
-}
-
 declare type integerVals$1 = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 interface PaddingsTypes {
     p: integerVals$1;
@@ -28,15 +20,26 @@ interface MarginsTypes {
     mt: typeof integerVals | typeof autoVals;
 }
 
+declare type vals = 'top' | 'left' | 'right' | 'bottom';
+interface CoordsTypes {
+    top: vals;
+    left: vals;
+    right: vals;
+    bottom: vals;
+}
+
 interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
-    action?: any;
+    action?: () => void;
     disabled?: boolean;
-    variant?: string;
+    variant?: 'outline';
     type?: 'button' | 'submit' | 'reset' | undefined;
+    icon?: Partial<HTMLElement>;
+    iconPosition?: 'left' | 'right';
 }
+
 declare const Button: {
-    ({ children, action, variant, disabled, type, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: ButtonProps): JSX.Element;
+    ({ children, action, variant, disabled, type, icon, iconPosition, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: ButtonProps): JSX.Element;
     documentation: string;
 };
 
@@ -117,4 +120,4 @@ declare const Text: ({ as, variant, children }: Props$1) => JSX.Element;
 declare type Props = {};
 declare const Icon: ({}: Props) => JSX.Element;
 
-export { Button, ButtonGroup, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
+export { Button, ButtonGroup, ButtonProps, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
