@@ -9,7 +9,8 @@
     "rollup": "rollup -c",
     "dev": "rollup -c -w",
     "tokens": "token-transformer ./tokens/tokens.json ./tokens/tokens_parsed.json && style-dictionary build",
-    "create:component": "babel-node --experimental-modules ./scripts/create-component.js"
+    "create:component": "babel-node --experimental-modules ./scripts/create-component.js",
+    "prettier": "prettier --write src/**/*.{ts,tsx}"
   },
   "author": "Jared Smith — Citrus",
   "license": "ISC",

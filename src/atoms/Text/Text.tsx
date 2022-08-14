@@ -1,28 +1,18 @@
 import React from 'react'
-import classnames from 'classnames';
-import styles from "./Text.module.css";
+import classnames from 'classnames'
+import styles from './Text.module.css'
 
 type Props = {
-  as?: 'p' | 'span' | 'strong',
+  as?: 'p' | 'span' | 'strong'
   variant?: 'small'
   children?: React.ReactNode
 }
 
-const Text = ({ 
-  as,
-  variant,
-  children
-}: Props) => {
+const Text = ({ as, variant, children }: Props) => {
   const Tag = as ? as : 'p'
 
-  const classList = classnames(
-    styles[`variant-${variant}`]
-  )
-  return (
-    <Tag className={classList}>
-      {children}
-    </Tag>
-  )
-};
+  const classList = classnames(styles[`variant-${variant}`])
+  return <Tag className={classList}>{children}</Tag>
+}
 
-export default Text;
+export default Text
