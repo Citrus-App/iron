@@ -32,9 +32,9 @@ interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
     action?: () => void;
     disabled?: boolean;
-    variant?: 'outline';
+    variant?: 'outline' | 'primary';
     type?: 'button' | 'submit' | 'reset' | undefined;
-    icon?: Partial<HTMLElement>;
+    icon?: React.ReactElement<any, any>;
     iconPosition?: 'left' | 'right';
 }
 
