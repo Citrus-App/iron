@@ -45,10 +45,13 @@ StyleDictionary.registerTransform({
   name: "name/flatten-category",
   transformer: (token) => {
     const [category, ...rest] = token.path;
-    if (category === "light" || category === "dark") {
+    if (category === "global") {
       return rest.join("-");
     }
-    return token.path.join("-");
+    if (category === "dark" || category === "light") {
+      return token.path.pop()
+    }
+    return token.path.join("-")
   },
 });
 

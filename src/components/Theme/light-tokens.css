@@ -1,57 +1,18 @@
 /**
  * Do not edit directly
- * Generated on Sat, 13 Aug 2022 06:35:51 GMT
+ * Generated on Sun, 14 Aug 2022 21:03:15 GMT
  */
 
 :root {
-  --border-accent: var(--blue-800);
-  --border-critical: var(--red-500);
-  --border-divider: var(--gray-200);
-  --border-default: var(--gray-400);
-  --surface-toast-error: var(--red-500);
-  --surface-toast: var(--gray-800);
-  --surface-warning: var(--yellow-100);
-  --surface-critical: var(--red-100);
-  --surface-success: var(--green-100);
-  --surface-info: var(--blue-100);
-  --surface-dialog-hover: var(--gray-100);
-  --surface-dialog: var(--gray-000);
-  --surface-on-accent-light: var(--blue-800);
-  --surface-accent-light: var(--blue-100);
-  --surface-on-accent: var(--gray-000);
-  --surface-accent: var(--blue-800);
-  --surface-textfield: var(--gray-300);
-  --surface-alt-hover: var(--gray-200);
-  --surface-alt: var(--gray-100);
-  --surface-default-hover: var(--gray-100);
-  --surface-default: var(--gray-000);
-  --surface-wash: var(--gray-100);
-  --icon-warning: var(--yellow-900);
-  --icon-info: var(--blue-800);
-  --icon-critical: var(--red-500);
-  --icon-success: var(--green-600);
-  --icon-accent: var(--blue-800);
-  --icon-default: var(--gray-800);
-  --icon-white: var(--gray-000);
-  --button-outline-disabled: var(--gray-300);
-  --button-outline-pressed: var(--blue-700);
-  --button-outline-hover: var(--blue-500);
-  --button-outline-default: var(--gray-500);
-  --button-disabled: var(--gray-300);
-  --button-pressed: var(--blue-700);
-  --button-hover: var(--blue-500);
-  --button-default: var(--gray-500);
-  --text-button-outline-disabled: var(--gray-300);
-  --text-button-outline-pressed: var(--blue-700);
-  --text-button-outline-hover: var(--blue-500);
-  --text-secondary: var(--gray-500);
-  --text-button-outline: var(--gray-500);
-  --text-warning: var(--yellow-900);
-  --text-info: var(--blue-600);
-  --text-critical: var(--red-500);
-  --text-success: var(--green-600);
-  --text-link: var(--blue-500);
-  --text-button: var(--gray-000);
-  --text-body: var(--gray-800);
-  --text-headline: var(--gray-900);
+  --border-primary: var(--spectrum-gray-900);
+  --text-tertiary: var(--spectrum-gray-600);
+  --text-secondary: var(--spectrum-gray-000);
+  --text-primary: var(--spectrum-gray-1000);
+  --surface-secondary: var(--spectrum-gray-900);
+  --surface-primary: var(--spectrum-gray-200);
+  --button-disabled: var(--spectrum-gray-400);
+  --button-secondary: var(--spectrum-gray-000);
+  --button-primary: var(--spectrum-gray-1000);
+  --icon-secondary: var(--spectrum-gray-000);
+  --icon-primary: var(--spectrum-gray-1000);
 }
