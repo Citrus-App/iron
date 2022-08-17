@@ -5,7 +5,7 @@
 
 
 p {
-  font-family: "SF Compact", sans-serif;
+  font-family: "SF Compact", system-ui, sans-serif;
   font-weight: 100;
   line-height: 2.8rem;
   font-size: 2rem;
@@ -13,7 +13,7 @@ p {
 }
 
 strong {
-  font-family: "SF Compact", sans-serif;
+  font-family: "SF Compact", system-ui, sans-serif;
   font-weight: bold;
 }
 
