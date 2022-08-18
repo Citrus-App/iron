@@ -43,21 +43,21 @@ declare const Button: {
     documentation: string;
 };
 
-interface Props$b {
+interface Props$a {
     children?: React.ReactNode;
 }
 declare const ButtonGroup: {
-    ({ children }: Props$b): JSX.Element;
+    ({ children }: Props$a): JSX.Element;
     documentation: string;
 };
 
-interface Props$a {
+interface ThemeProps {
     children?: React.ReactNode;
-    themeMode?: string;
+    themeMode?: 'light' | 'dark';
 }
 declare const Theme: {
-    ({ children, themeMode }: Props$a): JSX.Element;
-    extracter: (mode: string) => any;
+    ({ children, themeMode }: ThemeProps): JSX.Element;
+    extracter: (mode: ThemeProps['themeMode']) => any;
 };
 
 interface Props$9 {

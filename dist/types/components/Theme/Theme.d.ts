@@ -1,10 +1,10 @@
 import React from 'react';
-interface Props {
+export interface ThemeProps {
     children?: React.ReactNode;
-    themeMode?: string;
+    themeMode?: 'light' | 'dark';
 }
 declare const Theme: {
-    ({ children, themeMode }: Props): JSX.Element;
-    extracter: (mode: string) => any;
+    ({ children, themeMode }: ThemeProps): JSX.Element;
+    extracter: (mode: ThemeProps['themeMode']) => any;
 };
 export default Theme;
