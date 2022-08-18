@@ -8,6 +8,7 @@ import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords'
 import { ButtonProps } from './types'
 
 import styles from './Button.module.css'
+
 const Button = ({
   children,
   action,
