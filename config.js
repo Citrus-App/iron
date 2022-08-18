@@ -1,65 +1,58 @@
-const StyleDictionary = require("style-dictionary");
+const StyleDictionary = require('style-dictionary')
 
 StyleDictionary.registerFilter({
-  name: "isLight",
+  name: 'isLight',
   matcher: function (token) {
-    return token.path[0] === "light";
+    return token.path[0] === 'light' || token.path[0] === 'global'
   },
-});
+})
 
 StyleDictionary.registerFilter({
-  name: "isDark",
+  name: 'isDark',
   matcher: function (token) {
-    return token.path[0] === "dark";
+    return token.path[0] === 'dark' || token.path[0] === 'global'
   },
-});
-
-StyleDictionary.registerFilter({
-  name: "isGlobal",
-  matcher: function (token) {
-    return token.path[0] === "global";
-  },
-});
-
-StyleDictionary.registerFilter({
-  name: "isSpectrum",
-  matcher: function (token) {
-    return token.path[0] === "spectrum";
-  },
-});
+})
 
 StyleDictionary.registerTransform({
-  type: "name",
-  name: "name/flatten-category",
+  type: 'name',
+  name: 'name/flatten-category',
   transformer: (token) => {
-    const [category, ...rest] = token.path;
-    if (category === "global") {
-      return rest.join("-");
+    const [category, subcategory, ...rest] = token.path
+    if (category === 'global') {
+      if (subcategory == 'spectrum') {
+        return [subcategory, ...rest].join('-')
+      }
+      if (subcategory === 'consistent' || subcategory === 'featuredContext') {
+        return token.path.pop()
+      }
     }
-    if (category === "dark" || category === "light") {
+
+    if (category === 'light' || category === 'dark') {
       return token.path.pop()
     }
-    return token.path.join("-")
+
+    return token.path.join('-')
   },
-});
+})
 
 module.exports = {
-  source: ["tokens/**/*.json"],
+  source: ['tokens/**/*.json'],
   platforms: {
     css: {
-      transformGroup: "css",
-      buildPath: "src/components/Theme/",
+      transformGroup: 'css',
+      buildPath: 'src/components/Theme/',
       files: [
         {
-          destination: "index.css",
-          format: "css/variables",
+          destination: 'index.css',
+          format: 'css/variables',
           options: {
             outputReferences: true,
           },
         },
         {
-          destination: "tokens.js",
-          format: "javascript/module-flat",
+          destination: 'tokens.js',
+          format: 'javascript/module-flat',
           options: {
             outputReferences: true,
           },
@@ -67,124 +60,110 @@ module.exports = {
       ],
     },
     css: {
-      transformGroup: "css",
-      transforms: ["name/flatten-category"],
-      buildPath: "src/components/Theme/",
+      transformGroup: 'css',
+      transforms: ['name/flatten-category'],
+      buildPath: 'src/components/Theme/',
       files: [
         {
-          destination: "light-tokens.css",
-          format: "css/variables",
-          filter: "isLight",
-          options: {
-            outputReferences: true,
-          },
+          destination: 'light-tokens.module.css',
+          format: 'css/variables',
+          filter: 'isLight',
         },
         {
-          destination: "dark-tokens.css",
-          format: "css/variables",
-          filter: "isDark",
-          options: {
-            outputReferences: true,
-          },
-        },
-        {
-          destination: "global-tokens.css",
-          format: "css/variables",
-          filter: "isGlobal",
-          options: {
-            outputReferences: true,
-          },
+          destination: 'dark-tokens.module.css',
+          format: 'css/variables',
+          filter: 'isDark',
         },
       ],
     },
     ios: {
-      transformGroup: "ios",
-      buildPath: "build/ios/",
+      transformGroup: 'ios',
+      buildPath: 'build/ios/',
       files: [
         {
-          destination: "StyleDictionaryColor.h",
-          format: "ios/colors.h",
-          className: "StyleDictionaryColor",
-          type: "StyleDictionaryColorName",
+          destination: 'StyleDictionaryColor.h',
+          format: 'ios/colors.h',
+          className: 'StyleDictionaryColor',
+          type: 'StyleDictionaryColorName',
           filter: {
             attributes: {
-              category: "color",
+              category: 'color',
             },
           },
         },
         {
-          destination: "StyleDictionaryColor.m",
-          format: "ios/colors.m",
-          className: "StyleDictionaryColor",
-          type: "StyleDictionaryColorName",
+          destination: 'StyleDictionaryColor.m',
+          format: 'ios/colors.m',
+          className: 'StyleDictionaryColor',
+          type: 'StyleDictionaryColorName',
           filter: {
             attributes: {
-              category: "color",
+              category: 'color',
             },
           },
         },
         {
-          destination: "StyleDictionarySize.h",
-          format: "ios/static.h",
-          className: "StyleDictionarySize",
-          type: "float",
+          destination: 'StyleDictionarySize.h',
+          format: 'ios/static.h',
+          className: 'StyleDictionarySize',
+          type: 'float',
           filter: {
             attributes: {
-              category: "size",
+              category: 'size',
             },
           },
         },
         {
-          destination: "StyleDictionarySize.m",
-          format: "ios/static.m",
-          className: "StyleDictionarySize",
-          type: "float",
+          destination: 'StyleDictionarySize.m',
+          format: 'ios/static.m',
+          className: 'StyleDictionarySize',
+          type: 'float',
           filter: {
             attributes: {
-              category: "size",
+              category: 'size',
             },
           },
         },
       ],
     },
-    "ios-swift": {
-      transformGroup: "ios-swift",
-      buildPath: "build/ios-swift/",
+    'ios-swift': {
+      transformGroup: 'ios-swift',
+      buildPath: 'build/ios-swift/',
       files: [
         {
-          destination: "StyleDictionary.swift",
-          format: "ios-swift/class.swift",
-          className: "StyleDictionary",
+          destination: 'StyleDictionary.swift',
+          format: 'ios-swift/class.swift',
+          className: 'StyleDictionary',
           filter: {},
         },
       ],
     },
-    "ios-swift-separate-enums": {
-      transformGroup: "ios-swift-separate",
-      buildPath: "build/ios-swift/",
+    'ios-swift-separate-enums': {
+      transformGroup: 'ios-swift-separate',
+      buildPath: 'build/ios-swift/',
       files: [
         {
-          destination: "StyleDictionaryColor.swift",
-          format: "ios-swift/enum.swift",
-          className: "StyleDictionaryColor",
+          destination: 'StyleDictionaryColor.swift',
+          format: 'ios-swift/enum.swift',
+          className: 'StyleDictionaryColor',
           filter: {
             attributes: {
-              category: "color",
+              category: 'color',
             },
           },
         },
         {
-          destination: "StyleDictionarySize.swift",
-          format: "ios-swift/enum.swift",
-          className: "StyleDictionarySize",
-          type: "float",
+          destination: 'StyleDictionarySize.swift',
+          format: 'ios-swift/enum.swift',
+          className: 'StyleDictionarySize',
+          type: 'float',
           filter: {
             attributes: {
-              category: "size",
+              category: 'size',
             },
           },
         },
       ],
     },
   },
-};
+}
