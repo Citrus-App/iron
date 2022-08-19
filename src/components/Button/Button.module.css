@@ -8,7 +8,7 @@
   margin: 0;
   transition: color 0.4s ease, border 0.4s ease;
 
-  font-family: var(--global-font-families-sf-compact);
+  font-family: var(--global-font-families-sf-compact), system-ui, sans-serif;
   font-weight: var(--global-font-weights-sf-compact-2);
   font-size: calc(var(--global-font-size-0) * 0.1rem);
 
