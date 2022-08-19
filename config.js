@@ -1,16 +1,23 @@
 const StyleDictionary = require('style-dictionary')
 
+const isValidToken = (token) =>
+  typeof token.value === 'string' || typeof token.value === 'number'
+
 StyleDictionary.registerFilter({
   name: 'isLight',
   matcher: function (token) {
-    return token.path[0] === 'light' || token.path[0] === 'global'
+    if (isValidToken(token)) {
+      return token.path[0] === 'light' || token.path[0] === 'global'
+    }
   },
 })
 
 StyleDictionary.registerFilter({
   name: 'isDark',
   matcher: function (token) {
-    return token.path[0] === 'dark' || token.path[0] === 'global'
+    if (isValidToken(token)) {
+      return token.path[0] === 'dark' || token.path[0] === 'global'
+    }
   },
 })
 
