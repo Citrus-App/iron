@@ -48,7 +48,7 @@ StyleDictionary.registerTransform({
   name: 'value/back-up-font',
   transformer: (token) => {
     if (token.type === 'fontFamilies') {
-      return `${token.value}, system-ui, sans-serif`
+      return `'${token.value}', system-ui, sans-serif`
     }
     return token.value
   },
