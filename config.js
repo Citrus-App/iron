@@ -43,6 +43,17 @@ StyleDictionary.registerTransform({
   },
 })
 
+StyleDictionary.registerTransform({
+  type: 'value',
+  name: 'value/back-up-font',
+  transformer: (token) => {
+    if (token.type === 'fontFamilies') {
+      return `${token.value}, system-ui, sans-serif`
+    }
+    return token.value
+  },
+})
+
 module.exports = {
   source: ['tokens/**/*.json'],
   platforms: {
@@ -68,7 +79,7 @@ module.exports = {
     },
     css: {
       transformGroup: 'css',
-      transforms: ['name/flatten-category'],
+      transforms: ['name/flatten-category', 'value/back-up-font'],
       buildPath: 'src/components/Theme/',
       files: [
         {

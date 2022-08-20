@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 19 Aug 2022 05:07:27 GMT
+ * Generated on Sat, 20 Aug 2022 01:50:25 GMT
  */
 
 :root {
@@ -59,9 +59,9 @@
   --spectrum-yellow-900: #c73f00;
   --spectrum-yellow-1000: #752100;
   --spectrum-yellow-000: #fff8e4;
-  --global-fontFamilies-ivypresto-display: IvyPresto Display;
-  --global-fontFamilies-sf-compact: SF Compact;
-  --global-fontFamilies-degular: Degular;
+  --global-fontFamilies-ivypresto-display: IvyPresto Display, system-ui, sans-serif;
+  --global-fontFamilies-sf-compact: SF Compact, system-ui, sans-serif;
+  --global-fontFamilies-degular: Degular, system-ui, sans-serif;
   --global-lineHeights-0: 24;
   --global-lineHeights-1: 28;
   --global-lineHeights-2: 30;
