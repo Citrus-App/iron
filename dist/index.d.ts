@@ -1,23 +1,23 @@
 /// <reference types="react" />
 import React from 'react';
 
-declare type integerVals$1 = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+declare type integers = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
 interface PaddingsTypes {
-    p: integerVals$1;
-    pb: integerVals$1;
-    pl: integerVals$1;
-    pr: integerVals$1;
-    pt: integerVals$1;
+    p: integers;
+    pb: integers;
+    pl: integers;
+    pr: integers;
+    pt: integers;
 }
 
-declare const integerVals: number;
-declare const autoVals = "auto";
+declare type marginVals = integers | 'auto';
 interface MarginsTypes {
-    m: typeof integerVals | typeof autoVals;
-    mb: typeof integerVals | typeof autoVals;
-    ml: typeof integerVals | typeof autoVals;
-    mr: typeof integerVals | typeof autoVals;
-    mt: typeof integerVals | typeof autoVals;
+    m: marginVals;
+    mb: marginVals;
+    ml: marginVals;
+    mr: marginVals;
+    mt: marginVals;
 }
 
 declare type vals = 'top' | 'left' | 'right' | 'bottom';
