@@ -1,8 +1,7 @@
 .baseButton {
   min-height: 32px;
-  background-color: var(--button-default);
+  background-color: var(--button-primary);
   border-radius: 0;
-  color: var(--text-button);
   display: inline-flex;
   text-decoration: none;
   white-space: nowrap;
@@ -11,28 +10,17 @@
   padding: 0 28.5px;
   transition: color 0.4s ease, border 0.4s ease;
 
-  font-family: var(--font-families-sf-compact);
-  font-weight: var(--font-weights-sf-compact-3);
-  font-size: var(--font-size-0);
-
-  &:hover {
-    background-color: var(--button-hover)
-  }
-
-  &:focus {
-    /*background-color: var(--button-pressed);*/
-  }
-
-  &:disabled {
-    pointer-events: none;
-  }
+  font-family: var(--global-fontFamilies-sf-compact);
+  font-weight: var(--global-fontWeights-sf-compact-1);
+  font-size: var(--global-fontSize-0);
 }
 
 .inner {
   margin: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .inner svg {
@@ -103,5 +91,4 @@
   align-items: center;
   width: fit-content;
   height: fit-content;
-  margin: 0 5px;
 }
