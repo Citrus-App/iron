@@ -47,7 +47,7 @@ StyleDictionary.registerTransform({
   type: 'value',
   name: 'value/back-up-font',
   transformer: (token) => {
-    if (token.type === 'fontFamilies') {
+    if (token.value === 'SF Compact') {
       return `'${token.value}', system-ui, sans-serif`
     }
     return token.value
