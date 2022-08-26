@@ -1,3 +1,4 @@
 export { default as Header } from './Header';
 export { default as Text } from './Text';
-export { default as Icon } from './Icon';
+export { Icon } from './Icon/Icon';
+export { IconProps } from './Icon/types';
