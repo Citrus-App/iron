@@ -21,5 +21,3 @@ export const Icon = ({
     </div>
   )
 }
-
-export { icons }
