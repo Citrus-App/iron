@@ -15,11 +15,8 @@ export const Icon = ({
   const color = invert && styles.invert
   const classList = classnames(styles.root, color)
   return (
-    <div
-      className={classList}
-      dangerouslySetInnerHTML={{ __html: icons(variant) }}
-      {...props}
-    >
+    <div className={classList} {...props}>
+      {icons(variant)}
       {toolTip && <div className={styles.toolTip}>{toolTip}</div>}
     </div>
   )

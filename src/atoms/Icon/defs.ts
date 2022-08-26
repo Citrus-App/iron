@@ -1,4 +1,4 @@
-import * as allIcons from './svgs/Icons.js'
+import * as allIcons from './src/Icons'
 
 export type iconName = keyof typeof allIcons
 export type iconDefs = {

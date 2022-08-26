@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Icon, Text } from '../atoms'
-import * as allIcons from '../atoms/Icon/svgs/Icons'
+import * as allIcons from '../atoms/Icon/src/Icons'
 import type { iconName } from '../atoms/Icon/defs'
 
 export default {

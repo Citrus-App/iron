@@ -41,8 +41,8 @@ module.exports = {
           }),
         ],
         outputters: [
-          require('@figma-export/output-components-as-es6')({
-            output: './src/atoms/Icon/svgs',
+          require('./scripts/outputters/export-as-svg.js')({
+            output: './src/atoms/Icon/src',
           }),
         ],
       },
