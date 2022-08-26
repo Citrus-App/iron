@@ -1,40 +1,35 @@
 .baseButton {
-  background-color: var(--button-default);
+  min-height: 32px;
+  background-color: var(--button-primary);
   border-radius: 0;
-  line-height: 3rem;
-  color: var(--text-button);
   display: inline-flex;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   margin: 0;
+  padding: 0 28.5px;
   transition: color 0.4s ease, border 0.4s ease;
 
-  font-family: var(--font-families-sf-compact);
-  font-weight: var(--font-weights-sf-compact-3);
-  font-size: calc(var(--font-size-0) * 0.1rem);
-
-  &:hover {
-    background-color: var(--button-hover)
-  }
-
-  &:focus {
-    /*background-color: var(--button-pressed);*/
-  }
-
-  &:disabled {
-    pointer-events: none;
-  }
+  font-family: var(--global-fontFamilies-sf-compact);
+  font-weight: var(--global-fontWeights-sf-compact-1);
+  font-size: var(--global-fontSize-0);
 }
 
 .inner {
   margin: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.inner svg {
+  stroke: currentColor;
 }
 
 .variant-outline {
   background: transparent;
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--text-body);
   color: var(--text-body);
 
   &:hover {
@@ -58,6 +53,27 @@
   }
 }
 
+.variant-primary {
+  background-color: transparent;
+  color: var(--button-primary);
+  stroke: var(--button-primary);
+  border: 1px solid var(--button-primary);
+}
+.variant-primary:hover:enabled {
+  background-color: var(--button-primary);
+  color: var(--button-secondary);
+  stroke: var(--button-secondary);
+}
+
+.variant-primary:disabled {
+  color: var(--button-disabled);
+  stroke: var(--button-disabled);
+  border-color: var(--button-disabled);
+  cursor: not-allowed;
+}
+
+
+
 .variant-bare {
   background-color: transparent;
   border: 0 none;
@@ -67,4 +83,12 @@
     background-color: transparent;
      border: 0 none;
   }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
 }

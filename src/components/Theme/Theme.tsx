@@ -1,30 +1,23 @@
 import React from 'react'
-// import styles from './Theme.module.css'
-import { default as Tokens } from './tokens'
 
-type tokenKey = keyof typeof Tokens
+import darkTokens from './dark-tokens.module.css'
+import lightTokens from './light-tokens.module.css'
 
-interface Props {
+export interface ThemeProps {
   children?: React.ReactNode
-  themeMode?: string
+  themeMode?: 'light' | 'dark'
 }
 
-const setTheme = (mode: string) => {
-  const themeStyles: any = {}
-  Object.keys(Tokens).map(function (key, _index) {
-    if (key.startsWith(mode)) {
-      themeStyles[`--${key.split(`${mode}-`)[1]}`] = Tokens[key as tokenKey]
-    } else if (key.startsWith('global')) {
-      themeStyles[`--${key.split('global-')[1]}`] = Tokens[key as tokenKey]
-    }
-  })
-  return themeStyles
+const setTheme = (mode: ThemeProps['themeMode']) => {
+  if (mode === 'dark') {
+    return darkTokens
+  }
+  return lightTokens
 }
 
-const Theme = ({ children, themeMode = 'light' }: Props) => {
-  const themeStyles: any = setTheme(themeMode)
+const Theme = ({ children, themeMode = 'light' }: ThemeProps) => {
   return (
-    <div className="ThemeProvider" style={{ ...themeStyles }}>
+    <div className="ThemeProvider" style={setTheme(themeMode)}>
       {children}
     </div>
   )

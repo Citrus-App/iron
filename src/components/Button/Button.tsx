@@ -1,23 +1,13 @@
 import React from 'react'
 import classnames from 'classnames'
-import CoordsTypes from '../../utils/coords/coords'
 import getPaddings, {
   getPaddingsStyles,
 } from '../../utils/paddings/getPaddings'
-import PaddingsTypes from '../../utils/paddings/paddings'
 import { getMargins, getMarginsStyles } from '../../utils/margins/getMargins'
 import { getCoords, getCoordsStyle } from '../../utils/coords/getCoords'
-import MarginsTypes from '../../utils/margins/margins'
+import { ButtonProps } from './types'
 
 import styles from './Button.module.css'
-
-interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
-  children?: React.ReactNode
-  action?: any
-  disabled?: boolean
-  variant?: string
-  type?: 'button' | 'submit' | 'reset' | undefined
-}
 
 const Button = ({
   children,
@@ -25,6 +15,8 @@ const Button = ({
   variant,
   disabled,
   type,
+  icon,
+  iconPosition = 'left',
   m,
   mb,
   ml,
@@ -91,22 +83,34 @@ const Button = ({
 
   type = type ?? 'button'
 
+  const Icon = icon ?? undefined
+
   return (
-    <button
-      style={
-        {
-          ...getCoordsStyle({ top, left, right, bottom }),
-          ...getMarginsStyles({ m, mb, ml, mr, mt }),
-          ...getPaddingsStyles({ p, pb, pl, pr, pt }),
-        } as React.CSSProperties
-      }
-      className={classList}
-      onClick={action}
-      disabled={disabled}
-      type={type}
-    >
-      <div className={styles.inner}>{children}</div>
-    </button>
+    <div>
+      <button
+        style={
+          {
+            ...getCoordsStyle({ top, left, right, bottom }),
+            ...getMarginsStyles({ m, mb, ml, mr, mt }),
+            ...getPaddingsStyles({ p, pb, pl, pr, pt }),
+          } as React.CSSProperties
+        }
+        className={classList}
+        onClick={action}
+        disabled={disabled}
+        type={type}
+      >
+        <div className={styles.inner}>
+          {icon && iconPosition === 'left' && (
+            <div className={styles.icon}>{Icon}</div>
+          )}
+          {children}
+          {icon && iconPosition === 'right' && (
+            <div className={styles.icon}>{Icon}</div>
+          )}
+        </div>
+      </button>
+    </div>
   )
 }
 

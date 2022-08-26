@@ -1,11 +1,11 @@
-type integerVals = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+import type { integers } from '../lib/integers'
 
 interface PaddingsTypes {
-  p: integerVals
-  pb: integerVals
-  pl: integerVals
-  pr: integerVals
-  pt: integerVals
+  p: integers
+  pb: integers
+  pl: integers
+  pr: integers
+  pt: integers
 }
 
 export default PaddingsTypes

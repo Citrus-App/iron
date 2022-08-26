@@ -1,4 +1,5 @@
 export { default as Button } from './Button'
+export { ButtonProps } from './Button/types'
 export { default as ButtonGroup } from './ButtonGroup'
 export { default as Theme } from './Theme'
 

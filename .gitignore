@@ -43,3 +43,6 @@ node_modules
 .vscode
 
 .idea
+
+# storybook
+storybook-static

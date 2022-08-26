@@ -1,6 +1,25 @@
 /// <reference types="react" />
 import React from 'react';
 
+declare type integers = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
+interface PaddingsTypes {
+    p: integers;
+    pb: integers;
+    pl: integers;
+    pr: integers;
+    pt: integers;
+}
+
+declare type marginVals = integers | 'auto';
+interface MarginsTypes {
+    m: marginVals;
+    mb: marginVals;
+    ml: marginVals;
+    mr: marginVals;
+    mt: marginVals;
+}
+
 declare type vals = 'top' | 'left' | 'right' | 'bottom';
 interface CoordsTypes {
     top: vals;
@@ -9,52 +28,36 @@ interface CoordsTypes {
     bottom: vals;
 }
 
-declare type integerVals$1 = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-interface PaddingsTypes {
-    p: integerVals$1;
-    pb: integerVals$1;
-    pl: integerVals$1;
-    pr: integerVals$1;
-    pt: integerVals$1;
-}
-
-declare const integerVals: number;
-declare const autoVals = "auto";
-interface MarginsTypes {
-    m: typeof integerVals | typeof autoVals;
-    mb: typeof integerVals | typeof autoVals;
-    ml: typeof integerVals | typeof autoVals;
-    mr: typeof integerVals | typeof autoVals;
-    mt: typeof integerVals | typeof autoVals;
-}
-
 interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
-    action?: any;
+    action?: () => void;
     disabled?: boolean;
-    variant?: string;
+    variant?: 'outline' | 'primary';
     type?: 'button' | 'submit' | 'reset' | undefined;
+    icon?: React.ReactElement<any, any>;
+    iconPosition?: 'left' | 'right';
 }
-declare const Button: {
-    ({ children, action, variant, disabled, type, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: ButtonProps): JSX.Element;
-    documentation: string;
-};
 
-interface Props$b {
-    children?: React.ReactNode;
-}
-declare const ButtonGroup: {
-    ({ children }: Props$b): JSX.Element;
+declare const Button: {
+    ({ children, action, variant, disabled, type, icon, iconPosition, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: ButtonProps): JSX.Element;
     documentation: string;
 };
 
 interface Props$a {
     children?: React.ReactNode;
-    themeMode?: string;
+}
+declare const ButtonGroup: {
+    ({ children }: Props$a): JSX.Element;
+    documentation: string;
+};
+
+interface ThemeProps {
+    children?: React.ReactNode;
+    themeMode?: 'light' | 'dark';
 }
 declare const Theme: {
-    ({ children, themeMode }: Props$a): JSX.Element;
-    extracter: (mode: string) => any;
+    ({ children, themeMode }: ThemeProps): JSX.Element;
+    extracter: (mode: ThemeProps['themeMode']) => any;
 };
 
 interface Props$9 {
@@ -117,4 +120,4 @@ declare const Text: ({ as, variant, children }: Props$1) => JSX.Element;
 declare type Props = {};
 declare const Icon: ({}: Props) => JSX.Element;
 
-export { Button, ButtonGroup, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };
+export { Button, ButtonGroup, ButtonProps, Card, Gallery, GridWrapper, Header, Icon, Menu, Overlay, SidePanel, SideBar as Sidebar, Text, Theme, TopBar };

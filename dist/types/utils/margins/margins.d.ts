@@ -1,10 +1,10 @@
-declare const integerVals: number;
-declare const autoVals = "auto";
+import type { integers } from '../lib/integers';
+declare type marginVals = integers | 'auto';
 interface MarginsTypes {
-    m: typeof integerVals | typeof autoVals;
-    mb: typeof integerVals | typeof autoVals;
-    ml: typeof integerVals | typeof autoVals;
-    mr: typeof integerVals | typeof autoVals;
-    mt: typeof integerVals | typeof autoVals;
+    m: marginVals;
+    mb: marginVals;
+    ml: marginVals;
+    mr: marginVals;
+    mt: marginVals;
 }
 export default MarginsTypes;
