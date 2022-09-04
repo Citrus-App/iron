@@ -3,21 +3,31 @@ const StyleDictionary = require('style-dictionary')
 const isValidToken = (token) =>
   typeof token.value === 'string' || typeof token.value === 'number'
 
+const isValidName = (token) => !token.name.includes("'")
+
+const isDark = (token) => {
+  if (isValidToken(token)) {
+    return token.path[0] === 'dark' || token.path[0] === 'global'
+  }
+}
+
+const isLight = (token) => {
+  if (isValidToken(token)) {
+    return token.path[0] === 'light' || token.path[0] === 'global'
+  }
+}
+
 StyleDictionary.registerFilter({
   name: 'isLight',
   matcher: function (token) {
-    if (isValidToken(token)) {
-      return token.path[0] === 'light' || token.path[0] === 'global'
-    }
+    return isLight(token)
   },
 })
 
 StyleDictionary.registerFilter({
   name: 'isDark',
   matcher: function (token) {
-    if (isValidToken(token)) {
-      return token.path[0] === 'dark' || token.path[0] === 'global'
-    }
+    return isDark(token)
   },
 })
 
@@ -51,6 +61,40 @@ StyleDictionary.registerTransform({
       return `'${token.value}', system-ui, sans-serif`
     }
     return token.value
+  },
+})
+
+const writeVars = (tokens) =>
+  tokens
+    .map((token) =>
+      token && isValidToken(token) && isValidName(token)
+        ? `--${token.name}: ${token.value};`
+        : undefined
+    )
+    .filter(function (strVal) {
+      return !!strVal
+    })
+    .join('\n')
+
+StyleDictionary.registerFormat({
+  name: 'splitByMode',
+  formatter: function ({ dictionary }) {
+    const darkTokens = writeVars(
+      dictionary.allTokens.filter((token) => isDark(token))
+    )
+
+    const lightTokens = writeVars(
+      dictionary.allTokens.filter((token) => isLight(token))
+    )
+
+    return (
+      `.dark {\n` +
+      darkTokens +
+      `\n}\n` +
+      `\n.light {\n` +
+      lightTokens +
+      `\n}\n`
+    )
   },
 })
 
@@ -91,6 +135,10 @@ module.exports = {
           destination: 'dark-tokens.module.css',
           format: 'css/variables',
           filter: 'isDark',
+        },
+        {
+          destination: 'tokens.module.css',
+          format: 'splitByMode',
         },
       ],
     },

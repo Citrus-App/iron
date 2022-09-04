@@ -1,27 +1,13 @@
 import React from 'react'
+import classnames from 'classnames'
 
-import darkTokens from './dark-tokens.module.css'
-import lightTokens from './light-tokens.module.css'
-
+import styles from './tokens.module.css'
 export interface ThemeProps {
   children?: React.ReactNode
   themeMode?: 'light' | 'dark'
 }
 
-const setTheme = (mode: ThemeProps['themeMode']) => {
-  if (mode === 'dark') {
-    return darkTokens
-  }
-  return lightTokens
+export const Theme = ({ children, themeMode = 'light' }: ThemeProps) => {
+  const classList = classnames('ThemeProvider', styles[themeMode])
+  return <div className={classList}>{children}</div>
 }
-
-const Theme = ({ children, themeMode = 'light' }: ThemeProps) => {
-  return (
-    <div className="ThemeProvider" style={setTheme(themeMode)}>
-      {children}
-    </div>
-  )
-}
-
-Theme.extracter = setTheme
-export default Theme
