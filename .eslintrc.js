@@ -35,5 +35,6 @@ module.exports = {
       varsIgnorePattern: '^_'
     }],
     '@typescript-eslint/prefer-function-type': 'error'
-  }
+  },
+  ignorePatterns: ['**/*.js', '**/*.jsx'],
 };

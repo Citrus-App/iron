@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 declare const _default: ComponentMeta<{
     ({ children, action, variant, disabled, type, icon, iconPosition, m, mb, ml, mr, mt, p, pb, pl, pr, pt, top, left, right, bottom, }: import("../components").ButtonProps): JSX.Element;
