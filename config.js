@@ -31,6 +31,13 @@ StyleDictionary.registerFilter({
   },
 })
 
+StyleDictionary.registerFilter({
+  name: 'isValid',
+  matcher: function (token) {
+    return isValidToken(token) && isValidName(token)
+  },
+})
+
 StyleDictionary.registerTransform({
   type: 'name',
   name: 'name/flatten-category',
@@ -61,7 +68,7 @@ StyleDictionary.registerTransform({
       return `'${token.value}', system-ui, sans-serif`
     }
     return token.value
-  },
+  }
 })
 
 const writeVars = (tokens) =>
@@ -112,13 +119,6 @@ module.exports = {
             outputReferences: true,
           },
         },
-        {
-          destination: 'tokens.js',
-          format: 'javascript/module-flat',
-          options: {
-            outputReferences: true,
-          },
-        },
       ],
     },
     css: {
@@ -140,6 +140,18 @@ module.exports = {
           destination: 'tokens.module.css',
           format: 'splitByMode',
         },
+      ],
+    },
+    javascript: {
+      transformGroup: 'js',
+      transforms: ['value/back-up-font'],
+      buildPath: 'src/components/Theme/',
+      files: [
+        {
+          destination: 'tokens.ts',
+          format: 'javascript/module',
+          filter: 'isValid',
+        }
       ],
     },
     ios: {
