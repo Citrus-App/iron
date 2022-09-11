@@ -32,6 +32,10 @@ const Button = ({
   right,
   bottom,
 }: ButtonProps) => {
+  // handle buttons still using `outline` variant
+  if (variant === 'outline') {
+    variant = 'primary'
+  }
   const props = {
     children,
     action,
