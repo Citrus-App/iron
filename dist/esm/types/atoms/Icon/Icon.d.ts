@@ -1,4 +1,3 @@
 /// <reference types="react" />
-declare type Props = {};
-declare const Icon: ({}: Props) => JSX.Element;
-export default Icon;
+import { IconProps } from './types';
+export declare const Icon: ({ variant, toolTip, invert, ...props }: IconProps) => JSX.Element;

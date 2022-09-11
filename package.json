@@ -12,7 +12,8 @@
     "create:component": "babel-node --experimental-modules ./scripts/create-component.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prettier": "prettier --write src/**/*.{ts,tsx}"
+    "prettier": "prettier --write src/**/*.{ts,tsx}",
+    "export:icons": "figma-export use-config"
   },
   "author": "Jared Smith — Citrus",
   "license": "ISC",
@@ -21,6 +22,8 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "@figma-export/cli": "^4.4.0",
+    "@figma-export/output-components-as-svg": "^4.4.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
@@ -59,6 +62,8 @@
     "react": "^17.0.2"
   },
   "dependencies": {
+    "@figma-export/output-components-as-es6": "^4.4.0",
+    "@figma-export/transform-svg-with-svgo": "^4.4.0",
     "async": "^3.2.3",
     "autoprefixer": "^10.4.2",
     "babel-cli": "^6.26.0",

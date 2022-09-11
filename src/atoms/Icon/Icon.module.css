@@ -1,4 +1,41 @@
-
 .root {
   position: relative;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  fill: var(--icon-primary);
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &:hover {
+    .toolTip {
+      display: block;
+    }
+  }
+}
+
+.root:svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--icon-primary);
+}
+
+.invert {
+  fill: var(--icon-secondary);
+}
+
+.toolTip {
+  display: none;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 100%;
+  background: var(--color-dark);
+  color: var(--color-highlight);
+  padding: 0.7rem 1rem;
+  width: fit-content;
+  text-align: center;
+  left: 0;
+  opacity: 0.7;
+  white-space: nowrap;
 }
