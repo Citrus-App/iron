@@ -1,2 +1,2 @@
-export { default } from './Theme'
+export { Theme } from './Theme'
 export { ThemeProps } from './Theme'

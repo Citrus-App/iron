@@ -6,7 +6,7 @@ export interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
     action?: () => void;
     disabled?: boolean;
-    variant?: 'outline' | 'primary';
+    variant?: 'primary';
     type?: 'button' | 'submit' | 'reset' | undefined;
     icon?: React.ReactElement<any, any>;
     iconPosition?: 'left' | 'right';

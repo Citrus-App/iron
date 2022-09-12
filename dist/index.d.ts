@@ -32,7 +32,7 @@ interface ButtonProps extends MarginsTypes, PaddingsTypes, CoordsTypes {
     children?: React.ReactNode;
     action?: () => void;
     disabled?: boolean;
-    variant?: 'outline' | 'primary';
+    variant?: 'primary';
     type?: 'button' | 'submit' | 'reset' | undefined;
     icon?: React.ReactElement<any, any>;
     iconPosition?: 'left' | 'right';
@@ -55,10 +55,7 @@ interface ThemeProps {
     children?: React.ReactNode;
     themeMode?: 'light' | 'dark';
 }
-declare const Theme: {
-    ({ children, themeMode }: ThemeProps): JSX.Element;
-    extracter: (mode: ThemeProps['themeMode']) => any;
-};
+declare const Theme: ({ children, themeMode }: ThemeProps) => JSX.Element;
 
 interface Props$9 {
 }

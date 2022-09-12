@@ -1,7 +1,7 @@
 export { default as Button } from './Button'
 export { ButtonProps } from './Button/types'
 export { default as ButtonGroup } from './ButtonGroup'
-export { default as Theme } from './Theme'
+export { Theme } from './Theme'
 
 export { default as Menu } from './Menu'
 export { default as Overlay } from './Overlay'
