@@ -3,6 +3,7 @@
 }
 
 p {
+  font-family: var(--global-fontFamilies-sf-compact);
   font-weight: 100;
   line-height: 2.8rem;
   font-size: 2rem;
